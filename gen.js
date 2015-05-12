@@ -18,6 +18,9 @@ marked.setOptions({
 
 
 fs.readdirAsync(conf.articleSource)
+  .then(function(lists){
+    return reversedLists = _(lists).reverse().value();
+  })
   .each(function(md){
     var titleArr = md.split('.')[0].split('-');
     var headTitle = "Cho-Ching's Blog - " + titleArr[3];
