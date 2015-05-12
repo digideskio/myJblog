@@ -30,12 +30,17 @@ a {
 h1 {
   margin:0;
   padding-top: 0.5em;
+  padding-bottom: 0.5em;
   color: palette(Pink);
 }
 
+.Header h1 {
+  padding-left: 0.5em;
+}
+
 .Posts {
+  margin: 0;
   list-style: none;
-  padding: 0.5em;
   background-color: palette(White);
   li {
     margin-top: 0.5em;
@@ -43,6 +48,7 @@ h1 {
 }
 
 .Content {
+  padding: 0.5em;
   background-color: palette(White);
 }
 
