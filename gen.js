@@ -10,6 +10,13 @@ Promise.promisifyAll(fs);
 var postFn = jade.compileFile('./templates/Post.jade', {pretty:false,debug:true});
 var indexFn = jade.compileFile('./templates/Index.jade', {pretty:false,debug:true});
 
+marked.setOptions({
+  highlight: function (code) {
+    return require('highlight.js').highlightAuto(code).value;
+  }
+});
+
+
 fs.readdirAsync(conf.articleSource)
   .each(function(md){
     var titleArr = md.split('.')[0].split('-');
@@ -61,11 +68,14 @@ fs.readdirAsync(conf.articleSource)
   })
   //gen index.html
   .map(function(md){
+    var titleArr = md.split('.')[0].split('-');
+    var postDate = titleArr[0] +'-'+ titleArr[1] +'-'+ titleArr[2];   
     return fs.readFileAsync(conf.articleSource + md, 'utf8')
       .then(function(content){
         return {
           link: '/posts/' + md.split('.')[0] + '.html',
-          title: content.split('\n')[0] //像是:  # 標題  
+          title: content.split('\n')[0], //像是:  # 標題  
+          date: postDate
         };
       });
   })

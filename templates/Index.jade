@@ -4,8 +4,8 @@ block title
   title= title  
 
 block content
-  .header
+  .Header
     h1= title
-  ul
+  ul.Posts
     each list in lists
-      li: a(href=list.link)= list.title
+      li: a(href=list.link) #{list.title} <b>(#{list.date})</b>

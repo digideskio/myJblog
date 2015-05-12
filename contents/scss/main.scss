@@ -9,4 +9,44 @@
 
 body {
   font-family: "Noto Sans CJK Regular", sans-serif;
+  line-height: 1.5em;
+  color: palette(Blue Grey, 900);
+}
+
+pre {
+  padding: 1em;
+  background-color: palette(Blue Grey, 50);
+}
+
+a {
+  text-decoration: none;
+  color: palette(Blue, 700);
+  &:hover, &:active {
+    color: palette(Pink);
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  margin:0;
+  padding-top: 0.5em;
+  color: palette(Pink);
+}
+
+.Posts {
+  list-style: none;
+  padding: 0.5em;
+  background-color: palette(White);
+  li {
+    margin-top: 0.5em;
+  }
+}
+
+.Content {
+  background-color: palette(White);
+}
+
+.Footer {
+  background-color: palette(Blue Grey, 50);
+  text-align: right;
 }
