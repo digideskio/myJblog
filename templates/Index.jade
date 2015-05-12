@@ -1,0 +1,11 @@
+extends ./Html.jade
+
+block title
+  title= title  
+
+block content
+  .header
+    h1= title
+  ul
+    each list in lists
+      li: a(href=list.link)= list.title

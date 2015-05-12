@@ -1,0 +1,12 @@
+// http://www.google.com/design/spec/style/color.html#color-color-palette
+@import 'normalize';
+@import 'palette';
+
+@font-face {
+  font-family: "Noto Sans CJK Regular";
+  src: url(../fonts/NotoSansCJKtc-Regular.otf) format('otf');
+}
+
+body {
+  font-family: "Noto Sans CJK Regular", sans-serif;
+}
