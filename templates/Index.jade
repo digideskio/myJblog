@@ -6,6 +6,7 @@ block title
 block content
   .Header
     h1= title
-  ul.Posts
-    each list in lists
-      li: a(href=list.link) #{list.title} <b>(#{list.date})</b>
+  .Posts
+    ul
+      each list in lists
+        li: a(href=list.link) #{list.title} <b>(#{list.date})</b>
