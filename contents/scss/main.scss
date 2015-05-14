@@ -13,9 +13,17 @@ body {
   color: palette(Blue Grey, 900);
 }
 
+pre, code {
+  background-color: palette(Blue Grey, 50);
+}
+
 pre {
   padding: 1em;
-  background-color: palette(Blue Grey, 50);
+}
+
+code {
+  padding-left: 0.2em;
+  padding-right: 0.2em;
 }
 
 a {
@@ -33,6 +41,20 @@ h1 {
   padding-bottom: 0.5em;
   color: palette(Pink);
 }
+
+//---Layout -------
+
+.Main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Content {
+  flex: 1;
+}
+
+//---Components -----------
 
 .Header, .Posts, .Content, #disqus_thread {
   max-width: 800px;
