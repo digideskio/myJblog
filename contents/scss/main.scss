@@ -18,12 +18,7 @@ pre, code {
 }
 
 pre {
-  padding: 1em;
-}
-
-code {
-  padding-left: 0.2em;
-  padding-right: 0.2em;
+  padding: 0.5em;
 }
 
 a {
@@ -31,57 +26,82 @@ a {
   color: palette(Blue, 700);
   &:hover, &:active {
     color: palette(Pink);
-    text-decoration: underline;
+    //text-decoration: underline;
   }
 }
 
 h1 {
-  margin:0;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
   color: palette(Pink);
 }
 
-//---Layout -------
 
-.Main {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+img {
+  max-width: 100%;
 }
 
-.Content {
-  flex: 1;
-}
 
 //---Components -----------
 
-.Header, .Posts, .Content, #disqus_thread {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+.Header {
+  h1 {
+    margin: 0;
+    padding: 0.2em;
+    font-size: 1.2em;
+  }
+  background-color: palette(Blue Grey, 50);
 }
 
-.Header h1 {
-  padding-left: 0.5em;
-}
+.Posts {
+  list-style: none; 
+  padding: 0.2em;
+  margin: 0.2em;
 
-.Posts ul{
-  margin: 0;
-  list-style: none;
-  background-color: palette(White);
   li {
-    margin-top: 0.5em;
+    margin-top: 0.2em;
+    padding: 0.1em;
+    &:hover {
+      background-color: palette(Blue Grey, 50);
+    }
   }
 }
 
-.Content {
+.Main {
   padding: 0.5em;
-  background-color: palette(White);
+  h1 {
+    color: palette(Blue);
+    margin: 0;
+    padding: 0.2em;
+    font-size: 1.5em;
+    border: 1px solid palette(Blue Grey, 50);
+  }
+}
+
+#disqus_thread {
+  padding: 0.2em;
 }
 
 .Footer {
   background-color: palette(Blue Grey, 50);
   text-align: right;
-  padding-right: 0.5em;
+  p {
+    margin: 0;
+    padding: 0.2em;
+  }
 }
+
+
+//---Layout -------
+
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Main {
+  flex: 1;
+}
+
+
+
+

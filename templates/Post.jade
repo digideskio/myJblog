@@ -1,10 +1,7 @@
 extends ./Html.jade
 
-block title
-  title= title  
-
-block content
-  .Content!= content
+block main
+  .Main!= content
   #disqus_thread
   h3: a(href='/') << 回到文章列表
   script(type='text/javascript').

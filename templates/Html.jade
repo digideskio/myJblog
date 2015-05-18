@@ -8,10 +8,12 @@ html(lang='zh')
       meta(name='viewport', content='width=device-width')
       link(rel='stylesheet', href=source+'css/github.css')
       link(rel='stylesheet', href=source+'css/main.css')
-      block title
+      title= title
   body
-    .Main
-      .Content
-        block content
-      include ./Footer.jade
+    .Wrapper
+      .Header
+        h1 Cho-Ching's Blog
+      block main
+      .Footer
+        include ./Footer.jade
 
