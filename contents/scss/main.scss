@@ -34,6 +34,10 @@ h1 {
   color: palette(Pink);
 }
 
+h2 {
+  border-bottom: 1px solid palette(Blue Grey, 50);
+}
+
 
 img {
   max-width: 100%;
@@ -47,6 +51,9 @@ img {
     margin: 0;
     padding: 0.2em;
     font-size: 1.2em;
+    a {
+      color: palette(Pink);
+    }
   }
   background-color: palette(Blue Grey, 50);
 }
@@ -72,7 +79,7 @@ img {
     margin: 0;
     padding: 0.2em;
     font-size: 1.5em;
-    border: 1px solid palette(Blue Grey, 50);
+    border-bottom: 1px solid palette(Blue Grey, 50);
   }
 }
 
@@ -102,6 +109,11 @@ img {
   flex: 1;
 }
 
-
+@media (min-width: 50em){
+  .Main, #disqus_thread {
+    width: 50em;
+    margin: 0 auto;
+  }
+}
 
 
