@@ -1,4 +1,4 @@
-# 使用gvm安裝golang, 並設定vim開發環境
+# [Go] 使用gvm安裝golang, 並設定vim開發環境
 
 [Go](https://golang.org/)好像很好玩！
 

@@ -1,4 +1,4 @@
-# Flexbox排版探索(二) -- 加上media query
+# [Flexbox] 排版探索(二) -- 加上media query
 
 試著利用flexbox實現 Mobile-First approach排版。
 

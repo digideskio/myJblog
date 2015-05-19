@@ -1,4 +1,4 @@
-# [Golang] by Example 筆記(一)
+# [Go] by Example 筆記(一)
 
 除了官網的[A Tour of Go](https://tour.golang.org/), 另外就是[Go by Example](https://gobyexample.com/)了, 感謝網路上這麼多的前輩與資源, 整理一下練Go by Example的印象筆記。
 

@@ -1,4 +1,4 @@
-# Express.js -- 撰寫middleware(一)
+# [Express.js] 撰寫middleware(一)
 
 [Express.js](http://expressjs.com/) 應該是node.js旗下最老牌而且主流的網頁框架了, 利用express.js這樣的輕量化框架, 可以很開心的寫網站或是撰寫REST API。
 
