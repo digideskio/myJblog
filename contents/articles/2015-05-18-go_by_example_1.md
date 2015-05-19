@@ -184,7 +184,7 @@ Go沒有`?:`(ternary if)。
 
 ## Switch 
 
-就跟大家的印象一樣。
+就跟大家印象相同。
 
 
 可以把多個expressions放在相同的case statement上,
@@ -201,9 +201,10 @@ switch time.Now().Weekday() {
 }
 ```
 
-switch若沒有expression, 就像是if/else一樣: 
+switch若沒有expression, 就像是if/else: 
 
 ``` go 
+t := time.Now()
 witch {
   case t.Hour() < 12:
     fmt.Println("it's before noon")
@@ -216,8 +217,9 @@ witch {
 ## More
 
 對 C/C++ 有經驗的朋友, 一定可以很快就上手Go, 另外還加上了python語法的簡潔, 
-程式讀起來很快就可以適應與理解其字面,  用起來令人開心阿!
+程式讀起來很快就可以適應與理解其字面,  用起來令人開心!
 
+[官網 A Tour of Go](https://tour.golang.org/)
 
 [Go by Example](https://gobyexample.com)
 
