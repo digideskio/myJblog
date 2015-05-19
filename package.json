@@ -4,7 +4,7 @@
   "description": "jade static blog generator",
   "scripts": {
     "dev": "nodemon server.js",
-    "build": "node gen",
+    "build": "sass ./contents/scss/main.scss:build/css/main.css & node gen",
     "scss": "sass --watch ./contents/scss/main.scss:build/css/main.css"
   },
   "author": "Lu Cho-Ching",

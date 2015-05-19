@@ -109,6 +109,10 @@ Plugin 'fatih/vim-go'
 
 這樣就會幫我們把vim-go所用的相關lib通通裝好
 
+如果要自動完成,要安裝[YouCompleteMe](https://github.com/Valloric/YouCompleteMe), 如果要秀source code tag infomation, 要安裝[tagbar](https://github.com/majutsushi/tagbar)
+
+如果要使用godoc查找資料, 要先安裝godoc tool, 就可以使用像是`:GoDoc fmt println`來查看文件
+
 ![Hello](http://i.imgur.com/T2FL1Lr.jpg) 
 
 **Hello! Go World!**
