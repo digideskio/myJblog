@@ -1,4 +1,4 @@
-# [Go] by Example (二) -- Arrays, Slices, Maps
+# [Go] by Example (二) -- Arrays, Slices, Maps, Range
 
 延續[(一)](/posts/2015-05-18-go_by_example_1.html)的內容, 討論Go的資料結構
 
@@ -154,6 +154,59 @@ Go在找map找不到符合的key的時候,會傳回zero value, 像是`0`或是`"
 ``` go 
 _, d := m["k2"]
 fmt.Println(d)
+```
+
+## Range
+
+`range` iterator 可以幫助我們遍歷(browse)我們上面所提到的資料結構內的元素。
+
+``` go
+nums := []int{1, 2, 3, 4}
+for index, num := range nums {
+  fmt.Println(index, num)
+}
+```
+
+如果不需要index, 那麼就使用 *blank identifier* 將index忽略掉: 
+
+
+``` go
+nums := []int{1, 2, 3, 4}
+for _, num := range nums {
+  fmt.Println(num)
+}
+```
+
+range on map : 
+
+``` go 
+k := map[string]string{"a":"apple", "b":"banana"}
+for key, value := range k{
+  fmt.Println(key, value)
+}
+```
+
+注意如果是range on string, 那value將會是unicode code, index是開始的byte的index, 例如:
+
+``` go 
+for index, value := range "你好go hello" {
+  fmt.PrintLn(index, value)
+}
+```
+
+仔細觀察一下結果: 
+
+``` bash 
+0 20320
+3 22909
+6 103
+7 111
+8 32
+9 104
+10 101
+11 108
+12 108
+13 111
 ```
 
 ## More
