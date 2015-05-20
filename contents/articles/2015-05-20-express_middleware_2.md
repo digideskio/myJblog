@@ -83,6 +83,8 @@ Wed May 20 2015 09:52:46 GMT+0800 (CST) 'GET' '/hello'
 
 ## more
 
+[unit testing express middleware](http://www.slideshare.net/morrissinger/unit-testing-express-middleware)
+
 [Expressjs - Using Middleware](http://expressjs.com/guide/using-middleware.html)
 
 [How to write middleware for express.js App](https://stormpath.com/blog/how-to-write-middleware-for-express-apps/?utm_source=nodeweekly&utm_medium=email)
