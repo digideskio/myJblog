@@ -130,6 +130,19 @@ Bye
 $
 ```
 
+## 串起middleware 
+
+有了一堆寫好的middleware, 我們就可以任意的對不同條件, 組合起不同的服務, 
+
+例如我們先拿掉`app.use(logger)`, 改成以下: 
+
+``` js
+app.get('/hello', hello, bye);
+app.get('/wsaasds', logger, hello, bye);
+```
+
+那麼只要request是到`/wsaasds`的route, 通通都會透過`logger`這個middleware做log顯示, `/hello`則不會。
+
 
 ## more
 

@@ -1,8 +1,9 @@
 var express = require('express');
 var app = express();
+var apiRouter = express.Router();
 
 var logger = function(req, res, next){
-  console.log(new Date(), req.method, req.url);
+  console.log(new Date(), req.method, req.originalUrl);
   next();
 };
 
@@ -21,5 +22,9 @@ app.listen(8000, function(){
   console.log('server listening on port 8000');
 });
 
-app.use(logger);
-app.get('/hello', hello, bye);
+
+
+
+apiRouter.use(logger);
+app.use('/api', apiRouter);
+app.use(hello, bye);
