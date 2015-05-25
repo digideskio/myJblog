@@ -57,6 +57,14 @@ app.use('/static', express.static('public'));
 http://localhost:3000/static/hello.html
 ```
 
+
+像如果我用npm安裝了bootstrap或是jquery的套件, 那我就會設定如下: 
+
+``` js
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist')); 
+```
+
 ## Render plain HTML 
 
 我們不需要使用`res.render()`這樣的方法來回應一個HTML給user, 如果有一個特定的檔案, 那麼就使用`res.sendFile()`就可以, 不然就放在特定資料夾, 用上述的`express.static()` middleware來處理。
