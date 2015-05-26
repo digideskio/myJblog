@@ -7,15 +7,11 @@ var fs = require('fs');
 var Bluebird = require('bluebird');
 Bluebird.promisifyAll(fs);
 
-var postFn = jade.compileFile('./templates/Post.jade', {pretty:false,debug:true});
-var indexFn = jade.compileFile('./templates/Index.jade', {pretty:false,debug:true});
-
 marked.setOptions({
   highlight: function (code) {
     return require('highlight.js').highlightAuto(code).value;
   }
 });
-
 
 //將最新的file排在最前面
 function reverseDirList(list){
@@ -39,7 +35,7 @@ function parseInfo(fileName){
 
 function markdownToHtml(md){
   var postFn = jade.compileFile('./templates/Post.jade', {pretty:false,debug:true});
-  md.content
+  return md.content
     .then(marked)
     .then(function(data){
       return postFn({
@@ -54,9 +50,35 @@ function markdownToHtml(md){
     });
 }
 
+//取得每個文章,在index.html要顯示的條列資訊
+function getPostList(md){
+  return md.content
+    .then(function(data){
+      return {
+        link: '/posts/' + md.fileName.split('.')[0] + '.html',
+        title: data.split('\n')[0], //像是:  # 標題  
+        date: md.postDate
+      };
+    });
+}
+
+//產生index.html
+function genIndex(lists){
+  var indexFn = jade.compileFile('./templates/Index.jade', {pretty:false,debug:true});
+  return indexFn({
+    source: './', 
+    title: conf.name,
+    lists: lists
+  }); 
+}
+
 fs.readdirAsync(conf.articleSource)
   .then(reverseDirList)
   .map(parseInfo)
-  .each(markdownToHtml);
-
-
+  .each(markdownToHtml)
+  .map(getPostList)
+  .then(genIndex)
+  .then(fs.writeFileAsync.bind(fs, conf.buildto + 'index.html'))
+  .then(function(){
+    console.log('[done] index.html created.');
+  });
