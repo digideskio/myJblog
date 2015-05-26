@@ -1,4 +1,4 @@
-# [Go] by Example (二) -- Arrays, Slices, Maps, Range
+# [Go] by Example 筆記(二) -- Arrays, Slices, Maps, Range
 
 延續[(一)](/posts/2015-05-18-go_by_example_1.html)的內容, 討論Go的資料結構
 
