@@ -32,16 +32,31 @@ function parseInfo(fileName){
     postDate: postDate,
     inPath: conf.articleSource + fileName,
     //注意, 目前只收 2014-11-02-nodejs_test.md, 不能收 2014-11-02-nodejs-test.md
-    outPath: conf.buildto + 'posts/'+ postDate + '-' + titleArr[3] + '.html'
+    outPath: conf.buildto + 'posts/'+ postDate + '-' + titleArr[3] + '.html',
+    content: fs.readFileAsync(conf.articleSource + fileName, 'utf8')
   };
 }
 
+function markdownToHtml(md){
+  var postFn = jade.compileFile('./templates/Post.jade', {pretty:false,debug:true});
+  md.content
+    .then(marked)
+    .then(function(data){
+      return postFn({
+        source: '../', 
+        title: md.headTitle, 
+        content: data
+      });  
+    })
+    .then(fs.writeFileAsync.bind(fs, md.outPath))
+    .done(function(){
+      console.log('[done] ' + md.fileName  + ' --> ' + md.outPath );
+    });
+}
 
 fs.readdirAsync(conf.articleSource)
   .then(reverseDirList)
   .map(parseInfo)
-  .then(function(list){
-    console.log(list);
-  });
+  .each(markdownToHtml);
 
 
