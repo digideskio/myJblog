@@ -1,5 +1,4 @@
-# [Go] by Example 筆記(三) -- Functions
-
+# [Go] by Example 筆記(三) -- Functions, Pointers
 
 ![functions](http://www.golang-book.com/public/img/intro/10000000000001FF000000A90C708B88.noatx1.png)
 
@@ -141,6 +140,54 @@ func fact(n int) int {
   return n * fact(n-1)
 } 
 ```
+
+## Pointers
+
+Go支援 pointer(指標), 允許傳址(pass reference to values)。
+
+### passed  by value 
+
+``` go
+func zeroval(ival int) {
+  ival = 0
+}
+```
+
+zeroval這個function具有參數型別為int, 因此參數就會傳值(value)到函式裡面, 也就是`zeroval`會得到`ival`的值拷貝。
+
+若我們呼叫`zeroval`:
+
+``` go
+i := 1
+
+zeroval(i)
+fmt.Println(i)
+```
+
+我們會得到結果為1, 並不會影響原來的 `i`。
+
+### passed by reference
+
+就如同大家所熟悉的C/C++: 
+
+
+``` go
+func zeroptr(iptr *int) {
+  *iptr = 0
+}
+```
+
+zeroptr有一個`iptr`參數, 型別為 `*int` 表示是一個整數型態的指標(pointer)。
+
+呼叫`zeroptr`:
+
+``` go
+i := 1
+zeroptr(&i)
+fmt.Println( i)
+```
+
+`&i`會給 `i`的記憶體位址, 這裡i的數值就被改動了, 結果為0。
 
 
 ## More
