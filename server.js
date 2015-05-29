@@ -1,13 +1,10 @@
 var express = require('express');
 var conf = require('./conf');
+var utils = require('./utils');
 var marked = require('marked'); 
-var _ = require('lodash');
 var fs = require('fs');
 var Bluebird = require('bluebird');
 Bluebird.promisifyAll(fs);
-
-var utils = require('./utils');
-
 
 var app = express();
 
@@ -30,20 +27,22 @@ app.get('/', function(req, res){
     });
 });
 
-
 app.get('/posts/:post', function(req, res){
   var html = req.params.post;
-
   var titleArr = html.split('.')[0].split('-');
-  var headTitle = "Cho-Ching's Blog - " + titleArr[3];
+  var headTitle = conf.name + ' - ' + titleArr[3];
   var inPath = conf.articleSource + html.split('.')[0] + '.md';
 
-  fs.readFile(inPath, 'utf8', function(err, doc){
-    if (err) res.send('show post error!');
-    res.render('Post',{source: '../', title: headTitle,  content: marked(doc)});
-  });
+  fs.readFileAsync(inPath, 'utf8')
+    .then(marked)
+    .then(function(content){
+      res.render('Post',{
+        source: '../', 
+        title: headTitle,  
+        content: content
+      });
+    });
 });
-
 
 /** Error Handling **/
 
