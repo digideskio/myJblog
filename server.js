@@ -3,8 +3,11 @@ var conf = require('./conf');
 var marked = require('marked'); 
 var _ = require('lodash');
 var fs = require('fs');
-var Promise = require('bluebird');
-Promise.promisifyAll(fs);
+var Bluebird = require('bluebird');
+Bluebird.promisifyAll(fs);
+
+var utils = require('./utils');
+
 
 var app = express();
 
@@ -18,26 +21,15 @@ app.use('/css', express.static(__dirname + '/build/css'));
 
 app.get('/', function(req, res){
   fs.readdirAsync(conf.articleSource)
-    .then(function(lists){
-      return _(lists).reverse().value();
-    })
-    .map(function(md){
-      var titleArr = md.split('.')[0].split('-');
-      var postDate = titleArr[0] +'-'+ titleArr[1] +'-'+ titleArr[2];   
-      return fs.readFileAsync(conf.articleSource + md, 'utf8')
-        .then(function(content){
-          return {
-            link:  '/posts/' + md.split('.')[0] + '.html',
-            title: content.split('\n')[0], //像是:  # 標題  
-            date: postDate
-          };
-        });
-    })
-    .then(function(lists){
-      //console.log('lists: '+ JSON.stringify(lists));
-      res.render('Index',{source: './', title: "Cho-Ching's Blog", lists: lists});
+    .then(utils.reverseDirList)
+    .map(utils.parseInfo)
+    .map(utils.getPostList)
+    .then(utils.genIndex)
+    .then(function(indexPage){
+      res.send(indexPage);
     });
 });
+
 
 app.get('/posts/:post', function(req, res){
   var html = req.params.post;
