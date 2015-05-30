@@ -11,6 +11,6 @@ fs.readdirAsync(conf.articleSource)
   .map(utils.getPostList)
   .then(utils.genIndex)
   .then(fs.writeFileAsync.bind(fs, conf.buildto + 'index.html'))
-  .then(function(){
+  .done(function(){
     console.log('[done] index.html created.');
   });
