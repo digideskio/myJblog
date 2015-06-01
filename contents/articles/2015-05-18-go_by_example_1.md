@@ -90,9 +90,9 @@ HelloWorld
 
 使用 `var` keyword來宣告一個或多個變數並起可以同時賦予值, 宣告的方式就是var, 變數名, 變數type這樣。
 
-如果宣告變數沒有給初始值的話, Go就會給一個**zero-value** , 對int來說, zero-value就是0。
+如果宣告變數沒有給初始值的話, Go就會給一個**zero-value** 。 對int來說, zero-value就是0, boolean type就是false, string type就是`""`。
 
-`:=`是一個簡寫的方式, Go就會自動判斷`:=`是屬於哪種type。
+`:=`是一個簡寫的方式, Go就會自動判斷`:=`是屬於哪種type。在function外面,每個statements都要由一個關鍵字開始(`var`, `func`或是其他)不能直接用`:=`。
 
 
 ``` go
@@ -139,7 +139,9 @@ Go 是 block scope 。
 
 ## For loop 
 
-單一條件: 
+Go就只有一種循環結構, 叫作loop。
+
+單一條件(就是 `while`): 
 
 ``` go
 i := 1
@@ -157,6 +159,18 @@ for j := 7; j <= 9; j++ {
 }
 ```
 
+跟C或Java一樣, for的 pre statement和 post statment都可以為空, 例如: 
+
+``` go
+func main() {
+  sum := 1
+  for ; sum < 1000; {
+    sum += sum
+  }
+  fmt.Println(sum)
+}
+```
+
 for如果沒有條件, 就會一直循環下去: 
 
 ``` go
@@ -168,9 +182,9 @@ for {
 
 ## If/Else
 
-就跟大家的印象一樣。
+就跟大家的印象相同。
 
-可以在if條件裏面宣告以及初始變數, 在這條件式裏面宣告的變數, 在整個if/else branches都可以使用:
+if跟for一樣, 可以在條件裏面宣告以及初始變數, 在這條件式裏面宣告的變數, 在整個if/else branches都可以使用:
 
 ``` go 
 if num := 9; num < 0 {

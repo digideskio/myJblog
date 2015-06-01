@@ -6,6 +6,8 @@
 
 對Go來說, array就是一個有特定長度的元素的有號序列。
 
+`[n]T` type 就是一個有n個 T type值的陣列。 陣列的長度是其型別的一部份, 所以陣列item值可以改變, 但**陣列長度是不能變動的**
+
 以下宣告了一個長度為5, type為int的陣列, 注意陣列元素的初始值為0, 利用內建函式`len`傳回陣列長度: 
 
 ``` go 
@@ -39,13 +41,13 @@ b := [...]int{1, 2, 3, 4, 5}
 
 Slice像是功能更強大的array, array長度不能變動, slice可以。
 
-Slice長的就像array, 只是沒有宣告其長度: 
+Slice長的就像array, 只是沒有宣告其長度。`[]T`就是有型別為T的元素slice: 
 
 ``` go
 var s []string
 ```
 
-這樣會建立一個長度為0的slice。
+這樣會建立一個長度為0, 容量為0的slice。這個slice的值為`nil`。
 
 要建立一個非0長度的slice(元素初始值均為zero-value), 要利用Go內建的`make`: 
 
@@ -58,6 +60,12 @@ fmt.Println(s)
 
 ``` bash
 [   ]
+```
+
+也可以限制slice的容量(capcity): 
+
+``` go
+b := make([]int, 0, 5)  // len(b)=0, cap(b)=5
 ```
 
 操作方法都跟array一樣。
