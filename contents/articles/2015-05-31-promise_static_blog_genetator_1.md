@@ -1,4 +1,4 @@
-# [Promise][Bluebird] 做一個簡單的靜態Blog網站產生器(一)
+# [Promise][Bluebird] 做一個簡單的靜態Blog網站產生器
 
 利用 `Promise`方式做一個簡單的靜態Blog產生器。
 
@@ -169,7 +169,7 @@ html(lang='zh')
   body
     .Wrapper
       .Header
-        h1: a(href='/') Cho-Ching's Blog
+        h1: a(href='/') My Blog
       block main
       .Footer
         include ./Footer.jade
@@ -317,6 +317,127 @@ fs.readdirAsync(conf.articleSource)
     console.log('[done] index.html created.');
   });
 ```
+
+## Express Watch server
+
+平常開發的時候, 還要把markdown檔案編成html檔案後, 再啟動http server看修改內容實在很麻煩, 這時候有個監看的web server幫忙就好多了, 這裡我利用expressjs, nodemon, npm script很簡單的方式實現。
+
+安裝一下必要套件: 
+
+``` bash
+$ npm i --save express nodemon
+```
+
+[Express.js](http://expressjs.com/)是最普及的輕量化nodejs網頁框架, [nodemon](https://github.com/remy/nodemon)幫忙監控任何nodejs app檔案的變化, 一有變化就重新啟動server。
+
+在`package.json`加上script自動化一些動作: 
+
+``` js
+{
+  ...
+  "scripts": {
+    "dev": "nodemon server.js",
+    "build": "sass ./contents/scss/main.scss:build/css/main.css & node gen",
+    "scss": "sass --watch ./contents/scss/main.scss:build/css/main.css"
+  },
+  ...
+}
+```
+
+執行 `npm run dev` 就執行express watch server, 只要新增/修改了markdown文章, server就重新啟動, 那重新realod瀏覽器就可以看到更新後的結果。
+
+文章都寫好了, 確定要發佈就執行 `npm run build`, 就會直接呼叫`gen.js`和sass轉換css, 轉換好的`build`資料夾就可以整包拿去發佈。
+
+開發的時候若要改動外觀css, 那麼除了執行`npm run build`以外, 再執行`npm run scss`就會啟動監看sass檔案, 一有改動就會更新css。
+
+`server.js`就是我們的監看程式, 基本上, 就是利用我們寫的promise產生流程, 所以首先我們把`gen.js`的function全部抽出獨立成一個`util.js`, 設定的部份抽出成`conf.js`,  這樣`gen.js`和`server.js`都可以共用這些函式。
+
+`server.js` 基本內容就是, 引用函式庫, 使用jade樣板, 啟動, 然後沒相關的route全部導到錯誤處理這樣: 
+
+``` js
+
+var express = require('express');
+var conf = require('./conf');
+var utils = require('./utils');
+var marked = require('marked'); 
+var fs = require('fs');
+var Bluebird = require('bluebird');
+Bluebird.promisifyAll(fs);
+
+var app = express();
+
+app.listen(3000, function(){
+  console.log('server listening on port 3000');
+});
+
+app.set('views', './templates');
+app.set('view engine', 'jade');
+app.use('/css', express.static(__dirname + '/build/css'));
+
+//Blog Route
+
+//Err handling
+app.use(function(req, res, next){
+  var err = new Error('Not found');
+  err.status = 404;
+  next(err);
+});
+
+app.use(function(err, req, res, next){
+  if(err.status === 404) {
+    res.status(404).send('Not Found');
+  }
+  if(err.status === 500) {
+    console.log(err.stack);
+    res.status(500).send('Something broke!');
+  }
+});
+```
+
+再來加入要處理的routes: 要處理的route只有兩種, 一個就是index page, 另外就是每篇文章, 處理index page的route像這樣: 
+
+``` js
+//Blog Route
+app.get('/', function(req, res){
+  fs.readdirAsync(conf.articleSource)
+    .then(utils.reverseDirList)
+    .map(utils.parseInfo)
+    .map(utils.getPostList)
+    .then(utils.genIndex)
+    .then(function(indexPage){
+      res.send(indexPage);
+    });
+});
+``` 
+
+完全就把`gen.js` promise流程拿來用就對了! 這裡的流程和`gen.js`相比, 只是拿掉了`.each(utils.markdownToHtml)`每個markdown轉成html的部份, 以及最後我們沒有把index page寫入檔案, 而是把整個index page 直接傳回顯使給使用者(`res.send(indexPage)`)。
+
+顯示每篇文章的部份, 則是我們上述所寫到的`markdownToHtml` 函式的內容, 我們解析URL, 讀取解析出來對應的markdown檔案, 轉換html, 最後直接render解析jade樣板後, 傳送結果給使用者: 
+
+``` js
+//Blog Route
+app.get('/', function(req, res){
+  //...
+}
+
+app.get('/posts/:post', function(req, res){
+  var html = req.params.post;
+  var titleArr = html.split('.')[0].split('-');
+  var headTitle = conf.name + ' - ' + titleArr[3];
+  var inPath = conf.articleSource + html.split('.')[0] + '.md';
+
+  fs.readFileAsync(inPath, 'utf8')
+    .then(marked)
+    .then(function(content){
+      res.render('Post',{
+        source: '../', 
+        title: headTitle,  
+        content: content
+      });
+    });
+});
+```
+
 
 ## 大功告成
 
