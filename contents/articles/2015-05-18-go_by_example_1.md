@@ -233,6 +233,8 @@ witch {
 對 C/C++ 有經驗的朋友, 一定可以很快就上手Go, 另外還加上了python語法的簡潔, 
 程式讀起來很快就可以適應與理解其字面,  用起來令人開心!
 
+[First Go App](http://spf13.com/presentation/first-go-app/): spf13 非常棒的解說!!
+
 [官網 A Tour of Go](https://tour.golang.org/)
 
 [Go by Example](https://gobyexample.com)

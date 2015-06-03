@@ -166,7 +166,7 @@ fmt.Println(d)
 
 ## Range
 
-`range` iterator 可以幫助我們遍歷(browse)我們上面所提到的資料結構內的元素。
+`for` 加上 `range` iterator 可以幫助我們遍歷(browse)我們上面所提到的資料結構內的元素。
 
 ``` go
 nums := []int{1, 2, 3, 4}
@@ -184,6 +184,56 @@ for _, num := range nums {
   fmt.Println(num)
 }
 ```
+
+如果只要index, 那就把index後面逗號的全拿掉: 
+
+``` go 
+nums := []int{1, 2, 3, 4}
+for index := range nums {
+  fmt.Println(index)
+}
+```
+
+如果map的value是struct type: 
+
+``` go
+type Vertex struct {                                                                            
+  Lat, Long float64                                                                             
+}                                                                                               
+                                                                                                
+var m = map[string]Vertex{                                                                      
+  "Bell Labs": Vertex{                                                                          
+    40.1212, -74.123123,                                                                        
+  },                                                                                            
+  "Google": Vertex{                                                                             
+    37.213213, -123.213213,                                                                     
+  },                                                                                            
+} 
+```
+
+也可以把value的type省略不寫: 
+
+``` go
+type Vertex struct {                                                                            
+  Lat, Long float64                                                                             
+}                                                                                               
+                                                                                                
+var m = map[string]Vertex{                                                                      
+  "Bell Labs": {40.1212, -74.123123},                                                                                            
+  "Google": {37.213213, -123.213213}, //注意最後一個結尾還是要逗號
+} 
+```
+
+要刪除一個map的element使用`delete`, 利用第二個參數`ok`來測試是否該元素存在, 若ok傳回true: 
+
+``` go
+delete(m, "Google")                                                                           
+fmt.Println(m)                                                                                
+                                                                                              
+v, ok := m["Google"]                                                                          
+fmt.Println("The value:", v, "Present?", ok)   
+```
+
 
 range on map : 
 

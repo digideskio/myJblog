@@ -4,6 +4,8 @@
 
 感謝有 [Go Version Manager](https://github.com/moovweb/gvm)(gvm)提供了管理Go版本的介面, 讓安裝golang變的簡單。
 
+## 安裝GO
+
 安裝gvm之前, 先檢查我使用的Ubuntu 14.04有哪些需要前置安裝的套件: 
 
 ``` bash 
@@ -89,7 +91,46 @@ $ go version
 go version go1.4.2 linux/amd64
 ```
 
-重新讀取`~/.bashrc` 或是重新啟動終端機, go就可以用了! ya!
+重新讀取`~/.bashrc` 或是重新啟動終端機。
+
+## 設定 $GOPATH
+
+`GOPATH`環境變數是用來指定我們的工作區(workspace)包含相關函式庫的所在位置。
+
+利用gvm所提供的`pkgset`來設定 GOPATH, 例如我要新增一個pkgset叫作work: 
+
+``` bash
+$ echo $GOPATH
+/home/parks/.gvm/pkgsets/go1.4.2/global
+$ gvm pkgset use work
+Now using version go1.4.2@work
+$ echo $GOPATH
+/home/parks/.gvm/pkgsets/go1.4.2/work:/home/parks/.gvm/pkgsets/go1.4.2/global
+```
+
+這樣我們就使用`work`所在位置當作我們預設的workspace了。
+
+不過如果不想要用`$HOME/.gvm/pkgsets/go1.4.2/work`當作開發目錄的話, 我們可以手動來加上workspace路徑, 例如我想用`~/src/go`: 
+
+``` bash
+$ mkdir -p ~/src/go/{bin,pkg,src}
+```
+
+使用`gvm pkgenv`來修改環境變數: 
+
+``` bash
+$ gvm pkgenv work
+```
+
+這時候會打開預設編輯器秀出所有路徑, 只要修改 $GOPATH 和 $PATH加入新的workspace路徑(`~/src.go`), 和workspace的`bin`路徑就成: 
+
+``` bash
+...
+export gvm_pkgset_name="work"
+export GOPATH; GOPATH="/home/parks/.gvm/pkgsets/go1.4.2/work:$GOPATH:$HOME/src/go"
+export PATH; PATH="$HOME/src/go/bin:/home/parks/.gvm/pkgsets/go1.4.2/work/bin:$PATH"
+...
+```
 
 ## 設定Vim開發環境 -- 使用 vim-go
 是
@@ -111,7 +152,12 @@ Plugin 'fatih/vim-go'
 
 如果要自動完成,要安裝[YouCompleteMe](https://github.com/Valloric/YouCompleteMe), 如果要秀source code tag infomation, 要安裝[tagbar](https://github.com/majutsushi/tagbar)
 
-如果要使用godoc查找資料, 要先安裝godoc tool, 就可以使用像是`:GoDoc fmt println`來查看文件
+如果要使用godoc查找資料, 要先安裝godoc tool, 就可以使用像是`:GoDoc fmt println`來查看文件, 
+或是直接在所使用function上, 執行`:GoDoc` 就會列出該函式說明, 或是執行`:GoDef`查看該函式source code。
+
+執行 `:GoPath` 就會秀出$GOPATH。
+
+執行 `:GoRun` 就相當於執行`go run 你的go程式.go`。
 
 ![Hello](http://i.imgur.com/T2FL1Lr.jpg) 
 
@@ -121,4 +167,7 @@ Plugin 'fatih/vim-go'
 
 [gvm with golang](http://www.ascent.io/blog/2014/03/11/gvm-with-golang/)
 
+[managing a go environment in ubuntu](https://larry-price.com/blog/2015/01/18/managing-a-go-environment-in-ubuntu)
+
+[building a rest service with golang -1](http://stevenwhite.com/building-a-rest-service-with-golang-1/) : gvm & go workspace設定
 
