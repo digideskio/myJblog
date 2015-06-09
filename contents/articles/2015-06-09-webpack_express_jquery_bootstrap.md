@@ -279,7 +279,7 @@ app.listen(port, function(){
 
 ## Production 設定
 
-另外寫一個`webpack.production.config.js`, 與原來`webpack.config.js`的差別在於我們拿掉了所有有關webpack-dev-server的設定: 
+另外寫一個`webpack.production.config.js`:
 
 ``` js
 ...
@@ -294,9 +294,16 @@ config.plugins= [
     $: "jquery",
     jQuery: 'jquery',
     _: "lodash"
+  }),
+  new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      warnings: false
+    }
   })
 ];
 ```
+與原來`webpack.config.js`的差別在於, 我們拿掉了所有有關webpack-dev-server的設定, 
+另外設定了`UglifyJSPlugin`的選項把warnning訊息取消掉。
 
 ## app/main.js
 
