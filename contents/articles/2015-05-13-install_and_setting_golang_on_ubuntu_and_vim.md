@@ -165,6 +165,8 @@ Plugin 'fatih/vim-go'
 
 ## more
 
+[Go wiki](https://github.com/golang/go/wiki): Go語言相關資源蒐集
+
 [gvm with golang](http://www.ascent.io/blog/2014/03/11/gvm-with-golang/)
 
 [managing a go environment in ubuntu](https://larry-price.com/blog/2015/01/18/managing-a-go-environment-in-ubuntu)

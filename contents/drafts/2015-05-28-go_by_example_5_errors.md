@@ -3,6 +3,16 @@
 Go慣用處理錯誤的方式, 是讓function傳回兩個值,例如: 
 
 ``` go
+fd, err := os.Open("test.go")
+if err != nil {
+  log.Fatal(err)
+}
+```
+
+
+
+
+``` go
 package main
 
 import (
