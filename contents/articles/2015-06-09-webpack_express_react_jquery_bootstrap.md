@@ -1,4 +1,4 @@
-# [Webpack] jQuery + Boostrap + Express dev/production server 
+# [Webpack][React] jQuery + Boostrap + Express dev/production server 
 
 [Webpack](https://github.com/webpack/webpack)是一個module bundler。利用webpack就可以開心的管理我們的前端程式碼了, 使用npm管理module, 輸出source maps, 將大的javscript檔案拆成多個檔案, 幫我們前置處理像是jsx, coffeescript, sass, ES6.... 
 
@@ -68,11 +68,13 @@ app.listen(port, function(){
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prototype</title>
 </head>
 <body>
+  <div id="app"></div>
+  <script type="text/javascript" src="build/bundle.js"></script>
 </body>
-<script type="text/javascript" src="build/bundle.js"></script>
 </html>
 ``` 
 
@@ -136,7 +138,7 @@ config.output= {
 config.module = {};
 config.module.loaders= [
   {
-    test: /\.js$/, 
+    test: /\.(js|jsx)$/, 
     loader: 'babel', 
     exclude: [nodeModulePath]
   },
@@ -157,7 +159,9 @@ config.module.loaders= [
 
 [Loaders](http://webpack.github.io/docs/loaders.html)就很像其他build工具(例如gulp)裏面的`tasks`用來轉換檔案, 引用的loader名字可以簡寫例如`babel-loader`可以簡寫為`babel`。Loader是可串聯的, 串聯利用`!`來表示, 例如`style!css!sass`表示style-loader處理完換css-loader處理,最後sass-loader處理。
 
-上面的意思這樣就很好理解了, 只要js檔案(除了`node_modules`)都會先利用babel-loader前置處理轉換ES6程式碼, 剩下類推。loders可參考 [Loader列表](http://webpack.github.io/docs/list-of-loaders.html)
+上面的意思這樣就很好理解了, 只要js檔案(除了`node_modules`)都會先利用babel-loader前置處理轉換ES6程式碼, 剩下類推。 babel-es6支援 react的[JSX](https://facebook.github.io/jsx/)語法處理, 因此我們的.jsx或是js檔案都使用babel-loader來前置處理。 
+
+loders可參考 [Loader列表](http://webpack.github.io/docs/list-of-loaders.html)
 
 記得要安裝相關loader套件: 
 
@@ -172,9 +176,10 @@ $ npm i -save-dev babel-loader style-loader css-loader url-loader sass-loader
 config.plugins= [
   new webpack.HotModuleReplacementPlugin(),
   new webpack.ProvidePlugin({
-    $: "jquery",
+    $: 'jquery',
     jQuery: 'jquery',
-    _: "lodash"
+    _: 'lodash',
+    React: 'react'
   })
 ];
 ```
@@ -291,9 +296,10 @@ config.output= {
 ...
 config.plugins= [
   new webpack.ProvidePlugin({
-    $: "jquery",
+    $: 'jquery',
     jQuery: 'jquery',
-    _: "lodash"
+    _: 'lodash',
+    React: 'react'
   }),
   new webpack.optimize.UglifyJsPlugin({
     compress: {
