@@ -10,7 +10,7 @@
 
 官網的內容很多, 先縮小一下範圍, 假設一下我的使用情境: 這次我想使用webpack, 管理我的[SPA](http://en.wikipedia.org/wiki/Single-page_application), 做一個可以很快速產出prototyping的環境。
 
-我的SPA會大量用到boostrap和jQuery, SPA和REST API有可能會放在相同的Express server上,  我的Express server開發的時候可以hot-reload, 當我改變我的sass或是js程式碼的時候, 就會有webpack幫我在記憶體自動編譯,然後瀏覽器就會重新載入顯示更改過後的結果, 當我想要上線的時候, 透過webpack可以幫我的前端程式碼最佳化。 
+我的SPA會大量用到[react](https://facebook.github.io/react/), boostrap和jQuery, SPA和REST API有可能會放在相同的Express server上,  我的Express server開發的時候可以hot-reload, 當我改變我的sass或是js程式碼的時候, 就會有webpack幫我在記憶體自動編譯,然後瀏覽器就會重新載入顯示更改過後的結果, 當我想要上線的時候, 透過webpack可以幫我的前端程式碼最佳化。 
 
 ## 檔案結構
 
@@ -337,6 +337,8 @@ require('bootstrap'); /* bootrstap.min.js */
 不管是啟動開發或是production的bundle, 都先把`public/build`的內容物清除, 執行`npm run dev`就啟動了有webpack-dev-server的環境, 這樣只要修改任何的js或css檔案都會即時的前置編譯並在瀏覽器即時顯示修改結果。
 
 執行`npm run build`就會使用`webpack.production.config.js`設定檔做編譯, 實際的將bundle好的檔案寫入到`public/build`去。
+
+完整的結果我放在[這裡](https://github.com/luchoching/webpack-express-prototyping)。
 
 
 ## More 
