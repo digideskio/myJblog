@@ -68,6 +68,12 @@ img {
   background-color: palette(Blue Grey, 50);
 }
 
+.Menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .Posts {
   list-style: none; 
   padding: 0.2em;
@@ -117,6 +123,17 @@ img {
 
 .Main {
   flex: 1;
+
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+}
+
+.Menu {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 50em){
@@ -124,6 +141,25 @@ img {
     width: 50em;
     margin: 0 auto;
   }
+
+  .Header, .Menu {
+    flex-direction: row;
+  }
+
+  .Header {
+    justify-content: space-between;
+    h1 {
+      flex: 1;
+    }
+    .Menu {
+      justify-content: flex-end;
+      flex: 0 0 25%;
+      li {
+        padding: 0 0.5em 0 0.5em;
+      }
+    }
+  }
+
 }
 
 
