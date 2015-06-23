@@ -44,6 +44,24 @@ app.get('/posts/:post', function(req, res){
     });
 });
 
+app.get('/pages/:page', function(req, res){
+  var html = req.params.page;
+  var title = html.split('.')[0];
+  var headTitle = conf.name + ' - ' + title;
+  var inPath = conf.pageSource + title + '.md';
+
+  fs.readFileAsync(inPath, 'utf8')
+    .then(marked)
+    .then(function(content){
+      res.render('Post',{
+        source: '../', 
+        title: headTitle,  
+        content: content
+      });
+    });
+});
+
+
 /** Error Handling **/
 
 //Undefined route we send the 404 not find error
