@@ -17,4 +17,6 @@
 
 [Electron + react](https://speakerdeck.com/dannvix/electron-x-react-qian-duan-kai-fa-zhe-gao-su-kua-jie-zhuo-mian-kai-fa)
 
+[react in 樂天](http://slides.com/jaydenlin/reactjs-in-rakuten-taiwan#/)
+
 [meetup 7](https://speakerdeck.com/coodoo/reactjs-dot-tw-meetup-7-ji-shu-hui-bao): shadow-rendering, karma/mocha + inject-loader

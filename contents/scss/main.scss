@@ -25,6 +25,12 @@ code {
   font-size: 90%;
 }
 
+blockquote {
+  padding-left: 0.5em;
+  margin: 0;
+  font-style: italic;
+  background-color: palette(Blue Grey, 50);
+}
 
 a {
   text-decoration: none;
