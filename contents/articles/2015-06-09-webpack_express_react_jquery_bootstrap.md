@@ -345,6 +345,8 @@ require('bootstrap'); /* bootrstap.min.js */
 
 [The ultimate webpack setup](http://www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup)
 
+[webpack with practical examples](http://julienrenaux.fr/2015/03/30/introduction-to-webpack-with-practical-examples/)
+
 [gulp、webpackでjqueryプラグイン(scrollmagic、tweenmax等)を使う時の設定](http://qiita.com/ktkt/items/17e4fe57f6e6ecf65677)
 
 [react-webpack-node](https://github.com/choonkending/react-webpack-node/blob/master/webpack.config.js)
