@@ -1,6 +1,4 @@
-# 英文筆記
-
-## "I seen it" and other stupid mistakes
+# "I seen it" and other stupid mistakes
 
 [youtube link](https://youtu.be/ljKhIxcrhwk) , [voicetube link](https://tw.voicetube.com/videos/1215?ref=hot-week)
 
@@ -57,7 +55,7 @@ PP有兩個字, 所以要用兩個字:
 
 If I see an "if", then should use "**were**" instead of "**was**".
 
-> If I were you, I would go back and do the lesson again.
+> If I were you, I **would** go back and do the lesson again.
 
 "wa**s**" for "**s**ituation": 
 
