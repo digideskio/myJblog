@@ -19,13 +19,25 @@ app.use('/css', express.static(__dirname + '/build/css'));
 app.get('/', function(req, res){
   fs.readdirAsync(conf.articleSource)
     .then(utils.reverseDirList)
-    .map(utils.parseInfo)
+    .map(utils.parsePostInfo)
     .map(utils.getPostList)
-    .then(utils.genIndex)
+    .then(utils.genPostIndex)
     .then(function(indexPage){
       res.send(indexPage);
     });
 });
+
+app.get('/english', function(req, res){
+  fs.readdirAsync(conf.englishSource)
+    .then(utils.reverseDirList)
+    .map(utils.parseEnglishPostInfo)
+    .map(utils.getEnglishPostList)
+    .then(utils.genEnglishPostIndex)
+    .then(function(indexPage){
+      res.send(indexPage);
+    });
+});
+
 
 app.get('/posts/:post', function(req, res){
   var html = req.params.post;
@@ -44,6 +56,22 @@ app.get('/posts/:post', function(req, res){
     });
 });
 
+app.get('/english/:post', function(req, res){
+  var html = req.params.post;
+  var titleArr = html.split('.')[0].split('-');
+  var headTitle = conf.name + ' - ' + titleArr[3];
+  var inPath = conf.englishSource + html.split('.')[0] + '.md';
+
+  fs.readFileAsync(inPath, 'utf8')
+    .then(marked)
+    .then(function(content){
+      res.render('Post',{
+        source: '../', 
+        title: headTitle,  
+        content: content
+      });
+    });
+});
 app.get('/pages/:page', function(req, res){
   var html = req.params.page;
   var title = html.split('.')[0];
