@@ -1,4 +1,4 @@
-# [ES6] ECMAScript 6筆記(二) -- iteration protocols + for...of
+# [ES6] ECMAScript 6筆記(二) -- iteration protocols + for...of + generators, yield
 
 參考Babel的[learn-es2015](https://babeljs.io/docs/learn-es2015/)和 [MDN- iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)的解釋。
 
@@ -100,9 +100,95 @@ for (var n of fibonacci) {
 }
 ```
 
+## generator function + yield
+
+`function`宣告前面加上`*`號, 就表示我們定義了一個`genrator function`. 這個函式會傳回一個`Generator`物件。
+
+``` js
+function * name([param[, param[, ... param]]]) {
+  //statements
+}
+```
+
+Generators are functions which can be exited and later re-entered. Their context (variable bindings) will be saved across re-entrances.
+
+呼叫generator function不會立刻執行,會先回傳一個`iterator`物件, 當iterator物件的`next()` method被呼叫, 這個函式的主體就會開始執行,直到遇到第一個`yield`運算式為止。
+
+`yield` 會從iterator指定一個值回傳, 或是連同`yield*`發送值給其他的generator function。
+
+接下來`next()` method傳回一個物件, 這個物件帶有一個包含被送出(yielded)的值的屬性,以及一個`done`屬性指出是否這個generator已經發送出其最新的值。
+
+例如: 
+
+``` js
+function* idMaker(){
+  var index = 0;
+  while(index < 3)
+    yield index++;
+}
+
+var gen = idMaker();
+
+console.log(gen.next()); // { value: 0, done: false }
+console.log(gen.next()); // { value: 1, done: false }
+console.log(gen.next()); // { value: 2, done: false }
+console.log(gen.next()); // { value: undfined, done: true }
+```
+
+使用 `yield*` 呼叫其他的generator function: 
+
+``` js
+function* anotherGenerator(i) {
+  yield i + 1;
+  yield i + 2;
+  yield i + 3;
+}
+
+function* generator(i){
+  yield i;
+  yield* anotherGenerator(i);
+  yield i + 10;
+}
+
+var gen = generator(10);
+
+console.log(gen.next().value); // 10
+console.log(gen.next().value); // 11
+console.log(gen.next().value); // 12
+console.log(gen.next().value); // 13
+console.log(gen.next().value); // 20
+```
+
+babel範例, 改寫: 
+
+``` js
+'use strict';
+require("babel/polyfill");
+var fibonacci = {
+  [Symbol.iterator]: function*() {
+    var pre = 0, cur = 1;
+    for (;;) {
+      var temp = pre;
+      pre = cur;
+      cur += temp;
+      yield cur;
+    }
+  }
+}                                                                                                                                       
+for (var n of fibonacci) {
+  // truncate the sequence at 1000                                                                                                      
+  if (n > 1000)
+    break;
+  console.log(n);
+}
+```
+
+
+
 ## More 
 
 [iteration Iteration_protocols -- MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 
 [for-of -- MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
+[function * -- MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*)
