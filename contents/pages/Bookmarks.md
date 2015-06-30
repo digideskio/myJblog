@@ -25,9 +25,9 @@
 
 [running node forever with Systemd and PM2](http://www.terlici.com/2015/06/20/running-node-forever.html?utm_source=nodeweekly&utm_medium=email)
 
-[Create and Verify JWTs With Node.js](https://stormpath.com/blog/nodejs-jwt-create-verify/?utm_source=nodeweekly&utm_medium=email)
-
 [Dockerizing a Node.js web app](https://docs.docker.com/examples/nodejs_web_app/?utm_source=nodeweekly&utm_medium=email)
+
+[Mongorito](http://mongorito.com/): MongoDB ODM for nodejs based on ES6 generators.
 
 ## System
 
