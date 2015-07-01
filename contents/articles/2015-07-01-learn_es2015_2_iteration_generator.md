@@ -1,4 +1,4 @@
-# [ES6] ECMAScript 6筆記(二) -- iteration protocols + for...of + generators, yield
+# [ES6] ECMAScript 6 筆記(二) -- iteration, generator
 
 參考Babel的[learn-es2015](https://babeljs.io/docs/learn-es2015/)和 [MDN- iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)的解釋。
 
@@ -182,8 +182,6 @@ for (var n of fibonacci) {
   console.log(n);
 }
 ```
-
-
 
 ## More 
 

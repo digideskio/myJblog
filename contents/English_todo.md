@@ -20,4 +20,39 @@
 
 ## yield
 
+## thread 
 
+## routine
+
+## concurrently 
+
+at the same time 
+
+## fall
+
+v. 
+
+move downward, typically rapidly and freely without control, from a higher to a lower level.
+
+
+## through
+
+介系詞
+
+moving in one side and out of the other side of(an opening, channel, or location).
+
+from one side to the other, from the end to another, in and out the other side
+
+形容詞
+
+## fall through
+
+## rather than
+
+而不是
+
+## convey 
+
+傳達
+
+transport or carry to a place.
