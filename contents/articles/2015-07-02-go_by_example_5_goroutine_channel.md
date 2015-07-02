@@ -157,6 +157,8 @@ func main() {
 會得到印出`ping`的結果。
 
 
+## Channel Synchronization
+
 Channels提供了兩個goroutines溝通的方法, 兩個goroutine可以利用channel來做同步他們執行的結果, 例如:
 
 ``` go
@@ -213,10 +215,106 @@ func main() {
 
 就會得到`ping`和`pong`依序連續輸出的結果。
 
-## More
+再來一個例子: 
 
-[官網 Go Slices: usage and internals](http://blog.golang.org/go-slices-usage-and-internals)
+``` go 
+package main
+import (
+  "fmt" 
+  "time"
+)
+func worker(done chan bool) {
+  fmt.Println("working...")
+  time.Sleep(time.Second) 
+  fmt.Println("done")
+  done <- true 
+}
+func main() {
+  done := make(chan bool, 1)
+  go worker(done)
+  <-done
+}
+```
+
+function `worker`在做完他自身的事情後, 會透過`done` channel來告訴其他的goroutine本身的工作已經完成(`done <- true`)。
+
+最後一行表示在還沒收到`worker`的結果回傳時都是block住的, 確定收到`done` channel傳回來的結果後才會繼續執行。
+
+如果把最後一行`<-done`移除, 程式就會在`worker`開始前就跳出了。
+
+
+## Buffered channels
+
+Channel預設是*unbuffered*, 意味著要同時有送(`chan<-`)以及收(`<-chan`)兩端才行。
+
+那`Buffered channels`不需要有接收者, 提供有限數量的數值儲存。
+
+``` go
+package main
+import "fmt"
+func main() {
+  messages := make(chan string, 2)
+  messages <- "buffered"
+  messages <- "channel"
+  fmt.Println(<-messages)
+  fmt.Println(<-messages)
+} 
+```
+
+上述我們建立了一個可以儲存兩個值的buffered channel, 
+
+因為 channel是buffered, 所以我們可以送數值到channel而不需要有對應的接受者。
+
+那如果超過buffer大小呢? 例如我們多塞一個數值到channel去: 
+
+``` go
+package main
+import "fmt"
+func main() {
+  messages := make(chan string, 2)
+  messages <- "buffered"
+  messages <- "channel"
+  messages <- "foo"
+  fmt.Println(<-messages)
+  fmt.Println(<-messages)
+} 
+```
+
+執行就會報錯: 
+
+``` 
+fatal error: all goroutines are asleep - deadlock!
+```
+
+## Channel Directions
+
+如果我們把channel當作function的參數, 我們可以指定這個channel參數是可以接收或是傳送數值, 這樣大大增加了程式的型別檢查安全性。
+
+``` go
+package main
+import "fmt"
+func ping(pings chan<- string, msg string) {
+  pings <- msg
+}
+func pong(pings <-chan string, pongs chan<- string) {
+  msg := <-pings
+  pongs <- msg
+}
+func main() {
+  pings := make(chan string, 1)
+  pongs := make(chan string, 1)
+  ping(pings, "passed msg")
+  pong(pings, pongs)
+  fmt.Println(<-pongs)
+}
+```
+
+function `ping`只接受用來傳送數值的channel, function `pong`只接收用來傳送數值的channel `pongs`, 和接收數值的channel `pings`。
+
+## More
 
 [官網 A Tour of Go](https://tour.golang.org/)
 
 [Go by Example](https://gobyexample.com)
+
+[An introduction to Programming in Go](http://www.golang-book.com/)
