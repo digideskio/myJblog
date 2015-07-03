@@ -56,3 +56,34 @@ from one side to the other, from the end to another, in and out the other side
 傳達
 
 transport or carry to a place.
+
+## wait on 
+
+v. attend, serve, attend to, assist
+
+## otherwise
+
+除此之外
+
+## bound 
+
+adj. heading toward somewhere.
+
+n. a leaping movement upward. 
+
+v. walk or run with leaping strides
+
+## leaping
+
+## rewind
+
+v. 倒帶
+
+a mechanism for rewinding a tape or film. 
+
+## a litte bit
+
+## clause
+
+n. 條款
+

@@ -36,3 +36,7 @@
 ## Go
 
 [echo 1.0](http://echo.labstack.com/): a fast HTTP router (zero dynamic memory allocation) and micro web framework in Go.
+
+[A Go, Docker workflow](http://blog.crowdpatent.com/a-go-docker-workflow/?utm_source=golangweekly&utm_medium=email)
+
+[Writing Microservices in Go](http://nordicapis.com/writing-microservices-in-go/?utm_source=golangweekly&utm_medium=email)
