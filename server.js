@@ -38,12 +38,40 @@ app.get('/english', function(req, res){
     });
 });
 
+app.get('/draft', function(req, res){
+  fs.readdirAsync(conf.draftSource)
+    .then(utils.reverseDirList)
+    .map(utils.parseDraftPostInfo)
+    .map(utils.getDraftPostList)
+    .then(utils.genDraftPostIndex)
+    .then(function(indexPage){
+      res.send(indexPage);
+    });
+});
 
 app.get('/posts/:post', function(req, res){
   var html = req.params.post;
   var titleArr = html.split('.')[0].split('-');
   var headTitle = conf.name + ' - ' + titleArr[3];
   var inPath = conf.articleSource + html.split('.')[0] + '.md';
+
+  fs.readFileAsync(inPath, 'utf8')
+    .then(marked)
+    .then(function(content){
+      res.render('Post',{
+        source: '../', 
+        title: headTitle,  
+        content: content
+      });
+    });
+});
+
+
+app.get('/draft/:post', function(req, res){
+  var html = req.params.post;
+  var titleArr = html.split('.')[0].split('-');
+  var headTitle = conf.name + ' - ' + titleArr[3];
+  var inPath = conf.draftSource + html.split('.')[0] + '.md';
 
   fs.readFileAsync(inPath, 'utf8')
     .then(marked)

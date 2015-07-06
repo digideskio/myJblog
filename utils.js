@@ -41,6 +41,10 @@ function parseEnglishPostInfo(fileName){
   return parseInfo(fileName, conf.englishSource, 'english');
 }
 
+function parseDraftPostInfo(fileName){
+  return parseInfo(fileName, conf.draftSource, 'draft');
+}
+
 function parsePageInfo(fileName){
   var title = fileName.split('.')[0];
   return {
@@ -83,22 +87,15 @@ function getList(md, dest){
 
 function getPostList(md){
   return getList(md, 'posts');
-  /*
-  return md.content
-    .then(function(data){
-      return {
-        link: '/posts/' + md.fileName.split('.')[0] + '.html',
-        title: data.split('\n')[0], //像是:  # 標題  
-        date: md.postDate
-      };
-    });
-  */
 }
 
 function getEnglishPostList(md){
   return getList(md, 'english');
 }
 
+function getDraftPostList(md){
+  return getList(md, 'draft');
+}
 
 //產生index.html
 function genIndex(lists, css_source){
@@ -118,14 +115,20 @@ function genEnglishPostIndex(lists){
   return genIndex(lists, '../');
 }
 
+function genDraftPostIndex(lists){
+  return genIndex(lists, '../');
+}
 module.exports = {
   reverseDirList: reverseDirList,
   parsePostInfo: parsePostInfo,
   parseEnglishPostInfo: parseEnglishPostInfo,
   parsePageInfo: parsePageInfo,
+  parseDraftPostInfo: parseDraftPostInfo,
   markdownToHtml: markdownToHtml,
   getPostList: getPostList,
   getEnglishPostList: getEnglishPostList,
+  getDraftPostList: getDraftPostList,
   genPostIndex: genPostIndex,
-  genEnglishPostIndex: genEnglishPostIndex
+  genEnglishPostIndex: genEnglishPostIndex,
+  genDraftPostIndex: genDraftPostIndex
 };
