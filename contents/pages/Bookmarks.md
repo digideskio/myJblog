@@ -21,7 +21,7 @@
 
 [meetup 7](https://speakerdeck.com/coodoo/reactjs-dot-tw-meetup-7-ji-shu-hui-bao): shadow-rendering, karma/mocha + inject-loader
 
-## Node.js
+## JavsScript/ Node.js
 
 [running node forever with Systemd and PM2](http://www.terlici.com/2015/06/20/running-node-forever.html?utm_source=nodeweekly&utm_medium=email)
 
@@ -29,14 +29,71 @@
 
 [Mongorito](http://mongorito.com/): MongoDB ODM for nodejs based on ES6 generators.
 
+[Javascript Async Control Flow](http://kaye.us/javascript-async-control-flow/)
+
+[You Might Not Need Underscore](https://www.reindex.io/blog/you-might-not-need-underscore/?utm_source=javascriptweekly&utm_medium=email)
+
+## MongoDB
+
+[spf13- OSCON 2012 MongoDB tutorial](http://www.slideshare.net/spf13/oscon-2012)
+
+## HTML5/WEB
+
+[Introduction to the Fetch API](http://www.sitepoint.com/introduction-to-the-fetch-api/?utm_source=javascriptweekly&utm_medium=email)
+
+
 ## System
 
 [vim mode in bash](http://blog.sanctum.geek.nz/vi-mode-in-bash/)
 
-## Go
+## Go Web Framework
+
+[terryh - golang-web](http://blog.lifetaiwan.net/2014/05/golang-web.html) 
+
+[building web application with golang](https://github.com/astaxie/build-web-application-with-golang) ebook ,有全中文
+
+[Build you own Web Framework in Go](https://www.nicolasmerouze.com/build-web-framework-golang/)
+
+[Ask HN: Which Go Web Framework (Pros and Cons)?](https://news.ycombinator.com/item?id=8772760)
+
+[which web Framework if any do you recommend](http://www.reddit.com/r/golang/comments/2ha1z2/which_web_framework_if_any_do_you_recommend/)
 
 [echo 1.0](http://echo.labstack.com/): a fast HTTP router (zero dynamic memory allocation) and micro web framework in Go.
+
+[goji](https://github.com/zenazn/goji): Goji is a minimalistic web framework for Golang that's high in antioxidants. 
+
+[Building a REST service with Golang](http://stevenwhite.com/building-a-rest-service-with-golang-1/)
+
+[How to implement JSON-API standard in MongoDB and Go](http://nicolasmerouze.com/how-to-render-json-api-golang-mongodb/)
+
+[A RESTful Micro-Framework in Go](http://dougblack.io/words/a-restful-micro-framework-in-go.html) : Flask-RESTful 維護者寫的
+
+## GO Testing
+
+[painless mongdb testing with docker and golang](http://developers.almamedia.fi/painless-mongodb-testing-with-docker-and-golang/)
+
+[RESTful Go: An API Server with 90%+ Test Coverage in 260 Lines of Code](http://modocache.io/restful-go)
+
+## MongoDB & Go
+
+[Mgo GoDoc](http://godoc.org/gopkg.in/mgo.v2)
+
+[mgo example gist](https://gist.github.com/border/3489566_
+
+[running mongodb queries concurrently with go](http://blog.mongodb.org/post/80579086742/running-mongodb-queries-concurrently-with-go)
+
+## Go 
+
+[go tutorial with mongodb on heroku](http://blog.jeffdouglas.com/2014/07/25/go-tutorial-with-mongodb-on-heorku/): 有很多學go的資源提示
+
+[golang planet](http://golang-planet.com/)
+
+[GopherCon 2014 - opening day keynote - by Rob Pike](http://confreaks.tv/videos/gophercon2014-opening-day-keynote)
+[spf13- Building your first go app - OSCON](http://www.slideshare.net/spf13/go-firstapp?ref=http://spf13.com/presentation/first-go-app/)
+
+[mgo](https://labix.org/mgo) Rich MongoDB driver for Go.
 
 [A Go, Docker workflow](http://blog.crowdpatent.com/a-go-docker-workflow/?utm_source=golangweekly&utm_medium=email)
 
 [Writing Microservices in Go](http://nordicapis.com/writing-microservices-in-go/?utm_source=golangweekly&utm_medium=email)
+

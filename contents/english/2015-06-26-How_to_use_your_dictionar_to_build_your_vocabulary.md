@@ -99,6 +99,20 @@ a unit of pronuciation having one vowel sound, with or without surrounding conso
 
 母音
 
+## whenever
+ 
+adv. 每當
+
+used for emphasis instead of "when" in question, typically expressing surprise or confusion.
+
+> Whenever shall we get there? 
+
+連接詞. 無論何時
+
+at whatever time, on whatever occation(emphasizing a lack of restriction)
+
+> you can ask for help whenever you need it.
+
 ## 如何學習字彙
 
 進階用prescriptive dictionary, 新手用 descriptive dictionary.
@@ -109,4 +123,8 @@ Learning vocabulary is
   3. know how to say it
   4. understand what it means.
 
-(待續)
+每天練習的方法: 
+
+  1. 字典查找字彙後, 觀察其上下的單字,主要理解其 *prefix*, prefix有特定意義
+  2. 隨機翻找3個單字, 嘗試用這3個單字造句。
+
