@@ -37,7 +37,9 @@
 
 [spf13- OSCON 2012 MongoDB tutorial](http://www.slideshare.net/spf13/oscon-2012)
 
-## HTML5/WEB
+## WEB/HTML5/CSS3
+
+[Material Design Lite](http://www.getmdl.io/)
 
 [Introduction to the Fetch API](http://www.sitepoint.com/introduction-to-the-fetch-api/?utm_source=javascriptweekly&utm_medium=email)
 
@@ -50,7 +52,8 @@
 
 [terryh - golang-web](http://blog.lifetaiwan.net/2014/05/golang-web.html) 
 
-[building web application with golang](https://github.com/astaxie/build-web-application-with-golang) ebook ,有全中文
+[building web application with golang](http://astaxie.gitbooks.io/build-web-application-with-golang/content/zh/index.html) ebook
+
 
 [Build you own Web Framework in Go](https://www.nicolasmerouze.com/build-web-framework-golang/)
 
@@ -78,7 +81,7 @@
 
 [Mgo GoDoc](http://godoc.org/gopkg.in/mgo.v2)
 
-[mgo example gist](https://gist.github.com/border/3489566_
+[mgo example gist](https://gist.github.com/border/3489566_)
 
 [running mongodb queries concurrently with go](http://blog.mongodb.org/post/80579086742/running-mongodb-queries-concurrently-with-go)
 
@@ -89,11 +92,13 @@
 [golang planet](http://golang-planet.com/)
 
 [GopherCon 2014 - opening day keynote - by Rob Pike](http://confreaks.tv/videos/gophercon2014-opening-day-keynote)
-[spf13- Building your first go app - OSCON](http://www.slideshare.net/spf13/go-firstapp?ref=http://spf13.com/presentation/first-go-app/)
 
-[mgo](https://labix.org/mgo) Rich MongoDB driver for Go.
+[spf13- Building your first go app - OSCON](http://www.slideshare.net/spf13/go-firstapp?ref=http://spf13.com/presentation/first-go-app/)
 
 [A Go, Docker workflow](http://blog.crowdpatent.com/a-go-docker-workflow/?utm_source=golangweekly&utm_medium=email)
 
 [Writing Microservices in Go](http://nordicapis.com/writing-microservices-in-go/?utm_source=golangweekly&utm_medium=email)
 
+[How to code a markdown blog system in Go](http://blog.definedcode.com/creating-blog-go)
+
+[how to read-writing file from file](http://stackoverflow.com/questions/1821811/how-to-read-write-from-to-file)

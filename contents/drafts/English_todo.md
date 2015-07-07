@@ -263,4 +263,13 @@ a person or thing that gives rise to an action, phenomennon, or condition.
 
 a person's name written in a distinctive way as a form of identification in authorizing a check of document or concluding a letter
 
+## permit
+
+n. 許可證, authorization, license, pass, ticket
+
+an official document giving someone authorization to do something.
+
+v. 許可, allow
+
+give authorization or consent to (someone) to do something
 
