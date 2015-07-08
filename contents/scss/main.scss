@@ -67,6 +67,7 @@ img {
     margin: 0;
     padding: 0.2em;
     font-size: 1.2em;
+    border-bottom: 1px solid white;
     a {
       color: palette(Pink);
     }
@@ -78,10 +79,12 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 0.9em;
   li {
     color: palette(Blue);
     font-weight: bold;
     padding-left: 1em;
+    border-bottom: 1px solid white;
     &:hover {
       background-color: palette(Pink);
       a {
@@ -93,14 +96,19 @@ img {
 
 .Posts {
   list-style: none; 
-  padding: 0.2em;
-  margin: 0.2em;
+  padding: 0em;
+  margin: 0em;
 
   li {
-    margin-top: 0.2em;
-    padding: 0.1em;
+    font-size: 0.5em;
+    padding: 0.2em;
+    border-bottom: 1px dotted palette(Blue Grey, 200);
     &:hover {
       background-color: palette(Blue Grey, 50);
+      //border: none;
+      a {
+        color: palette(Pink)
+      }
     }
   }
 }
@@ -161,6 +169,10 @@ img {
 
   .Header, .Menu {
     flex-direction: row;
+  }
+
+  .Posts  li {
+    font-size: 0.9em;
   }
 
   .Header {
