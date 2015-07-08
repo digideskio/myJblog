@@ -13,8 +13,12 @@ body {
   color: palette(Blue Grey, 900);
 }
 
-pre, code {
+pre  {
   background-color: palette(Blue Grey, 50);
+  code {
+    background-color: palette(Blue Grey, 50);
+    color: palette(Blue Grey);
+  }
 }
 
 pre {
@@ -22,8 +26,13 @@ pre {
 }
 
 code {
-  font-size: 90%;
+  color: palette(Blue, 700);
+  background-color: palette(Blue Grey, 50);
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-radius: 0.5em;
 }
+
 
 blockquote {
   padding-left: 0.5em;
