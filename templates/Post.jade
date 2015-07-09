@@ -2,8 +2,8 @@ extends ./Html.jade
 
 block main
   .Main!= content
-  #disqus_thread
-  h3: a(href='/') << 回到文章列表
+    #disqus_thread
+    h3.back: a(href='/') << 回到文章列表
   script(type='text/javascript').
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'luchoching';

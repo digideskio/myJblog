@@ -2,6 +2,7 @@ extends ./Html.jade
 
 block main
   .Main
+    p 所有文章都會不定時更新。
     ul.Posts
       each list in lists
         li: a(href=list.link) #{list.title} <b>(#{list.date})</b>

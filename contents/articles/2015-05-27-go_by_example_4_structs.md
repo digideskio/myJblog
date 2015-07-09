@@ -1,5 +1,7 @@
 # [Go] by Example 筆記(四) -- Structs, Methods, Interfaces
 
+## Structs 
+
 Go的 *structs* 是一種包含一堆named fields的型別, 可以很方便的用來整合一堆相關的資料, 例如:
 
 ``` go
@@ -151,8 +153,41 @@ measure(r)
 measure(c)
 ```
 
+### Empty Interface 
+
+Interface就代表兩個事情: 
+
+  - interface 是一組methods的集合
+  - interface 也是type的一種
+
+`Interface{}` type表示 empty interface, 一個沒有任何method的interface。
+
+例如: 
+
+``` go
+func DoSomething(v interface{}) {
+  // ...
+}
+```
+
+表示我們可以傳任何type到Dosomething函式中, 但是v原來的type會被轉換成`interface{}` type。
+
+在看API的時候會常常看到empty interface: 
+
+``` go
+func Println(a ...interface{}) (n int, err error) {
+  return Fprintln(os.Stdout, a...)
+} 
+```
+
+`...interface{}`表示可以餵入任意數量與任意型別的參數。
+
 
 ## More
+
+[how to use interface in go - by jordan orelli](http://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go)
+
+[what is the meaning of interface in golang](http://stackoverflow.com/questions/23148812/what-is-the-meaning-of-interface-in-golang)
 
 這系列筆記文章都來自於以下局部翻譯或整理: 
 

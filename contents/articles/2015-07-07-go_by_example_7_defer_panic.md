@@ -111,15 +111,15 @@ closing
 package main
 
 import (
-        "fmt"
+  "fmt"
   "log"
-        "gopkg.in/mgo.v2"
-        "gopkg.in/mgo.v2/bson"
+  "gopkg.in/mgo.v2"
+  "gopkg.in/mgo.v2/bson"
 )
 
 type Person struct {
-        Name string
-        Phone string
+  Name string
+  Phone string
 }
 
 func main() {

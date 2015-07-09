@@ -1,3 +1,5 @@
+# [English]
+
 ## conform 
 
 > A zero arguments function that returns an object, conforming to the iterator protocol.
@@ -50,6 +52,8 @@ from one side to the other, from the end to another, in and out the other side
 ## rather than
 
 而不是
+
+> The Body element is a []byte rather than string because that is the type expected by the io libraries we will use, as you'll see below.
 
 ## convey 
 
@@ -272,4 +276,87 @@ an official document giving someone authorization to do something.
 v. 許可, allow
 
 give authorization or consent to (someone) to do something
+
+## interconnected 
+
+互聯的
+
+## persistant 
+
+一貫的
+
+continuing firmly or obstinately in a course of action in spite of diffculty or opposition.
+
+> one of the government's most persistent critics.
+
+## unaltered
+
+不變的
+
+remaining the same; unchanged
+
+## flaw 
+
+缺陷
+
+defect, fault, imperfection
+
+a mark, fault, or other imperfection that mars a substance or object.
+
+> plates with flaws in them were sold at the outlet store.
+
+## supply
+
+n.
+
+a stock of a resource from which a person or place can be provided with the necessary amount f that resource
+
+v.
+
+make (something needed or wanted) avaliable to someone; provide
+
+## arbitrary
+
+隨意的
+
+random
+
+based on random choice or personal whim, rather than any reason or system.
+
+> his mealtimes were entirely arbitrary.
+
+## mitigate
+
+減輕
+
+make less severe, serious , or painful
+
+reduce, ease
+
+> he wanted to mitigate misery in the world.
+
+## distinct
+
+不同, 獨特的, 和...不同, different, not alike, not the same
+
+adj. recognizably different in nature from something else of a similar type. 
+
+> the patterns of spoken language are distinct from those of writing.
+
+## along with
+
+隨著
+
+go along with(一起去), get along with(取得進展), come along with(伴隨著)
+
+## minor
+
+adj. 次要的,
+
+lesser in importance, seriousness , or significance
+
+n. 未成年人
+
+a person under the age of full legal responsibility.
+
 

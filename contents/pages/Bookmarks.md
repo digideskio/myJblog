@@ -102,3 +102,7 @@
 [How to code a markdown blog system in Go](http://blog.definedcode.com/creating-blog-go)
 
 [how to read-writing file from file](http://stackoverflow.com/questions/1821811/how-to-read-write-from-to-file)
+
+## 勵志
+
+[進Google](https://www.ptt.cc/bbs/Soft_Job/M.1435904555.A.FE7.html)

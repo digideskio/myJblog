@@ -35,3 +35,8 @@ visibility in package-level, not type-level
 
 package包含 types, functions ...
 
+
+## go wiki example 
+
+function literals ---> 有很多重複的 error code 處理 ,使用function literal
+
