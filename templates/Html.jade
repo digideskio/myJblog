@@ -6,9 +6,12 @@ html(lang='zh')
       meta(charset='utf-8')
       meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
       meta(name='viewport', content='width=device-width')
-      link(rel='stylesheet', href=source+'css/github.css')
-      link(rel='stylesheet', href=source+'css/main.css')
       title= title
+      link(rel='stylesheet', href=source+'css/main.css')
+      link(rel='stylesheet', href=source+'css/codepen-embed.css')
+      script(src=source+'js/highlight.pack.js')
+      script.
+        hljs.initHighlightingOnLoad();
   body
     .Wrapper
       .Header

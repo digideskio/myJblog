@@ -9,20 +9,12 @@
 
 body {
   font-family: "Noto Sans CJK Regular", sans-serif;
-  line-height: 1.5em;
+  line-height: 1.4;
   color: palette(Blue Grey, 900);
 }
 
-pre  {
-  background-color: palette(Blue Grey, 50);
-  code {
-    background-color: palette(Blue Grey, 50);
-    color: palette(Blue Grey);
-  }
-}
-
-pre {
-  padding: 0.5em;
+pre code {
+  font-size: 0.8em;
 }
 
 code {
@@ -77,6 +69,7 @@ img {
     padding: 0.2em;
     font-size: 1.2em;
     border-bottom: 1px solid white;
+    text-shadow: 1px 1px 2px palette(White);
     a {
       color: palette(Pink);
     }
@@ -124,12 +117,22 @@ img {
 
 .Main {
   padding: 0.5em;
+  padding-top: 0;
   h1 {
-    color: palette(Blue);
+    color: palette(Pink);
     margin: 0;
     padding: 0.2em;
-    font-size: 1.5em;
-    border-bottom: 1px solid palette(Blue Grey, 50);
+    font-size: 1.4em;
+    background-color: palette(Blue Grey, 50);
+  }
+
+  h2 {
+    color: palette(Pink);
+    //background-color: palette(Blue Grey, 50)
+    border-bottom: 1px solid palette(Blue Grey, 100);
+    padding: 0;
+    margin: 0;
+    margin-top: 1em;
   }
 }
 
@@ -178,6 +181,10 @@ img {
 
   .Header, .Menu {
     flex-direction: row;
+  }
+
+  .Header h1{
+    border: none;
   }
 
   .Posts  li {

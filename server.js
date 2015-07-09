@@ -15,6 +15,7 @@ app.listen(3000, function(){
 app.set('views', './templates');
 app.set('view engine', 'jade');
 app.use('/css', express.static(__dirname + '/build/css'));
+app.use('/js', express.static(__dirname + '/build/js'));
 
 app.get('/', function(req, res){
   fs.readdirAsync(conf.articleSource)
