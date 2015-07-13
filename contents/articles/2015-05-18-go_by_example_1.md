@@ -60,6 +60,9 @@ $ ./hello
 
 Golang value types包括了 string, interger, float, boolean --> 就如你所想的一樣, 跟我們所熟悉的很像。
 
+參考[官網 Package builtin](http://golang.org/pkg/builtin/), value type包括: bool, byte, complex128, complex64, error, float32, float64, int, int16, int32, int64, int8, rune(int32 alias), string, uint(unsigned integer, 至少32bits大小), unit16, unit32, unit64, uint8, uintptr(為integer type, 但是大到足夠處理任何pointer)
+
+
 String litetals 可以用雙引號(**"**)來表示, 或是用反向單引號(**`**)來表示, 反向單引號就是鍵盤左上角在esc鍵下方那顆
 
 差別在於雙引號可以接受特殊跳脫字元, 例如`\n`, 用反向單引號就如實印出來這樣,不會將跳脫字元轉成特殊字元。
@@ -92,7 +95,7 @@ HelloWorld
 
 如果宣告變數沒有給初始值的話, Go就會給一個**zero-value** 。 對int來說, zero-value就是0, boolean type就是false, string type就是`""`。
 
-`:=`是一個簡寫的方式, Go就會自動判斷`:=`是屬於哪種type。在function外面,每個statements都要由一個關鍵字開始(`var`, `func`或是其他)不能直接用`:=`。
+`:=`是一個簡寫的方式, Go就會自動判斷`:=`是屬於哪種type。在function外面,每個statements都要由一個關鍵字開始(`var`, `func`或是其他)不能直接用`:=`。一開始這裡會常忘記: **:= 只能用在function內部** :
 
 
 ``` go

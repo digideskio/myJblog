@@ -107,6 +107,10 @@ used for emphasis instead of "when" in question, typically expressing surprise o
 
 > Whenever shall we get there? 
 
+another example: 
+
+> Whenever an object needs to be iterated (such as at the beginning of a for..of loop), its @@iterator method is called with no arguments, and the returned iterator is used to obtain the values to be iterated.
+
 連接詞. 無論何時
 
 at whatever time, on whatever occation(emphasizing a lack of restriction)

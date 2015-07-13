@@ -2,7 +2,7 @@
 
 書籤蒐集。
 
-## React 
+## React/Flux
 
 [Material UI](https://github.com/callemall/material-ui): 學其 inline style
 
@@ -12,6 +12,7 @@
 
 [700+ react/flux 資源](https://react.zeef.com/nick.raienko)
 
+[redux](https://github.com/gaearon/redux): FP flux
 
 ## React.tw meetup
 
@@ -102,6 +103,12 @@
 [How to code a markdown blog system in Go](http://blog.definedcode.com/creating-blog-go)
 
 [how to read-writing file from file](http://stackoverflow.com/questions/1821811/how-to-read-write-from-to-file)
+
+[10 things you (probably) don't know about Go](https://talks.golang.org/2012/10things.slide?utm_source=golangweekly&utm_medium=email#1)
+
+## Tools 
+
+[sourcegraph](https://sourcegraph.com/) : Intelligent code collaboration for you & your team.
 
 ## 勵志
 

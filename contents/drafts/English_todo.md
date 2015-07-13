@@ -1,24 +1,10 @@
 # [English]
 
-## conform 
-
-> A zero arguments function that returns an object, conforming to the iterator protocol.
 
 
-## whenever 
+## represent
 
-> Whenever an object needs to be iterated (such as at the beginning of a for..of loop), its @@iterator method is called with no arguments, and the returned iterator is used to obtain the values to be iterated.
-
-
-## realize --> realizing
-
-實現
-
-> Don’t require realizing an array, enabling lazy design patterns like LINQ.
-
-## delegate
-
-> When the iterator's next() method is called, the generator function's body is executed until the first yield expression, which specifies the value to be returned from the iterator or, with yield*, delegates to another generator function. 
+## aware -->  be aware of 
 
 ## yield
 
@@ -49,11 +35,6 @@ from one side to the other, from the end to another, in and out the other side
 
 ## fall through
 
-## rather than
-
-而不是
-
-> The Body element is a []byte rather than string because that is the type expected by the io libraries we will use, as you'll see below.
 
 ## convey 
 
@@ -95,17 +76,6 @@ n. 條款
 
 靈感
 
-## fundamental 
-
-根本的, 基本的, basic, cardinal, essential, key, main, staple, underlying, core
-
-forming a necessary base or core; of central importance.
-
-> the protection of fundamental human rights.
-
-n. a central or primary rule or principle on which something is based.
-
-> two courses cover the fundamentals of microbiology
 
 ## capital 
 
@@ -179,9 +149,6 @@ sudden uncontrollable fear or anxiety, often causing widly unthinking behavior.
 各處, 處處
 始終 from beginning to end, from start to finish
 
-## typically
-
-通常, 典型得
 
 ## gracefully
 
@@ -359,4 +326,95 @@ n. 未成年人
 
 a person under the age of full legal responsibility.
 
+## treat
+
+v. 對待, 處理, 當成
+
+behave toward or deal with in a certain way.
+
+behave toward, act toward, deal with
+
+> shw had been brutally treated.
+
+> HTML templates treat data values as plain text which should be encoded so they can be safely embedded in an HTML document.
+
+v.
+
+provide someone with (food, drink, or entertainment) at one's expense.
+
+> the old man has treated him to a drink or two.
+
+
+## deal with
+
+## toward
+
+## trivial
+
+adj. 不重要的, unimportant
+of little value or importance
+
+
+## inventory
+
+n. 庫存, 清單, 商品清單
+
+a complete list of items such as property, goods in stock, or the contents of a building.
+
+v. 盤點, 清點
+
+make a complete list of.
+
+## sweater
+
+sweaters 毛線衣
+
+## wool 
+
+羊毛
+
+## denote
+
+v. 表示
+
+be a sign of; indicate
+
+represent, evince, express, meam, imply
+
+> this mark denotes purity and quality.
+
+## wealth
+
+財富
+
+an abundance of valuable possessions or money.
+
+> he used his wealth to bribe officials.
+
+## offset
+
+抵消, 彌補, 相抵
+
+a consideration or amount that diminishes or balances the effect of a contray one.
+
+*****the amount or distance by which something is out of line. (在程式文件看到意思都是這)
+
+## conversion
+
+conversions 
+
+n. 轉變, 換位
+
+the act or an instance of converting or the process of being converted.
+
+> the conversion of food into body tissues.
+
+the act of scoring an extra point or points after having scored a touchdown.
+
+> if this monotonous mess doesn't end after two overtimes, teams are forced to go for two points on touchdown conversions.
+
+
+(in the context of online marketing) the propotion of people viewing an advertisement and going on to buy the product, click on a link, etc..
+
+> You'll see better conversion rates for your local advertising if you include yout physical address on your website.
 

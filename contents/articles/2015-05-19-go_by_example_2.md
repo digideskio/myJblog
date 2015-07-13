@@ -68,6 +68,8 @@ fmt.Println(s)
 b := make([]int, 0, 5)  // len(b)=0, cap(b)=5
 ```
 
+如果沒有宣告容量, slice的容量等於長度。例如上上個例子`make([]string, 3)`這個slice的容量也為3。
+
 操作方法都跟array一樣。
 
 只是slice多了許多好用的操作, 例如`append`: 
