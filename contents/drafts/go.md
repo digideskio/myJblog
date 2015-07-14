@@ -130,6 +130,12 @@ fmt.Printf("read %d bytes: %q\n", count, data[:count])
 
 ## io
 
+[http://golang.org/pkg/io/](http://golang.org/pkg/io/)
+
+file to disk, the network, STDIN/STDOUT
+
+使用 `[]byte`
+
 ### io.Reader
 
 ``` go

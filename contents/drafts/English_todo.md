@@ -1,6 +1,6 @@
 # [English]
 
-
+## sight
 
 ## represent
 
@@ -89,9 +89,7 @@ n. 條款
 
 括號
 
-## primitive 
 
-原始
 
 ## make sense
 
@@ -196,9 +194,6 @@ conformity in the application of something.
 
 typlically that which is necessary for the sake of logic, accuracy, or faimless.
 
-## in terms of 
-
-就...而言, 介系詞
 
 ## preposition
 
@@ -398,23 +393,4 @@ an abundance of valuable possessions or money.
 a consideration or amount that diminishes or balances the effect of a contray one.
 
 *****the amount or distance by which something is out of line. (在程式文件看到意思都是這)
-
-## conversion
-
-conversions 
-
-n. 轉變, 換位
-
-the act or an instance of converting or the process of being converted.
-
-> the conversion of food into body tissues.
-
-the act of scoring an extra point or points after having scored a touchdown.
-
-> if this monotonous mess doesn't end after two overtimes, teams are forced to go for two points on touchdown conversions.
-
-
-(in the context of online marketing) the propotion of people viewing an advertisement and going on to buy the product, click on a link, etc..
-
-> You'll see better conversion rates for your local advertising if you include yout physical address on your website.
 

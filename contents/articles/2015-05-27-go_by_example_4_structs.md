@@ -133,6 +133,8 @@ func (c circle) perim() float64 {
 }
 ```
 
+Go沒有`implement`這樣的keyword, Go會自動判定該型別是否有完全實作整個interface所定義的methods。
+
 假設我們的function傳入的參數是interface type, 那麼只要是實作這個interface的type都可以使用這個function: 
 
 ``` go

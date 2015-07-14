@@ -199,6 +199,16 @@ if num := 9; num < 0 {
 
 Go沒有`?:`(ternary if)。
 
+在if述句裏面可以直接做變數命名賦值, 除了讓程式碼看起來更簡潔以外, 這個在if述句宣告的變數的作用域就在這個if block中。 像常用的錯誤處理就不需要先宣告`var err`然後在每個要做錯誤處理的地方到處覆寫, 例如:
+
+``` go
+
+if err := responder.Cfg.Set("key", "value"); err!=nil {
+  //...
+}
+```
+
+
 ## Switch 
 
 就跟大家印象相同。

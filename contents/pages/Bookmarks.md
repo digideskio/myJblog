@@ -88,6 +88,10 @@
 
 ## Go 
 
+[Nathan leclaire](http://nathanleclaire.com/) : GO高質量blog好文
+
+[golang examples](http://golang-examples.tumblr.com/): 好用各種golan code snippets
+
 [go tutorial with mongodb on heroku](http://blog.jeffdouglas.com/2014/07/25/go-tutorial-with-mongodb-on-heorku/): 有很多學go的資源提示
 
 [golang planet](http://golang-planet.com/)
