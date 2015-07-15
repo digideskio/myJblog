@@ -8,7 +8,7 @@ $ echo "go" >> test
 $ more test
 hello
 go
-````
+```
 
 ## 讀取整個檔案
 

@@ -1,5 +1,9 @@
 # [Go] 補充& Todo 
 
+## slice 操作
+
+[官網 Slice Tricks](https://github.com/golang/go/wiki/SliceTricks)
+
 ## Go FMT 
 
 automatically formants Go source code
@@ -193,6 +197,12 @@ func main() {
 ![bufio.Scanner](http://imgur.com/cOwfuAyl.png)
 
 
+### 將檔案讀到一個string slice去
+
+[golang read text file into string array](http://solvedstack.com/questions/golang-read-text-file-into-string-array-and-write)
+
+
+
 
 
 ## ioutil 
@@ -202,9 +212,56 @@ func main() {
 
 ## fmt
 
+[https://golang.org/pkg/fmt/](https://golang.org/pkg/fmt/)
+
+
+Integer : 
+
+`%d` --> base 10
+
+`%q` --> a single-quoted character literal safely escaped with Go syntax.
+
+String: 
+
+`%s` -->the uninterpreted bytes of the string or slice
+
+`%q` --> a double-quoted string safely escaped with Go syntax
+
+## func Printf
+
+``` go
+func Printf(format string, a ...interface{}) (n int, err error)
+```
+
+傳回bytes數以及錯誤, 例如: 
+
+``` go 
+fmt.Printf("%s\n", strings.Split("a,b,c", ","))
+```
+
+使用`%s` format string 會輸出: 
+
+```
+[a b c]
+```
+
+若改用`%q`, 會輸出: 
+
+``` 
+["a" "b" "c"]
+```
+要分行必須加`\n`。
+
+## func Println
+
+Spaces are always added between operands and a newline is appended. 
+
+
 ## strings 
 
-**string的加減!!**
+[http://golang.org/pkg/strings/](http://golang.org/pkg/strings/)
+
+string 可以用加號串聯
 
 注意是string**s**, 提供炒作strings的函式
 
@@ -213,6 +270,121 @@ func main() {
 還有`Reader` 和 `Replacer` type: 
 
 ![reader and Replacer](http://imgur.com/PEZfA0al.png)
+
+
+### func Split
+
+``` go
+fmt.Printf("%s\n", strings.Split("a,b,c", ","))
+fmt.Printf("%q\n", strings.Split("a man a plan a canal panama", "a "))
+fmt.Printf("%q\n", strings.Split("xyz", ""))
+fmt.Printf("%q\n", strings.Split("", "Bernardo O'Higgins"))
+```
+
+輸出: 
+
+```
+[a b c]
+["" "man " "plan " "canal panama"]
+["x" "y" "z"]
+[""]
+```
+
+### func Join 
+
+func Split 的相反
+
+### func Fields
+
+A field is separated by one or more space characters. 
+
+``` go
+func Fields(s string) []string
+``` 
+
+例如: 
+
+``` go
+fmt.Printf("Fields are: %q", strings.Fields("  foo bar  baz   "))
+```
+
+結果為: 
+
+``` 
+Fields are: ["foo" "bar" "baz"]
+```
+
+## func FieldsFunc 
+
+FieldsFunc splits the string s at each run of Unicode code points c satisfying f(c) and returns an array of slices of s. If all code points in s satisfy f(c) or the string is empty, an empty slice is returned.  If f does not return consistent results for a given c, FieldsFunc may crash.
+
+不保證切割字串得到的slice元素排列順序和原來字串一樣
+
+``` go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "unicode"
+)
+
+func main() {
+  f := func(c rune) bool {
+    return !unicode.IsLetter(c) && !unicode.IsNumber(c)
+  }
+  fmt.Printf("%q", strings.FieldsFunc("  foo1;bar2,baz3...", f))
+}
+```
+
+得到: 
+
+```
+["foo1" "bar2" "baz3"]
+```
+
+再來一個例子: 
+
+``` go 
+f := func(c rune) bool {
+  return c == ',' || c == ':' || c == ' '
+}
+fmt.Printf("Fields are: %q", strings.FieldsFunc(" cat,dog:bird", f))   
+```
+
+注意 `rune`型別表示的是該符號的unicode code point, 為int32型別, 表示寫法為單引號。
+
+## unicode 
+
+Package unicode provides data and functions to test some properties of Unicode code points.
+
+## Basic type
+
+重要官網參考: [Strings, bytes, runes and characters in Go](http://blog.golang.org/strings)
+
+## string 和 bytes 的選擇
+
+[string 或是 byte slice](http://joshua.poehls.me/2014/04/go-101-string-or-byte-slice/)
+
+
+### type string 
+
+In Go, a string is in effect a read-only slice of bytes
+
+### type rune 
+
+`rune` 是 `int32`的alias, 目的用來代表一個Unicode的代碼點([Code Point](https://en.wikipedia.org/wiki/Code_point)), 例如ASCII有128個code points, 因此可以塞到一個byte(8bit)中去。
+
+`rune`型別就是用來表示Unicode code points。
+
+例如: 
+
+``` 
+'⌘'
+```
+
+以rune型別來表示為integer value: `0x2318`, 注意rune的表示為*單引號*
+
 
 ## strconv
 

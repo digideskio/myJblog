@@ -1,5 +1,13 @@
 # [English]
 
+## trick(s)
+
+n. 竅門, 招數, 特技
+
+a cunning or skillful act or scheme intended to deceive or outwit someone.
+
+> he's a double-dealer capable if any mean trick.
+
 ## sight
 
 ## represent
@@ -133,12 +141,6 @@ desplite the fact that
 
 > an opportunity to obtain advanced degrees.
 
-## panic
-
-n, adj, v. 恐慌, 恐慌的, 恐嚇
-sudden uncontrollable fear or anxiety, often causing widly unthinking behavior.
-
-> she hit him in panic
 
 
 ## throughout
@@ -172,7 +174,7 @@ put off (an action or event) to a later time
 
 延緩, delay, hold over
 
-> the deferred the decision until February.
+> they deferred the decision until February.
 
 ## suppose
 
@@ -223,21 +225,6 @@ a person or thing that gives rise to an action, phenomennon, or condition.
 > The cause of the accident is not clear.
 
 
-## signature
-
-簽名
-
-a person's name written in a distinctive way as a form of identification in authorizing a check of document or concluding a letter
-
-## permit
-
-n. 許可證, authorization, license, pass, ticket
-
-an official document giving someone authorization to do something.
-
-v. 許可, allow
-
-give authorization or consent to (someone) to do something
 
 ## interconnected 
 
@@ -277,15 +264,6 @@ v.
 
 make (something needed or wanted) avaliable to someone; provide
 
-## arbitrary
-
-隨意的
-
-random
-
-based on random choice or personal whim, rather than any reason or system.
-
-> his mealtimes were entirely arbitrary.
 
 ## mitigate
 

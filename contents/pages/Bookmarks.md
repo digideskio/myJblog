@@ -88,6 +88,8 @@
 
 ## Go 
 
+[SocketLoop.com](https://www.socketloop.com/): Golang tutorials
+
 [Nathan leclaire](http://nathanleclaire.com/) : GO高質量blog好文
 
 [golang examples](http://golang-examples.tumblr.com/): 好用各種golan code snippets
@@ -117,3 +119,7 @@
 ## 勵志
 
 [進Google](https://www.ptt.cc/bbs/Soft_Job/M.1435904555.A.FE7.html)
+
+[write code every day](https://brett.is/writing/about/write-code-every-day/?hn=1)
+
+[reflections from 52 weeks 52 projects](https://speakerdeck.com/jeffersonlam/reflections-from-52-weeks-52-projects)
