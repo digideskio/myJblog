@@ -24,3 +24,10 @@ go
 ## 好用的bash alias 
 
 [Ask HN: Share your favourite bash/zsh aliases](https://news.ycombinator.com/item?id=9869231)
+
+
+## Google Chrome shortcut
+
+[chrome shortcut](https://support.google.com/chrome/answer/157179?hl=en)
+
+`Ctrl+F`找符合字串, 按`Enter`找下個符合字串, `Shift+Enter`找前個符合字串

@@ -1,13 +1,5 @@
 # [English]
 
-## trick(s)
-
-n. 竅門, 招數, 特技
-
-a cunning or skillful act or scheme intended to deceive or outwit someone.
-
-> he's a double-dealer capable if any mean trick.
-
 ## sight
 
 ## represent
@@ -68,11 +60,6 @@ v. walk or run with leaping strides
 
 ## leaping
 
-## rewind
-
-v. 倒帶
-
-a mechanism for rewinding a tape or film. 
 
 ## a litte bit
 
@@ -127,21 +114,6 @@ specify, designate, mark
 
 a warning or proviso of specific stipulations, conditions, or limitations.
 
-## though
-
-雖然 although, even if
-
-desplite the fact that
-
-> through they were speaking in undertones, Philip could hear them.
-
-## obtain
-
-獲得, 得到, 取得 get, acquire, or secure (something)
-
-> an opportunity to obtain advanced degrees.
-
-
 
 ## throughout
 
@@ -154,11 +126,6 @@ desplite the fact that
 
 優雅地
 
-## idiomatic 
-
-using, containing, or denoting expressions that are natural to a native speaker.
-
-慣用的
 
 ## ensure
 
@@ -223,8 +190,6 @@ a formal written request, typically one signed by many people, appealing to auth
 a person or thing that gives rise to an action, phenomennon, or condition.
 
 > The cause of the accident is not clear.
-
-
 
 ## interconnected 
 

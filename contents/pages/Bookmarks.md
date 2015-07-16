@@ -88,6 +88,8 @@
 
 ## Go 
 
+[www.golangbootcamp.com/](http://www.golangbootcamp.com/): ebook online/offline
+
 [SocketLoop.com](https://www.socketloop.com/): Golang tutorials
 
 [Nathan leclaire](http://nathanleclaire.com/) : GO高質量blog好文

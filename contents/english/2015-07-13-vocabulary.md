@@ -83,7 +83,7 @@ representative, classic
 
 > a typical day
 
-more: 
+more:  通常 
 
 > In this small town, it's quite hard to find a typically ethnic culture.
 

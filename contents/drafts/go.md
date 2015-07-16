@@ -212,45 +212,6 @@ func main() {
 
 ## fmt
 
-[https://golang.org/pkg/fmt/](https://golang.org/pkg/fmt/)
-
-
-Integer : 
-
-`%d` --> base 10
-
-`%q` --> a single-quoted character literal safely escaped with Go syntax.
-
-String: 
-
-`%s` -->the uninterpreted bytes of the string or slice
-
-`%q` --> a double-quoted string safely escaped with Go syntax
-
-## func Printf
-
-``` go
-func Printf(format string, a ...interface{}) (n int, err error)
-```
-
-傳回bytes數以及錯誤, 例如: 
-
-``` go 
-fmt.Printf("%s\n", strings.Split("a,b,c", ","))
-```
-
-使用`%s` format string 會輸出: 
-
-```
-[a b c]
-```
-
-若改用`%q`, 會輸出: 
-
-``` 
-["a" "b" "c"]
-```
-要分行必須加`\n`。
 
 ## func Println
 

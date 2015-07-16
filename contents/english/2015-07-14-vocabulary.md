@@ -40,6 +40,10 @@ modify, limit, restrict, make condition
 
 > she felt obliged to qualify her first short answer.
 
+qualified: 
+
+> When starting a new program or library, it is recommended to do so inside the src folder, using a fully qualified path
+
 ## brick 
 
 磚

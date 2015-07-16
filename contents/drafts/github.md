@@ -14,3 +14,10 @@ $ git remote -v
 
 http://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
 
+
+## pull request 怎麼用
+
+## 怎麼在別人的repository 發問
+
+## issue是什麼
+

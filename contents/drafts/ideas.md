@@ -37,6 +37,8 @@ slide md format:
 
 ### 參考
 
+(how can i render markdown to a golang template html with blackfriday)[http://stackoverflow.com/questions/23124008/how-can-i-render-markdown-to-a-golang-templatehtml-or-tmpl-with-blackfriday]
+
 [blackfriday command line tool](https://github.com/russross/blackfriday-tool)
 
 [blackfriday + template on the fly example](http://stackoverflow.com/questions/23198739/how-can-i-render-markdown-to-html-with-blackfriday-in-go)
