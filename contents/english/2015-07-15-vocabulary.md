@@ -1,4 +1,4 @@
-# [Vocabulary] flaw, seeater, wool, denote, wealth, treat, defer, panic, permit, signature, convention, occupy, arbitrary, archive
+# [Vocabulary] flaw, sweater, wool, denote, wealth, treat, defer, panic, permit, signature, convention, occupy, arbitrary, archive
 
 ## flaw 
 

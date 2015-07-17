@@ -149,6 +149,9 @@ more:
 
 > This is a core concept in Go’s type system; instead of designing our abstractions in terms of what kind of data our types can hold, we design our abstractions in terms of what actions our types can execute.
 
+more: 
+
+> Coming from an OOP background a lot of us are used to inheritance, something that isn’t supported by Go. Instead you have to think in terms of composition and interfaces.
 
 ## conversion
 

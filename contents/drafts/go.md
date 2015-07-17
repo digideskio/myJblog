@@ -86,51 +86,6 @@ Package `os` provides a platform-independent interface to operating system funct
 
 設計像Unix-like, 但錯誤處理像Go-like, 錯誤傳回錯誤的值而不是error numbers。
 
-## 打開檔案讀取
-
-``` go
-file, err:=os.Open("file.go") //for read access.
-if err != nil {
-  log.Fatal(err)
-}
-```
-
-打開檔案失敗的話, 錯誤訊息就會自我解釋了: 
-
-``` bash
-open file.go: no such file or directory
-```
-
-`os.Open`傳回一個`File`型別, `File`實作`io.Reader` interface:
-
-``` go
-func Open(name string) (file *File, err error)
-```
-
-`os.Open`或是`os.Create`都是呼叫`os.OpenFile`:
-
-``` go
-func OpenFile(name string, flag int, perm FileMode) (file *File, err error)
-```
-
-flag例如是`O_RDONLY`只允許讀取, perm像是`0666`這樣。
-
-
-
-`File`可以執行的動作如下:  
-
-![os.File](http://imgur.com/NJ0aTNnl.png)
-
-例如把檔案的資料讀到一個bytes slice, `file.Read(data)`傳回讀取到的bytes計數：
-
-``` go
-data := make([]byte, 100)
-count, err := file.Read(data)
-if err != nil {
-  log.Fatal(err)
-}
-fmt.Printf("read %d bytes: %q\n", count, data[:count])
-```
 
 ## io
 
@@ -151,22 +106,6 @@ type Reader interface {
 `Reader` 為包裹了基本`Read` method的interface.
 
 ## bufio
-
-``` go 
-import "bufio"
-```
-
-http://golang.org/pkg/bufio/
-
-Package bufio implements buffered I/O.
-
-It wraps an io.Reader or io.Writer object,
-
-creating another object (Reader or Writer) that also implements the interface but provides buffering and some help for textual I/O.
-
-
-建議使用`ReadBytes('\n')`或是`ReadString('\n')`或是用`Scanner`(簡單使用還是推荐用Scanner)
-
 
 ###  func NewScanner(r io.Reader) *Scanner
 
@@ -192,31 +131,9 @@ func main() {
 }
 ```
 
-`Scanner`型別可以使用的function如下: 
-
-![bufio.Scanner](http://imgur.com/cOwfuAyl.png)
-
-
 ### 將檔案讀到一個string slice去
 
 [golang read text file into string array](http://solvedstack.com/questions/golang-read-text-file-into-string-array-and-write)
-
-
-
-
-
-## ioutil 
-
-[read a text file and replace certain words](https://www.socketloop.com/tutorials/golang-read-a-text-file-and-replace-certain-words)
-
-
-## fmt
-
-
-## func Println
-
-Spaces are always added between operands and a newline is appended. 
-
 
 ## strings 
 
@@ -356,4 +273,8 @@ Append(Bool, Float, Int. Quote), Format(Bool, Float, Int..), Parse(Bool, Float..
 
 
 ## go 的config檔案應該用哪種好? json ? 
+
+## interface conversions(轉換)
+
+[http://golang.org/doc/effective_go.html#interface_conversions](http://golang.org/doc/effective_go.html#interface_conversions)
  

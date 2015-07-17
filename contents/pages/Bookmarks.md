@@ -74,9 +74,17 @@
 
 ## GO Testing
 
+[Tesing in Go](http://blog.codeship.com/testing-in-go/?utm_source=golangweekly&utm_medium=email)
+
+[Securing Go web applications](https://stablelib.com/blog/securing-golang-web-apps/?utm_source=golangweekly&utm_medium=email)
+
 [painless mongdb testing with docker and golang](http://developers.almamedia.fi/painless-mongodb-testing-with-docker-and-golang/)
 
 [RESTful Go: An API Server with 90%+ Test Coverage in 260 Lines of Code](http://modocache.io/restful-go)
+
+## Mobile Go
+
+[using go in mobile apps](https://medium.com/using-go-in-mobile-apps): 系列文章
 
 ## MongoDB & Go
 
@@ -87,6 +95,8 @@
 [running mongodb queries concurrently with go](http://blog.mongodb.org/post/80579086742/running-mongodb-queries-concurrently-with-go)
 
 ## Go 
+
+[video: Building Service in Go](https://www.youtube.com/watch?v=MeOK1UzGHYw): Linux.conf.au 2015 by Mark Smith [source code](https://github.com/zorkian/lca2015)
 
 [www.golangbootcamp.com/](http://www.golangbootcamp.com/): ebook online/offline
 

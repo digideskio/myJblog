@@ -91,6 +91,33 @@ format specifier有很多, 常用的像`%d`印出10進位數字,  `%s`印出字�
 ```
 使用`fmt.Printf`要分行必須加`\n`。
 
+另外使用`%v`會印出預設的格式, 那`%+v`會印出結構加上field name, 例如:
+
+``` go
+ype User struct {
+  Id       int
+  Name     string
+  Location string
+}
+
+type Player struct {
+  User
+  GameId         int
+}
+
+func main() {
+  p := Player{}
+  p.Id = 42
+  p.Name = "Matt"
+  p.Location = "LA"
+  p.GameId = 90404
+  fmt.Printf("%v\n", p) //印出{{42 Matt LA} 90404}
+  fmt.Printf("%+v\n", p) //印出{User:{Id:42 Name:Matt Location:LA} GameId:90404}
+}
+```
+
+`fmt.Printf`和`fmt.Println`傳回所列印出的字數(int)和錯誤(若有的話), `fmt.Sprintf`傳回字串型別:
+
 ``` go
 func main() {
   name := "Caprica-Six"
@@ -99,9 +126,6 @@ func main() {
     name, aka)
 }
 ```
-
-`fmt.Printf`和`fmt.Println`傳回所列印出的字數(int)和錯誤(若有的話), `fmt.Sprintf`傳回字串型別
-
 那`fmt.FPrintf`就是利用`io.Writer`將列印的訊息寫到檔案去。
 
 ## Packages and imports 
