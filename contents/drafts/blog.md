@@ -1,5 +1,11 @@
 # [Blog]
 
+## 新增功能
+
+post list分頁
+
+RSS feed
+
 ## 風格參考
 
 [stevenwhite](http://stevenwhite.com/building-a-rest-service-with-golang-1/)

@@ -1,5 +1,6 @@
 # [English]
 
+
 ## assert
 
 ## sight
@@ -214,10 +215,6 @@ a person under the age of full legal responsibility.
 
 ## toward
 
-## trivial
-
-adj. 不重要的, unimportant
-of little value or importance
 
 
 ## inventory

@@ -1,4 +1,38 @@
-# [Vocabulary] ensure, suppose, indicate, treat, cause, petition, fatal, despite, drawback, a big deal, turn out, composition, latitude, logitude
+# [Vocabulary] tough, statistics, opaque, stem, ensure, suppose, indicate, treat, cause, petition, fatal, despite, drawback, a big deal, turn out, composition, latitude, logitude
+
+## tough
+
+**注意發音** təf
+
+adj, 強硬的
+
+(of a substance or object) strong enough to withstand adverse conditions or rough or careless handling.
+
+> tough bacpacks for climbers.
+
+n, 惡棍 a tough person, especially a gangster or criminal.
+
+## statistic(s)
+
+統計
+
+a fact or piece of data from a study of a large quantity of numerical data.
+
+> the statistics show that the crime rate has increased.
+
+## opaque
+
+**注意發音** ōˈpāk
+
+不透明的
+
+not able to be seen throughl not transparent.
+
+> the windows were opaque with steam.
+
+## steam 
+
+蒸氣
 
 ## ensure
 
