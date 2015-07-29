@@ -1,4 +1,4 @@
-# [Golang] golangbootcamp 補遺(二)
+# [Golang] golangbootcamp 補遺(二) -- structs
 
 閱讀[golang bootcamp](http://www.golangbootcamp.com/) 筆記補遺。
 
@@ -26,6 +26,20 @@ var (
 
 func main() {
   fmt.Println(p, q, r, s)
+}
+```
+
+一口氣宣告與賦值的寫法: 
+
+``` go
+func test(){
+  cases := []struct {
+    in, want string
+  }{
+    {"Hello, world", "dlrow ,olleH"},
+    {"Hello, 世界", "界世 ,olleH"},
+    {"", ""},
+  }
 }
 ```
 

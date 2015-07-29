@@ -31,3 +31,21 @@
 先`:`然後使用`上下箭頭`找執行過的指令。
 
 或是直接`@:`就可執行上一個指令。
+
+## tagbar
+
+```
+$ sudo apt-get install exuberant-ctags
+```
+
+使用vundle: https://github.com/majutsushi/tagbar
+
+`.vimrc`加入快速鍵(可以任意): 
+
+``` vim
+nmap <F8> :TagbarToggle<CR>
+```
+
+按F8救出tage list
+
+

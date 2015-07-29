@@ -14,6 +14,8 @@
 
 [redux](https://github.com/gaearon/redux): FP flux
 
+[Creating an Isomorphic Blogging app Using React and Flux](http://engineering.devmag.io/post/1/creating-an-isomorphic-blogging-app-using-react-and-flux): use [alt](https://github.com/goatslacker/alt)
+
 ## React.tw meetup
 
 [Electron + react](https://speakerdeck.com/dannvix/electron-x-react-qian-duan-kai-fa-zhe-gao-su-kua-jie-zhuo-mian-kai-fa)
@@ -48,6 +50,12 @@
 ## System
 
 [vim mode in bash](http://blog.sanctum.geek.nz/vi-mode-in-bash/)
+
+## Go Conference & bootcamp 
+
+[dotGo](http://www.dotgo.eu/): The European Go conference
+
+[Ardan Labs](https://www.ardanlabs.com/): Go Training
 
 ## Go Web Framework
 
@@ -95,6 +103,12 @@
 [running mongodb queries concurrently with go](http://blog.mongodb.org/post/80579086742/running-mongodb-queries-concurrently-with-go)
 
 ## Go 
+
+[alexedwards blog](http://www.alexedwards.net/blog/): *****非常實用的Go code snippets分享
+
+[not-another-go-net-http-tutorial](http://soryy.com/blog/2014/not-another-go-net-http-tutorial/): http/net guide for beginner.
+
+[Create microservices in GO.](http://microservicesingo.com/):(電子書)GO is a great language for building microservices. However there are a lot of challenges to navigate. How do you do caching, manage databases. Monitor and analyze performance. Integrate with Docker. Do continous deployments. Run on private or public clouds. 
 
 [video: Building Service in Go](https://www.youtube.com/watch?v=MeOK1UzGHYw): Linux.conf.au 2015 by Mark Smith [source code](https://github.com/zorkian/lca2015)
 

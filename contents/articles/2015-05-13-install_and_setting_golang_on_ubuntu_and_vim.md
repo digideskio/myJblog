@@ -157,6 +157,8 @@ Plugin 'fatih/vim-go'
 
 執行 `:GoPath` 就會秀出$GOPATH。
 
+執行 `:GoTest` 就會執行 `go test`
+
 執行 `:GoRun` 就相當於執行`go run 你的go程式.go`。
 
 ![Hello](http://i.imgur.com/T2FL1Lr.jpg) 

@@ -63,6 +63,7 @@ func main() {
 
 ## The real world: getting a proper timestamp out of the Twitter API 
 
+把 `create_at` unmarshal成 `string`沒有太大用處, 如果unmarshal成`time.Time`
 
 
 

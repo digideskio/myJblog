@@ -31,3 +31,7 @@ go
 [chrome shortcut](https://support.google.com/chrome/answer/157179?hl=en)
 
 `Ctrl+F`找符合字串, 按`Enter`找下個符合字串, `Shift+Enter`找前個符合字串
+
+back --> `Alt+left` , forward --> `Alt + right`
+
+focus on url bar --> `alt + d` 或 `F6` 或 `ctrl+L`

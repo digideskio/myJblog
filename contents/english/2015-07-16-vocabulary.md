@@ -61,7 +61,7 @@ having or showing the capacity to become or develop into something in the future
 
 > a two-pronged campaign to woo potential customers.
 
-v. 潛力
+n. 潛力
 
 latent qualities or abilities that may be developed and lead to future success or usefulness.
 

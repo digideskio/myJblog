@@ -1,5 +1,101 @@
 # [English]
 
+## multiplex
+
+adj, 複合的, 多種的複雜的
+
+consisting of many elements in a complex relationship.
+
+n, 
+
+a system or signal involving simultaneous transmission of serveral messages along a single channel of communication. 
+
+>  Are you running into a lot of constraints among operators who are devoting digital bandwidth to multiplexes and additional pay-per-view channels? 
+
+v. 
+
+incorporate into a multiplex signal or system. 
+
+> An internal pattern calibration circuit is multiplexed to the first signal and used for generation a plurality of second parameters for calibration of close loop.
+
+## suffice
+
+**注意發音**
+
+v. 足夠, 滿足
+
+be enough or adequate.
+
+> a quick look should suffice.
+
+## equation 
+
+n, (數學)等式 =
+a statement that the values of two mathematical expressions are equal(indicated by the sign =)
+
+
+## neat 
+
+adj, 整齊的
+
+(of a place or thing) arranged in an orderly, tidy way.
+
+> the books had been stacked up in neat piles.
+
+more : 
+
+> Pretty neat - we're setting an HTTP Header, marshalling a string slice to JSON, and writing that out to our http connection.
+
+done with or demonstrating skill or effeciency.
+
+> Howard's neat, precise tackling.
+
+## distill 
+
+蒸餾, 提制, 抽取, 提煉
+
+extract the essential meaning or most important aspect of.
+
+> My travel note were distilled into a book.
+
+more:
+
+> it helps us distill the source down to the idea.
+
+purify (a liquid) by vaporizing it, then condensing it by coding the vapor, and collecting the result liquid.
+
+> they managed to distill a small quantity of water.
+
+
+## apparent
+
+明顯的
+
+clearly visible or understood; obvious.
+
+> it became apparent that he was talented. 
+
+## entrant(s)
+
+參加者
+
+a person or group that enters, joins, or takes part in something.
+
+> He had forgetten he had entered a comptetion where entrants were asked  to describe their dream day.
+
+more: 
+
+> After asking for feedback though, it quickly became apparent that we had many new entrants.
+
+## ubiquitous
+
+**發音...** 囧
+
+present, appearing, of found everywhere.
+
+universal, popular
+
+> his ubiquitous influence was felt by all the family.
 
 ## assert
 

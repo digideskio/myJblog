@@ -1,5 +1,14 @@
 # [Go] 補充& Todo 
 
+## mgo connection pool / http
+
+http://stackoverflow.com/questions/23223743/connections-pool-in-mgo
+
+Further sessions to the same cluster are then established using the New or Copy methods on the obtained session. This will make them share the underlying cluster, and manage the pool of connections appropriately.
+
+So a single call to `Dial` or `DialWithTimeout` or `DialWithInfo` will establish the connection pool, if you require more than one session, use the `session.New()` or `session.Copy()` methods to obtain it from the session returned from whichever Dial function you chose to use.
+
+
 ## slice 操作
 
 [官網 Slice Tricks](https://github.com/golang/go/wiki/SliceTricks)
@@ -44,34 +53,18 @@ package包含 types, functions ...
 
 function literals ---> 有很多重複的 error code 處理 ,使用function literal
 
-## text/template
-
-
 
 ## http/template
 
-``` go
-import "html/template"
-```
-
-`html/template`實作 data-driven templates, 用來產生 html output。
-
-不管是不是最後輸出為html, 都應該使用`html/template`而不是 `text/template`
-
-``` go
-tmpl, err:= template.New("name").Parse(...)
-err = tmpl.Execute(out, data)
-```
-
-成功的話, templ是injection-safe
-
-
-[hugo的golang template解釋](http://gohugo.io/templates/go-templates/): 很清楚
 
 [THE GO TEMPLATES POST](http://andlabs.lostsig.com/blog/2014/05/26/8/the-go-templates-post)
 
 [go template include html](http://stackoverflow.com/questions/18175630/go-template-executetemplate-include-html): 有用blackfriday 轉markdown到html的例子
 
+
+## display a count on html template in go  
+
+http://stackoverflow.com/questions/14102845/display-a-count-on-html-template-in-go
 
 
 ## os

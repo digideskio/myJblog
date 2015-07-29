@@ -134,7 +134,13 @@ based on random choice or personal whim, rather than any reason or system.
 
 > his mealtimes were entirely arbitrary.
 
+more: 
+
 > It's important to state right up front that a string holds arbitrary bytes. It is not required to hold Unicode text, UTF-8 text, or any other predefined format.
+
+more: 
+
+> The json package uses map[string]interface{} and []interface{} values to store arbitrary JSON objects and arrays.
 
 ## archive 
 

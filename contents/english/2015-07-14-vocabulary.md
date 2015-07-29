@@ -81,6 +81,10 @@ existing in a material or physical form; real or solid; not abstract.
 
 > concrete objects like stones
 
+more: 
+
+> A type assertion accesses the underlying concrete type：
+
 ## conceal
 
 v. 隱匿
