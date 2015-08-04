@@ -26,6 +26,8 @@
 
 ## JavsScript/ Node.js
 
+[Non-blocking Asynchronous JSON.parse Using The Fetch API](http://azimi.me/2015/07/30/non-blocking-async-json-parse.html)
+
 [running node forever with Systemd and PM2](http://www.terlici.com/2015/06/20/running-node-forever.html?utm_source=nodeweekly&utm_medium=email)
 
 [Dockerizing a Node.js web app](https://docs.docker.com/examples/nodejs_web_app/?utm_source=nodeweekly&utm_medium=email)
@@ -46,12 +48,13 @@
 
 [Introduction to the Fetch API](http://www.sitepoint.com/introduction-to-the-fetch-api/?utm_source=javascriptweekly&utm_medium=email)
 
-
 ## System
 
 [vim mode in bash](http://blog.sanctum.geek.nz/vi-mode-in-bash/)
 
 ## Go Conference & bootcamp 
+
+[**GopherCon 2015 Roundup**](https://blog.golang.org/gophercon2015): video & slides ! 
 
 [dotGo](http://www.dotgo.eu/): The European Go conference
 
@@ -62,7 +65,6 @@
 [terryh - golang-web](http://blog.lifetaiwan.net/2014/05/golang-web.html) 
 
 [building web application with golang](http://astaxie.gitbooks.io/build-web-application-with-golang/content/zh/index.html) ebook
-
 
 [Build you own Web Framework in Go](https://www.nicolasmerouze.com/build-web-framework-golang/)
 
@@ -96,13 +98,12 @@
 
 ## MongoDB & Go
 
-[Mgo GoDoc](http://godoc.org/gopkg.in/mgo.v2)
-
 [mgo example gist](https://gist.github.com/border/3489566_)
 
 [running mongodb queries concurrently with go](http://blog.mongodb.org/post/80579086742/running-mongodb-queries-concurrently-with-go)
 
 ## Go 
+
 
 [alexedwards blog](http://www.alexedwards.net/blog/): *****非常實用的Go code snippets分享
 
@@ -113,6 +114,8 @@
 [video: Building Service in Go](https://www.youtube.com/watch?v=MeOK1UzGHYw): Linux.conf.au 2015 by Mark Smith [source code](https://github.com/zorkian/lca2015)
 
 [www.golangbootcamp.com/](http://www.golangbootcamp.com/): ebook online/offline
+
+[Go Programming Blueprints](http://www.amazon.com/Go-Programming-Blueprints-Development-Challenges/dp/1783988029): ebook **大推!**
 
 [SocketLoop.com](https://www.socketloop.com/): Golang tutorials
 

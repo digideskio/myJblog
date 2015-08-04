@@ -1,4 +1,4 @@
-# [Vocabulary] flaw, sweater, wool, denote, wealth, treat, defer, panic, permit, signature, convention, occupy, arbitrary, archive
+# [Vocabulary] flaw, sweater, wool, denote, wealth, treat, defer, panic, permit, signature, convention(s), occupy, arbitrary, archive
 
 ## flaw 
 
@@ -96,7 +96,7 @@ a letter of figure printed at the foot of one or more pages of each sheet of a b
 
 
 
-## convention 
+## convention(s)
 
 n. 公約, 慣例, 常規
 

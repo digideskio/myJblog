@@ -1,10 +1,22 @@
-# [Vocabulary] idiomatic, obtain, through, rewind, touch base, comprise, trick(s), potential, refer, infer, indirection, progress, century, toward
+# [Vocabulary] idiom, idiomatic, obtain, through, rewind, touch base, comprise, trick(s), potential, refer, infer, indirection, progress, century, toward
+
+## idiom 
+
+n. 成語.  習慣用法
+
+a group of words established by usage as having a meaning not deducible from those of the individual words. (e.g., ranin cats and dogs, see the light)
 
 ## idiomatic 
 
+慣用的
+
 using, containing, or denoting expressions that are natural to a native speaker.
 
-慣用的
+> the new teacher's idiomatic approach to dealing wiht special-neeeds students is already showing signs of success.
+
+more:
+
+> Idiomatic Go applications are often composed of many packages, which are organized by having code in different folders, and this is also true of the Go standard library.
 
 ## obtain
 

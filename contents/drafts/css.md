@@ -1,4 +1,14 @@
-# [CSS/JS] 蒐集
+# [HTML/CSS/JS] 蒐集
+
+## <figure>
+
+<figure> 标签是 HTML 5 中的新标签。
+
+http://www.w3school.com.cn/tags/tag_figure.asp
+
+<figure> 标签规定独立的流内容（图像、图表、照片、代码等等）。
+figure 元素的内容应该与主内容相关，但如果被删除，则不应对文档流产生影响。
+
 
 ## 棄用jsxhint, 改用 eslint !! 
 

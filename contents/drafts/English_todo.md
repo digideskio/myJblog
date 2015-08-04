@@ -1,5 +1,270 @@
 # [English]
 
+## hopefully 
+
+adv, 
+
+in a hopeful manner.
+
+> he rode on hopfully.
+
+
+it is to be hoped that.
+
+> hopefully, it should be finished by next year.
+
+more: 
+
+> Hopefully some of the 'magic' behind the ubiquitous Go net/http example has been demystified.
+
+## demystify --> demystified
+
+v. make (a diffcult or esoteric subject) clearer and easier to understand.
+
+## thorough --> thoroughly
+
+**別和through搞混**
+
+adj, 
+
+complete with regard to every detail; not superficial or partial 
+
+> planners need a thorough understanding of the subject.
+
+thoroughly --> adv. 徹底地, 充份地
+
+> Or you're thoroughly confused, and should send me feedback.
+
+# curtain(s)
+
+窗簾, 簾子
+
+a piece of material suspended at the top to fomr a covering or screen, typically one of a pair at a window.
+
+> she drew the curtains and lit the fire.
+
+more: 
+
+> Let's look under the curtain of our final function
+
+
+
+## confused 
+
+## shrink
+
+n.
+
+v. 收縮, 縮小 
+
+become or make smaller in size or amount; contract or cause to contract.
+
+> the workforce has **shrunk** to less than a thousand.
+
+more: 
+
+> We are using the map more like a slice, but do not have to worry about shrinking the slice as clients comme and go through time.
+
+## beneath
+
+介詞, 在..下面
+
+extending or directly underneath, typically with close contact
+
+> in the labyrinths beneath central Moscow.
+
+at a lower level or layer than.
+
+> beneath this floor there's a cellar.
+
+more :
+
+> Beneath the room structure, add the following run method that contains two of these select clauses.
+
+副詞, 
+
+extending or directly underneath something
+
+> a house built on stilts to allow air to circulate beneath.
+
+at a lower level or layer
+
+跑道已經裂開, 露出下面的黑色土地
+
+> the runways had cracked open, exposing the black earth beneath
+
+## underneath
+
+## unwise <--> wise
+
+不智的
+
+(of a person or action) not wise or sensible; foolish
+
+> it is unwise to rely on hearsay evidence. 
+
+## rely
+
+v. 依靠, 依賴
+
+depend on with full trust or confidence.
+
+> I know I can rely on your discretion.
+
+## invent 
+
+v. 發明
+
+create or design (something that has not existed before); be the originator of.
+
+> he invented an improved form of the steam engine.
+
+## reinvent
+
+v. 重新發明
+
+change (something) so much that is appears to be entirely new.
+
+> he brought opera to the masses and reinvented the waltz.
+
+## embark
+
+**注意發音**
+
+從事
+
+go on board a ship, aircraft, or other vehicle.
+
+> he embarked for India in 1817.
+
+## curious
+
+adj, 好奇的
+
+eager to know or learn something. having a desire to learn or know more about something or someone.
+
+> I began to be curious about the whereabouts of the bride and groom.
+
+strange; unusual.
+
+> A curious sensation overwhelmed her.
+
+
+## enormously
+
+adv, 巨大地
+
+to a very great degree or extent; considerably.
+
+> quality of life varies enormously from on place to another.
+
+more: 
+
+> As we will see, Go helps us enormously with its built-in channels and concurrency paradigms.
+
+## paradigm(s)
+
+範例
+
+a typical example of pattern of something; a model.
+
+> there is a new paradigm for public art in this country.
+
+
+
+## piracy 
+
+海盜行為, 侵犯版權專利權
+
+the proactice of attacking and robbing ships at sea.
+
+## gadget
+
+小工具
+
+a small mechanical device or tool, especially an ingenious or novel one.
+
+> It would be diffcult these days to find a gadget that is not web-enabled and allow us to build a single application that targets almost all platform and devices.
+
+
+## thrill 
+
+n, 顫抖
+
+a sudden feeling of excitement and pleasure.
+
+> the thrill of jumping out of an airplane.
+
+v. 
+
+cause (someone) to have a sudden feeling of excitement and pleasure.
+
+> his kiss thrilled and excited her.
+
+## as well as 
+
+以及
+
+
+## audience 
+
+聽眾
+
+the assembled spectators or listeners at a public event, such as a play, movie, concert or meeting.
+
+## frustrate
+
+v. 挫敗
+
+prevent ( a plan or attempted action) from progressing, succeeding, or being fulfilled.
+
+## occasion(s) 
+
+機會, 場合
+
+a particular time or instance of an event.
+
+> on one occation i stayed up until two in the morning.
+
+more: 
+
+> However, on a couple of occasions, we will iterate together to get a feel of how a process of gradual improvements and small interations (starting and keeping it simple and introducing complexity only when absolutely necessary) can be applied when writing Go package and programs.
+
+## gradual 
+
+adj, 漸進的
+
+taking place or progressing slowly or by degrees.
+
+> the gradual introduction of new methods.
+
+## apply
+
+v. 申請
+
+make a formal application or request.
+
+> you need to apply to the local authorities for a grant.
+
+v. 應用
+
+be applicable or relevant.
+
+> the offer does not apply to unionized workers.
+
+put or spread (something) on a surface
+
+> the sealer can be applied to new wood.
+
+## formal 
+
+adj. 正式的
+
+done in accordance with rules of convention or etiquette; suitable for or constituting an offical or important situation or occasion.
+
+> a formal dinner party.
+
+
 ## multiplex
 
 adj, 複合的, 多種的複雜的

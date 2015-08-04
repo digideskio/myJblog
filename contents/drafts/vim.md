@@ -1,5 +1,22 @@
 # [Vim]
 
+## CSS syntax errors via CSSlint in VIM
+
+[source](https://michalzuber.wordpress.com/2014/12/03/css-syntax-errors-via-csslint-in-vim/)
+
+``` 
+$ sudo npm install -g csslint
+```
+
+`.vimrc`加入:
+
+``` 
+let g:syntastic_csslint_args="--ignore=outline-none"
+```
+
+
+
+
 ## 單引號改雙引號
 
 [使用surrend](http://www.vim.org/scripts/script.php?script_id=1697) 插件

@@ -1,4 +1,4 @@
-# [Vocabulary] insist, consume, as well, qualify, brick, congruent, primitive, concrete, conceal, outline, effort, aspect, in terms of, conversion
+# [Vocabulary] insist, consume, qualify, brick, congruent, primitive, concrete, conceal, outline, effort, aspect, in terms of, conversion
 
 ## insist
 
@@ -15,12 +15,6 @@ v. 消費,消耗
 eat, drink, or ingest(food or drink)
 
 > People consume a good deal of sugar in drinks.
-
-## as well 
-
-副詞, 還有, 同時, 也, 並
-
-likewise, too, besides, also
 
 ## qualify
 

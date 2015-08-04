@@ -8,6 +8,20 @@ Further sessions to the same cluster are then established using the New or Copy 
 
 So a single call to `Dial` or `DialWithTimeout` or `DialWithInfo` will establish the connection pool, if you require more than one session, use the `session.New()` or `session.Copy()` methods to obtain it from the session returned from whichever Dial function you chose to use.
 
+**spf13文件有講到了** :  http://spf13.com/presentation/MongoDB-and-Go/
+
+``` go
+func (s *Server) handle(w http.ResponseWriter, r *http.Request){
+  session := s.session.Copy()
+  defer session.Close()
+  //...
+}
+
+```
+
+**這篇有範例!!** https://medium.com/@matryer/the-http-handlerfunc-wrapper-technique-in-golang-c60bf76e6124
+
+
 
 ## slice 操作
 
@@ -52,6 +66,11 @@ package包含 types, functions ...
 ## go wiki example 
 
 function literals ---> 有很多重複的 error code 處理 ,使用function literal
+
+
+## go的template模板怎么才能引入css和js等静态文件？
+
+http://golangtc.com/t/55555bcd421aa90930000005
 
 
 ## http/template

@@ -1,6 +1,6 @@
 # [Golang] Template(一)
 
-[http/template/](http://golang.org/pkg/html/template/) package實作用來生成HTML的data-driven templates, 並且可以防止[code injection](https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%A2%BC%E6%B3%A8%E5%85%A5)。
+[html/template/](http://golang.org/pkg/html/template/) package實作用來生成HTML的data-driven templates, 並且可以防止[code injection](https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%A2%BC%E6%B3%A8%E5%85%A5)。
 
 `html/template`提供跟 [text/template](http://golang.org/pkg/text/template/) 相同介面, 不管是不是輸出HTML建議都用這個`html/template` package。
 
