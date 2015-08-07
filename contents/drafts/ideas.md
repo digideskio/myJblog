@@ -1,43 +1,13 @@
 # [IDEAS]
 
+## 撰寫 blog html/css/prototype
+
+copy build成品 在重新排layout
+
+
 ## HTTP router 
 
-## Html簡報的static website generator
-
-### 想法
-用markdown寫簡報
-
-先完成: 
-slide.md --> dist folder  
-
-dist --> index.html, main.css, main.js
-
-
-slide md format: 
-
-``` markdown
-# 1 
-
-## page1 title or anything  最多只能用標題2 
-
-# 2
-
-## page 2
-
-# 3
-
-## page3 
-```
-
-產生slide.html 和 silde.pdf不同css,js 
-
-**先做gen.go產生結果dist, 用web server開啟, 之後再來改善**
-
-### 做法
-
-
-
-### 參考
+## md-ppt
 
 (how can i render markdown to a golang template html with blackfriday)[http://stackoverflow.com/questions/23124008/how-can-i-render-markdown-to-a-golang-templatehtml-or-tmpl-with-blackfriday]
 

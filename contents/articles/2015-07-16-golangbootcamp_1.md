@@ -1,4 +1,4 @@
-# [Golang] golangbootcamp 補遺(一)
+# [Golang] golangbootcamp 補遺(一) -- Variables, Constants, Print, Packages, GOPATH
 
 閱讀[golang bootcamp](http://www.golangbootcamp.com/) 筆記補遺。
 
@@ -76,7 +76,11 @@ const (
 
 `fmt.Printf`用在當我們要用特定義格式(format specifier)輸出的時候
 
-format specifier有很多, 常用的像`%d`印出10進位數字,  `%s`印出字串, `%q`印出加上雙引號的字串
+format specifier有很多, 
+
+若是integer使用`%d`印出10進位數字,
+
+String和 bytes型別的slice 使用`%v`會印出原來的樣子, `%s`會印出解譯後的結果, `%q`會印出加上雙引號的字串
 
 例如用在輸出slice ,使用`%s` format string 會輸出: 
 

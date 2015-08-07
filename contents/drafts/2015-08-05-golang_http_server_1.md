@@ -312,10 +312,59 @@ func main() {
 
 ## Template build once 
 
-## Validation , 404, 500
+要有更大的彈性, 實作Handler, 才可額外傳入參數
 
-沒有的URL就傳回404, 500 
 
+
+``` go
+package main
+
+import (
+	"html/template"
+	"log"
+	"net/http"
+	"path/filepath"
+	"sync"
+)
+
+type templateHandler struct {
+	once     sync.Once
+	filename string
+	templ    *template.Template
+}
+
+func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	lp := filepath.Join("templates", "Layout.html")
+	t.once.Do(func() {
+		t.templ = template.Must(template.ParseFiles(lp, filepath.Join("templates", t.filename)))
+	})
+	t.templ.ExecuteTemplate(w, "layout", nil)
+}
+
+func main() {
+
+	fs := http.FileServer(http.Dir("static"))
+	http.Handle("/static/", http.StripPrefix("/static/", fs))
+
+	http.Handle("/", &templateHandler{filename: "Hello.html"})
+	http.Handle("/haha", &templateHandler{filename: "Haha.html"})
+
+	if err := http.ListenAndServe(":8080", nil); err != nil {
+		log.Fatal("ListenAndServe:", err)
+	}
+}
+```
+
+## Validation , 404, 500, handling non-existent pages
+
+validation --> 把沒有提供的URL屏除在外, 例如只提供 /edit/, /view/, 利用regexp把不是/edit, /view的顯示http not found 
+
+
+## MongoDB
+
+## Testing our web server 
+
+## Form 
 
 ## More 
 

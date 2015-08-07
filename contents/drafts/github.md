@@ -1,5 +1,10 @@
 # [Git][Github]
 
+## 更改git branch 名字
+
+## 要跳到某一個commit
+
+
 ## git push origin不用輸入帳號密碼
 
 [github設定SSH keys](https://help.github.com/articles/generating-ssh-keys/)
