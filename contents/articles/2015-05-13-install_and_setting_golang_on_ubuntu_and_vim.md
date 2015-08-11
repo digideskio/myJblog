@@ -155,6 +155,14 @@ Plugin 'fatih/vim-go'
 如果要使用godoc查找資料, 要先安裝godoc tool, 就可以使用像是`:GoDoc fmt println`來查看文件, 
 或是直接在所使用function上, 執行`:GoDoc` 就會列出該函式說明, 或是執行`:GoDef`查看該函式source code。
 
+在`.vimrc`加入: 
+
+``` go
+let g:go_fmt_command = "goimports"
+```
+
+執行`:GoImports` 就會檢查有用到無用到的library, 在`import`區段補足或是刪除後儲存檔案(不過我不愛用 :P)
+
 執行 `:GoPath` 就會秀出$GOPATH。
 
 執行 `:GoTest` 就會執行 `go test`

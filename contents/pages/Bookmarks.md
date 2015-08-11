@@ -26,6 +26,8 @@
 
 ## JavsScript/ Node.js
 
+[Lodash: 10 Javascript Utility Functions That You Should Probably Stop Rewriting](http://colintoh.com/blog/lodash-10-javascript-utility-functions-stop-rewriting)
+
 [Non-blocking Asynchronous JSON.parse Using The Fetch API](http://azimi.me/2015/07/30/non-blocking-async-json-parse.html)
 
 [running node forever with Systemd and PM2](http://www.terlici.com/2015/06/20/running-node-forever.html?utm_source=nodeweekly&utm_medium=email)

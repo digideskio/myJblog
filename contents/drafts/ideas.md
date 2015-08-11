@@ -1,9 +1,21 @@
 # [IDEAS]
 
+## 實作hacker pad ? 撈 hacker news REST API
+
+## 自己的英文字典庫
+
+存到mongodb 
+
+可以匯出文件?
+
+## 新的blog 
+
+將資料存到mongodb ? 
+
+
 ## 撰寫 blog html/css/prototype
 
 copy build成品 在重新排layout
-
 
 ## HTTP router 
 

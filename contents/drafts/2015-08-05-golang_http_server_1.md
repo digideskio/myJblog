@@ -228,6 +228,20 @@ func main() {
 {{end}}
 ```
 
+ TODO: **那我可不可以幫整個Hello template定名字: **
+
+``` html
+{{define "hello"}}
+{{define "title"}}Hello (from template){{end}}
+
+{{define "body"}}
+<h1>Hello! (from template)</h1>
+<button onclick="hello()">show</button>
+{{end}}
+{{end}}
+```
+
+
 有寫過templates的朋友應該很快就能適應。
 
 修改原來的`main.go`: 

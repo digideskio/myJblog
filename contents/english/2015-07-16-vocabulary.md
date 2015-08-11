@@ -65,6 +65,11 @@ n. 竅門, 招數, 特技
 a cunning or skillful act or scheme intended to deceive or outwit someone.
 
 > he's a double-dealer capable if any mean trick.
+
+more: 
+
+> There are however a few tricks to using it.
+
 ## potential 
 
 adj. 潛在的

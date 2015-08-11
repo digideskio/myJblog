@@ -1,5 +1,171 @@
 # [English]
 
+## blend
+
+v. 混合
+
+mix (a substance) with another substance so that they combine together as a mass
+
+> blend the cornstarch with a tabespoon of water
+
+more: 
+
+> Compiling a template is a process by which the source template is interpreted and prepared for blending with various data.
+
+n. 
+
+a mixture of different things or qualities. 
+
+## mass
+
+n. 一大塊
+
+a coherent, typically large body of matter with no definite shape
+
+> a mass of curly hair.
+
+adj.
+
+relating to, done by, or affecting large numbers of people or things. 
+
+
+## interpret
+
+**注意發音**
+
+v. 翻譯
+
+explain the meaning of (information, words. or actions).
+
+> the evidence is diffcult to interpret.
+
+## sensible 
+
+明智的
+
+(of a statement or course of action) chosen in accordance with wisdom or prudence; likely to be of benefit.
+
+> I cannot believe that is sensible to spend so much.
+
+## turn into
+
+變成, become, change into 
+
+> turning a room into an HTTP handler
+
+## accordance 
+
+## wisdom
+
+## exploit
+
+## grin
+
+## constitute
+
+## analogy
+
+## reckon
+
+## granularity
+
+## stem(s)
+
+> Much of the power of Normal mode stems from the way that operator commands can be combined with motions.
+
+## fortune(s)
+
+chance or luck as an external, arbitrary force affecting human affairs.
+
+> some malicious act of fortune keeps them separate.
+
+## affair(s)
+
+
+
+
+## bake --> baked
+
+v. 烘烤 
+
+cook (food) by dry heat without direct exposure to a flame, typically in an oven or on a hot surface 
+
+## dry
+
+adj, 乾燥的
+
+free from moistture or liquid; not wet or moist
+
+> the jacket kept me warm and dry.
+
+
+## ingredient(s)
+
+成份
+
+any of the foods or substances that are combined to make a particular dish
+
+> pork is an important ingredient in many stir-fried dishes.
+
+## dish(es)
+
+碟
+
+a shallow, typically flat-bottomed container for cooking or serving food.
+
+> an ovenproof dish
+
+
+## recipe
+
+食譜
+
+a set of instructions for preparing a particular dish, including a list of the ingredients required.
+
+> a traditional Indoneian recipe
+
+more: 
+
+>  A Dockerfile describes the software that is “baked” into an image. It isn’t just ingredients tho, it can tell the software what environment to use or what commands to run. Your recipe is going to be very short.
+
+## approximate
+
+adj. 近似的
+
+close to the actual, but not completely accurate or exact.
+
+> the calculations are very approximate.
+
+v. 
+
+## stake
+
+n. 樁
+
+a strong wooden or metal post with a point at one end, driven into the ground to support a tree, form part of a fence, act as a boundary mark, etc.
+
+v.
+
+support (a tree or plant) with a stake or stakes.
+
+n.
+
+## fairly
+
+adv, 相當地, 比較地
+
+with justice. 
+
+> he could not fairly be accused of wasting police time.
+
+**to quite a high degre**e
+
+> I was fairly certain she had nothing to do with the affair.
+
+more: 
+
+> Go's html/template package is fairly minimal compared to templating packages associated with other language (Jinja, even Django's templates), although it makes up for this with security and great docs.
+
 ## former
 
 adj, 前任的

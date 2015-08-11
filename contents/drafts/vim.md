@@ -1,5 +1,30 @@
 # [Vim]
 
+## All the right moves 
+
+`ctrl - d` move half page down
+
+`ctrl - u` move half page up
+
+`ctrl+o` jump to last cursor position
+
+`ctrl+i` jump to next cursor position
+
+## w 和 W,  b和B
+
+``` css
+.news { bakcground-position: 180px 0px }
+```
+
+假設游標開始在`.`, 
+
+執行`w`會跑到`n`再來跑到`{`再來`b`再來`-`再來`p`再來`:`再來`1`
+
+執行`W`會跑到`{`再來跑到`b`再來跑到`1`
+
+`b`和`B`同理
+
+
 ## CSS syntax errors via CSSlint in VIM
 
 [source](https://michalzuber.wordpress.com/2014/12/03/css-syntax-errors-via-csslint-in-vim/)

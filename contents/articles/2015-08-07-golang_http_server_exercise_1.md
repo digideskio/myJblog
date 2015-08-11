@@ -169,6 +169,9 @@ func main() {
 
 這裡我們的FileServer所指定的`static`為static files的根目錄。那我們要的`/css/main.css`的確在我們的`static`目錄裏面, 這樣就會得到我們要的結果。
 
+
 ## More 
 
-[why do i need to use http stripprefix to access my static files](http://stackoverflow.com/questions/27945310/why-do-i-need-to-use-http-stripprefix-to-access-my-static-files)
+[stackoverflow - why do i need to use http stripprefix to access my static files](http://stackoverflow.com/questions/27945310/why-do-i-need-to-use-http-stripprefix-to-access-my-static-files)
+
+[stackoverflow- how to render multipe templates in golang](http://stackoverflow.com/questions/17206467/go-how-to-render-multiple-templates-in-golang)
