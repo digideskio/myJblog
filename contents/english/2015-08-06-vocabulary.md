@@ -1,4 +1,4 @@
-# [Vocabulary] ubiquitous, neat, distill, apparent, entrant(s), formal, multiplex, suffice, equation, audience, frustrate, ocaasion(s), gradual, apply, enormously, paradigm(s), piracy, gadget, thrill, wise, unwise, rely, invent, reinvnet, embark, curious, hopefully, demystify, thorough, thoroughly, curtain(s), confused, shrink, beneath, underneath
+# [Vocabulary] ubiquitous, neat, distill, apparent, entrant(s), formal, multiplex, suffice, equation, audience, frustrate, ocaasion(s), gradual, apply, enormously, paradigm(s), piracy, gadget, thrill, wise, unwise, wisdom, rely, invent, reinvnet, embark, curious, hopefully, demystify, thorough, thoroughly, curtain(s), confused, shrink, beneath, underneath
 
 ## ubiquitous
 
@@ -216,6 +216,17 @@ cause (someone) to have a sudden feeling of excitement and pleasure.
 (of a person or action) not wise or sensible; foolish
 
 > it is unwise to rely on hearsay evidence. 
+
+
+## wisdom
+
+**注意發音**
+
+n. 智慧
+
+the quality of having experience, knowledge, and good judgmentl the quality of being wise
+
+> a stoic is a person who combines the qualities of wisdom, upright dealing, and courage.
 
 ## rely
 

@@ -170,6 +170,26 @@ func main() {
 這裡我們的FileServer所指定的`static`為static files的根目錄。那我們要的`/css/main.css`的確在我們的`static`目錄裏面, 這樣就會得到我們要的結果。
 
 
+## 錯誤處理
+
+在`handler`加上一些錯誤處理, URL pattern只允許"/", method只允許"GET":
+
+``` go
+func handler(w http.ResponseWriter, r *http.Request) {
+  if r.URL.Path != "/" {
+    http.Error(w, "Not found", http.StatusNotFound)
+    return
+  }
+  if r.Method != "GET" {
+    http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+    return
+  }
+	t := template.Must(template.ParseFiles(path.Join("templates", "Hello.html")))
+	t.Execute(w, nil)
+}
+```
+
+
 ## More 
 
 [stackoverflow - why do i need to use http stripprefix to access my static files](http://stackoverflow.com/questions/27945310/why-do-i-need-to-use-http-stripprefix-to-access-my-static-files)

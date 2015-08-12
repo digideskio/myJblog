@@ -1,6 +1,11 @@
 # [IDEAS]
 
-## 實作hacker pad ? 撈 hacker news REST API
+## [golang] md snippets editor 
+
+就像目前寫的每個心得的小段落 --> save md to db ? 
+
+可以選小段落組成文章
+
 
 ## 自己的英文字典庫
 

@@ -1,5 +1,55 @@
 # [Vim]
 
+## HTML lint and format
+
+利用 HTML Tidy with HTML5 support + syntastic 
+
+https://github.com/htacg/tidy-html5
+
+https://github.com/scrooloose/syntastic/wiki/HTML:---tidy
+
+```
+let g:syntastic_html_tidy_exec = 'tidy5'
+```
+
+或直接使用js-beautify command :
+
+https://github.com/beautify-web/js-beautify
+
+使用vim版本wrapper: (**用這!!**) 
+
+https://github.com/maksimr/vim-jsbeautify
+
+`ctrl-f`就會自動format
+
+## javascript autocomplete 
+
+使用 `youcompleteme`和 `tern_for_vim`
+
+https://github.com/marijnh/tern_for_vim
+
+用 vundle安裝後, 注意修改`~/.vim/bundle/tern_for_vim`的`package.json`
+將`tern`改成最新版的套件
+
+`npm install` 和 `npm install -g tern`
+
+設定`~/.vim/bundle/tern_for_vim/.tern-project`: 
+
+```
+{
+  "libs": [
+    "browser",
+    "ecma5",
+    "ecma6",
+    "jquery"
+  ],
+  "plugins": {
+    "node": {}
+  }
+}
+```
+
+
 ## All the right moves 
 
 `ctrl - d` move half page down
@@ -9,6 +59,10 @@
 `ctrl+o` jump to last cursor position
 
 `ctrl+i` jump to next cursor position
+
+
+
+利用`hjkl`才能跟數字組成快速motion, 例如游標往上移動三行 `3k`
 
 ## w 和 W,  b和B
 

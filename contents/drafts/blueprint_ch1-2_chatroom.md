@@ -12,7 +12,7 @@
 
 ![web socket](https://www.websocket.org/img/websocket-architecture.jpg)
 
-
+## server
 
 所有的users(**clients**)在我們的chat application中, 都會被自動放到一個大的public **room**。在room的每個人都可以跟每個人互相聊天
 
@@ -220,6 +220,48 @@ func newRoom() *room {
 
 ## creating and using rooms 
 
-`main.go`
+`main.go`: 
+
+``` go
+package main
+
+import (
+  "html/template"
+  "log"
+  "net/http"
+  "path/filepath"
+  "sync"
+)
+
+type templateHandler struct {
+  once     sync.Once
+  filename string
+  templ    *template.Template
+}
+
+func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+  t.once.Do(func() {
+    t.templ = template.Must(template.ParseFiles(filepath.Join("templates", t.filename)))
+  })
+  t.templ.Execute(w, nil)
+}
+
+func main() {
+  r := newRoom()
+  http.Handle("/", &templateHandler{filename: "chat.html"})
+  http.Handle("/room", r)
+
+  //get the room going
+  go r.run()
+
+  if err := http.ListenAndServe(":8080", nil); err != nil {
+    log.Fatal("ListenAndServe:", err)
+  }
+}
+```
+
+我們把`room`運行在分開的Go routine, 以便整個chatting的運算都發生在背景執行, 讓我們的main theread運行wev server。
+
+這樣server部份就完成了, 不過還需要處理clients的交互部份
 
 
