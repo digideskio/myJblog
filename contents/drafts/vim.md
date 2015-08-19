@@ -1,5 +1,34 @@
 # [Vim]
 
+## auto-reload vimrc
+
+http://www.bestofvim.com/tip/auto-reload-your-vimrc/
+
+
+## Vundle  -- uninstall plugin
+
+## USING GIT AND GITHUB TO MANAGE YOUR DOTFILES
+
+http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
+
+## base16 theme
+
+http://chriskempson.github.io/base16/
+
+### tomorrow-theme 
+
+可以考慮(或許可以透明背景?) https://github.com/chriskempson/tomorrow-theme
+
+## vim-markdown 
+
+https://github.com/plasticboy/vim-markdown
+
+`gx` : open the link under the cursor
+
+`:Toc`, `:Toch` open a nav table
+
+`]]`,`[[` 跳到下/上個heading
+
 ## HTML lint and format
 
 利用 HTML Tidy with HTML5 support + syntastic 

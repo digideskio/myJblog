@@ -64,10 +64,6 @@
 
 ## Go Web Framework
 
-[terryh - golang-web](http://blog.lifetaiwan.net/2014/05/golang-web.html) 
-
-[building web application with golang](http://astaxie.gitbooks.io/build-web-application-with-golang/content/zh/index.html) ebook
-
 [Build you own Web Framework in Go](https://www.nicolasmerouze.com/build-web-framework-golang/)
 
 [Ask HN: Which Go Web Framework (Pros and Cons)?](https://news.ycombinator.com/item?id=8772760)
@@ -105,6 +101,8 @@
 [running mongodb queries concurrently with go](http://blog.mongodb.org/post/80579086742/running-mongodb-queries-concurrently-with-go)
 
 ## Go 
+
+[leaps](https://github.com/Jeffail/leaps): a collaborative text editing service (code 參考!)
 
 
 [alexedwards blog](http://www.alexedwards.net/blog/): *****非常實用的Go code snippets分享

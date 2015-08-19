@@ -1,5 +1,16 @@
 # [Linux]指令 
 
+## xfce4-terminal
+
+http://www.webupd8.org/2013/01/how-to-use-xfce4-terminal-06x-as-drop.html
+
+``` 
+$ xfce4-terminal --drop-down
+```
+
+在快速鍵設定這個指令為`F12` 就可以快速開啟中央terminal! 
+
+
 ## 建立目錄並且切換到新的目錄:
 
 ```
