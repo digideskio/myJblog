@@ -111,6 +111,10 @@ unexpectedlly experience or be faced with (something diffcult or hostile)
 
 > we have encountered on samll problem
 
+more: 
+
+> That is a simple example you're likely to encounter.
+
 n.
 
 ## opposite

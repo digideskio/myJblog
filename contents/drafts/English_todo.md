@@ -1,5 +1,61 @@
 # [English]
 
+## 場景摹擬
+
+- 自我介紹
+- interview問題回應
+
+## 常用句子摹擬
+
+- 不好意思, 可否再說一次
+
+## critical 
+
+adj.  臨界的, 危急的, 要緊的
+
+expressing adverse or disapproving comments or judgments. 
+
+## inspect 
+
+v. 檢查
+
+look at (someone or something) closely, typically to access their condition or to discover any shortcomings.
+
+> they were inspecting my outside paintwork for cracks and flaws.
+
+
+
+## mess
+
+v. 弄亂弄糟
+
+make untidy or dirty,
+
+> you have **mess up** my beautiful carpet.
+
+more: 
+
+> One of common undos takes place when you commit too early and possibly forget to add some files,
+> or you mess up your commit message. 
+
+n.
+
+## wrangle
+
+v. 爭論, 爭吵
+
+have a long and complicated dispute.
+
+> weeks of political wrangling
+
+more: 
+
+> The next two sections demonstrate how to wrangle your staging area and working directory changes.
+
+## take place
+
+v. 發生, occur, happen,
+
 ## aware 
 
 **adj** 察覺的, 注意到, 自覺的

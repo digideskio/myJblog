@@ -1,5 +1,18 @@
 # [Vim]
 
+## [markdown] escape html tag 
+
+ < 和 > 可用: 
+
+```
+&lt;
+&gt;
+```
+
+## open file in vertiacally/horizontal split window
+
+`:sp filename` , `:vsp filename`, 或`:vs filename`
+
 ## auto-reload vimrc
 
 http://www.bestofvim.com/tip/auto-reload-your-vimrc/
