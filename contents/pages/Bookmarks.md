@@ -50,6 +50,10 @@
 
 [Introduction to the Fetch API](http://www.sitepoint.com/introduction-to-the-fetch-api/?utm_source=javascriptweekly&utm_medium=email)
 
+[Laying Out A Flexible Future For Web Design With Flexbox](http://www.smashingmagazine.com/2015/08/flexible-future-for-web-design-with-flexbox/)
+
+[Understanding Critical CSS](http://www.smashingmagazine.com/2015/08/understanding-critical-css/)
+
 ## System
 
 [vim mode in bash](http://blog.sanctum.geek.nz/vi-mode-in-bash/)
