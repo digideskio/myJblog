@@ -1,4 +1,4 @@
-# [Vocabulary] tenet, essence, extremely, trivial, omit, precise, candidate, spin off, underlying, wonder, encounter, opposite, subtle, subtlety, sake, brevity, vice versa, recognize
+# [Vocabulary] tenet, essence, essential, essentially, extremely, trivial, omit, precise, candidate, spin off, underlying, wonder, encounter, opposite, subtle, subtlety, sake, brevity, vice versa, recognize
 
 ## tenet(s) 
 
@@ -19,6 +19,27 @@ the intrinisic nature or indispensable quality of something, especially somethin
 more: 
 
 > confilict is the essence of drama.
+
+## essential
+
+adj. 絕對必要, 非常重要 
+
+absolutely necessary; extremely important.
+
+> it's essential to keep up-to-date records.
+
+## essentially
+
+adv. 實質上, 本質上
+
+used to emphasize the basic, fundamental, or intrinsic nature of a person, thing, or situation.
+
+> Essentially, they are amateurs.
+
+more: 
+
+> It essentially rewinds the work you've done in your testing branch so you can go in a different direction.
+
 
 ## extremely
 

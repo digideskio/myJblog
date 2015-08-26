@@ -2,123 +2,94 @@
 
 ## 場景摹擬
 
-- 自我介紹
-- interview問題回應
+自我介紹
+
+interview問題回應
 
 ## 常用句子摹擬
 
-- 不好意思, 可否再說一次
+不好意思, 可否再說一次
 
-## critical 
+## occasional --> occasionally
 
-adj.  臨界的, 危急的, 要緊的
+adj, 偶然的
 
-expressing adverse or disapproving comments or judgments. 
+occuring, appearing, or done infrequently and irregularly.
 
-## inspect 
-
-v. 檢查
-
-look at (someone or something) closely, typically to access their condition or to discover any shortcomings.
-
-> they were inspecting my outside paintwork for cracks and flaws.
-
-
-
-## mess
-
-v. 弄亂弄糟
-
-make untidy or dirty,
-
-> you have **mess up** my beautiful carpet.
+> the occasional car went by but no taxis.
 
 more: 
 
-> One of common undos takes place when you commit too early and possibly forget to add some files,
-> or you mess up your commit message. 
+> Occasionally, this process doesn't go smoothly.
 
-n.
+## resolution
 
-## wrangle
+n. 決議
 
-v. 爭論, 爭吵
+a firm decision to do or not to do something.
 
-have a long and complicated dispute.
+> She kept her resolution not to see Anne any more
 
-> weeks of political wrangling
+**the action of solving a problem, dispute, or contentious matter.**
 
-more: 
-
-> The next two sections demonstrate how to wrangle your staging area and working directory changes.
-
-## take place
-
-v. 發生, occur, happen,
-
-## aware 
-
-**adj** 察覺的, 注意到, 自覺的
-
-having knowledge or perception of a situation of fact.
-
-> most people **are aware of** the dangers of sunbathing.
+> the peaceful resolution of all disputes.
 
 more: 
 
-> it will automatically create completion-aware g<alias> bash alias for each of your git aliases.
+> Git add standard conflict-resolution markers to the files that have conflicts, so you can open them manually and resolve those conflicts.
 
-## percept --> perception
+## concentrate
 
+**重音在前**
 
-## variation(s)
+v.
 
-n. 變異, 變動, 變化
+focus one's attention or mental effort on a pariticular object or activity.
 
-a change or difference in condition, amount, or level, typically with certain limits.
-
-> regional variations in house prices.
-
-## prompt
-
-n. 提示
-
-an act of assisting or encouraging a hesitating speaker.
-
-> with barely a prompt, Barbara talked on.
-
-more: 
-
-> It's also useful to customize your prompt to show information about the current directory's Git repository.
-
-## abbreviate
-
-v. 簡略, 刪減(字, 詞, text)
-
-shorten (a word, phrase, or text)
-
-> the business of artists and repertory, commonly abbreviated to A&R
+> She couldn't concentrate on the movie.
 
 more:
 
-> If you want to use some abbreviated stats for each commit, you can use the --state option.
+> you can concentrate on your hotfix.
 
+
+
+## get around
+
+避開, 繞開
+
+> There are ways to get ground this.
+
+## significance
+
+n. 重要性
+
+the quality of being worthy of attention; importance
+
+> adolescent education was felt to be a social issue of some significance.
+
+more: 
+
+> What is the significance of that? 
+
+意義
+
+the meaning to be found in  words pr events.
+
+> the significance of what was happening was clearer to me than to her.
+
+
+## regard 
+
+n.
+
+v. 
+
+## regard of 
+
+## percept --> perception
 
 ## phrase
-
-
-## reside
-
-v.  (在一個特定永久的地方)居住 
-
-have one's permanent home in a particular place.
-
-> people who work in the city actually reside in neighboring towns.
-
-more :
-
-> Git has thress states that your files can reside in: committed, modified, and staged.
-
 
 ## as well as 
 
@@ -297,24 +268,6 @@ a stock of a resource from which a person or place can be provided with the nece
 v.
 
 make (something needed or wanted) avaliable to someone; provide
-
-## mitigate
-
-減輕
-
-make less severe, serious , or painful
-
-reduce, ease
-
-> he wanted to mitigate misery in the world.
-
-## distinct
-
-不同, 獨特的, 和...不同, different, not alike, not the same
-
-adj. recognizably different in nature from something else of a similar type. 
-
-> the patterns of spoken language are distinct from those of writing.
 
 ## along with
 

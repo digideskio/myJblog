@@ -10,6 +10,9 @@ RSS feed
 
 ## 風格參考
 
+應該用這個就好, 最簡單乾淨: http://www.rosipov.com/blog/use-vimdiff-as-git-mergetool/
+
+
 觀察其mobile first設計! 
 
 用這個!  http://jacinabox.com.au/

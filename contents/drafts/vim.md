@@ -91,6 +91,36 @@ https://github.com/marijnh/tern_for_vim
 }
 ```
 
+## Jumping to previously visited locations
+
+http://vim.wikia.com/wiki/Jumping_to_previously_visited_locations
+
+`ctrl+o` jump back to the previous (order) location, 打開vim後, 我們可以利用這個指令跳到我們上次修改的位置
+
+`ctrl+i` jump forward to the next (newer) location
+
+`:jumps` 列出jump list
+
+```
+ jump line  col file/text
+   4   102    0 somefile.txt
+   3    93    0 -invalid-
+   2    23    0 the current line 23 is shown here
+   1    89   34 the current line 89 is shown here
+>  0    22   40 Display the jump list for the current window with:
+   1    39    0 the current line 39 is shown here
+   2   995    0 anotherfile.txt
+   3    53  102 the current line 53 is shown here
+```
+
+Ctrl-I to jump to line 39 in the current buffer.
+
+Ctrl-O to jump to line 89 in the current buffer.
+
+4 then Ctrl-O to jump to line 102 in file somefile.txt.
+
+3 then Ctrl-I to jump to line 53 in the current buffer.
+
 
 ## All the right moves 
 
@@ -98,9 +128,6 @@ https://github.com/marijnh/tern_for_vim
 
 `ctrl - u` move half page up
 
-`ctrl+o` jump to last cursor position
-
-`ctrl+i` jump to next cursor position
 
 
 
