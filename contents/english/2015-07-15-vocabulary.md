@@ -1,4 +1,4 @@
-# [Vocabulary] flaw, sweater, wool, denote, wealth, treat, defer, panic, permit, signature, convention(s), occupy, arbitrary, archive
+# [Vocabulary] flaw, sweater, wool, denote, wealth, treat, defer, panic, permit, sign, signature, convention(s), occupy, arbitrary, archive
 
 ## flaw 
 
@@ -81,6 +81,15 @@ v. 許可, allow
 give authorization or consent to (someone) to do something
 
 > the law permits councils to monitor any factory emmiting smoke.
+
+## sign 
+
+n. 符號, 標記, 跡象 
+
+an object, quality, or even whose presence or occurence indeicates the probable presence or occurence of something else.
+
+> flowers are often given as a sign of affection.
+
 
 ## signature
 

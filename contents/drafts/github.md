@@ -1,210 +1,184 @@
-# [Git] Basic Branching and Merging
+# [Git] Remote Branches
 
-## Basic Branching
+## remote branches 
 
-假設已經開始開發專案, 並且已經有一些commits了: 
+Remote references 就是一些在你遠端repositiries的reference(pointers), 包括了branches, tags等等
 
-![b1](https://git-scm.com/book/en/v2/book/03-git-branching/images/basic-branching-1.png)
-
-再來這時決定要解決issue-tracking system上的 issue #53: 
+`git ls-remote`列出有哪些remote references: 
 
 ```
-$ git checkout -b iss53
+$ git ls-remote
+From git@github.com:luchoching/myJblog.git
+81022d132fdfc372b77e5ff4172f2be4610e370a  HEAD
+8c20268ecccc24d630de375c42a8bc6e6defd252  refs/heads/add_page_bar
+81022d132fdfc372b77e5ff4172f2be4610e370a  refs/heads/master
+ff57d7d9a80a57f96be0e894e7c4cdb880c84609  refs/heads/materail-style
+df3566a53b1d19bae1b78b865b13b717a254cbf1  refs/heads/new-style
 ```
 
-![b2](https://git-scm.com/book/en/v2/book/03-git-branching/images/basic-branching-2.png)
-
-在iss53 branch上我們做了一些commits, iss53 branch指標理所當然就往前了: 
-
-![b3](https://git-scm.com/book/en/v2/book/03-git-branching/images/basic-branching-3.png)
-
-
-再來接到說網站有緊急issue要優先處理, 
-
-我們不需要同時發佈(deploy)這個bug fix加上iss53所做的修改, 首先做的事情就侍從iss53 branch 切換到master branch
-
-不過注意, **如果你的working directory或是 staging area還有未commit的改變, 這會和你正要checkout出去的分支產生衝突, Git會阻止你切換branch**
-
-例如: 
+或是`git remote show (remote)`: 
 
 ```
-$ git checkout  master 
-error: Your local changes to the following files would be overwritten by checkout:
-  README
-Please, commit your changes or stash them before you can switch branches.
-Aborting
+$ git remote show origin
+* remote origin
+  Fetch URL: git@github.com:luchoching/myJblog.git
+  Push  URL: git@github.com:luchoching/myJblog.git
+  HEAD branch: master
+  Remote branches:
+    add_page_bar   tracked
+    master         tracked
+    materail-style tracked
+    new-style      tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
 ```
 
-除非將工作區域清乾淨(commit), 或是利用**namely, stashing以及commit amending**來解決
+最常用的, 還是利用 remote-tracking branches的優點
 
-清好了才可以`git checkout master`
+Remote-tracking branches 就是紀錄遠端分支狀態的reference, 這些都是我們不能移動的local references, 只有當我們做任何網路溝通的時候他們才會自動移動
 
-This is an important point to remember: when you switch branches, Git resets your working directory to look like it did the last time you committed on that branch. It adds, removes, and modifies files automatically to make sure your working copy is what the branch looked like on your last commit to it.
+Remote-tracking branches就好像書籤(bookmarks)提醒你, 你最後跟遠端respositories連線的時候, 那些在遠端repositories的branches是在什麼位置
 
-再來我們要做一個`hotfix` branch來把整個解決bug的事情做完:
+`(remote)/(branch)`
 
-```
-$ git checkout -b hotfix
-$ vim index.html
-$ git commit -a -m 'fixed the broken email address'
-```
+例如你想要看 在你的`origin` remote的 `master` branch最後我跟他們連線的時候是什麼模樣, 我們就可以檢查`origin/master` branch
 
-![b4](https://git-scm.com/book/en/v2/book/03-git-branching/images/basic-branching-4.png)
+又假設你的伙伴push上去一個`iss53` branch, 我可能也有自己的local的`iss53`, 那server上的這個branch, 會指向`origin/iss53`的commit
 
-測試hotfix若ok, 就可以把hotfix 合併回去master: 
+進一步說明, 假設你有一個Git server在網路上叫作`git.ourcompany.com`, 如果我clone, Git就會自動把遠端倉庫`git.ourcompany.com`叫作`origin`, pull拉下所有資料, 建立一個指向這個遠端倉庫的`master`的指標, 在local端命名為`origin/master`, 但是我們沒有辦法在local端更改資料, 
+接著Git就會建立一個屬於你自己的local端的`master` branch, 一開始, 兩個branches都指向相同的位置: 
 
-``` 
-$ git checkout master
-$ git merge hotfix
-Updating f42c576..3a0874c
-Fast-forward
- index.html | 2 ++
- 1 file changed, 2 insertions(+)
-```
+![b1](https://git-scm.com/book/en/v2/book/03-git-branching/images/remote-branches-1.png)
 
-如果順著一個分支走下去可以到達另一個分支的話，那麼 Git 在合併兩者時，只會簡單地把指標右移，因為這種單線的歷史分支不存在任何需要解決的分歧，所以這種合併過程可以稱為`fast-forward`。
+如果你在本地 master 分支做了些改動，與此同時，其他人向 git.ourcompany.com 推送了他們的更新，那麼伺服器上的 master 分支就會向前推進，而於此同時，你在本地的提交歷史正朝向不同方向發展。不過只要你不和伺服器通訊，你的 origin/master 指標仍然保持原位不會移動:
 
-![b5](https://git-scm.com/book/en/v2/book/03-git-branching/images/basic-branching-5.png)
+![b2](https://git-scm.com/book/en/v2/book/03-git-branching/images/remote-branches-2.png)
 
-hotfix分支已經用不到了, 因為master branch指向的是同一個地方, 那就可以刪掉hotfix, 然後回到iss53 branch工作: 
+`git fetch origin` 會去找哪一個server叫作`origin`, 然後從該server擷取我們local都還沒有的資料下來, 更新我們的local database, 移動我們的`origin/master`到新的位置:
 
-```
-$ git branch -d hotfix
-$ git checkout iss53
-$ vim index.html
-$ git commit -a -m 'finished new footer'
-```
+![b3](https://git-scm.com/book/en/v2/book/03-git-branching/images/remote-branches-3.png)
 
-![b6](https://git-scm.com/book/en/v2/book/03-git-branching/images/basic-branching-6.png)
+假設你還有另一個僅供你的敏捷開發小組使用的內部伺服器`git.team1.ourcompany.com`, 利用`git remote add teamone git.team1.ourcompany.com`加入成為我們的remote reference之一: 
 
-注意這個時候 hotfix修改的內容並未包含到 iss53中, 
+![b4](https://git-scm.com/book/en/v2/book/03-git-branching/images/remote-branches-4.png)
 
-如果要納入這次的bug修改, 可以用`git merge master`把master合併到iss53, 或是等iss53完成後, 再將iss53的更新併入到master。
+利用`git fetch teamone`取得該server裏面我們local server沒有的資料, 因為teamone是origin的subset, 所以只有加上`teamone/master` branch pointer
 
-## Basic Merging
+![b5](https://git-scm.com/book/en/v2/book/03-git-branching/images/remote-branches-5.png)
 
-假設iss53已經做完了, 可以合併到master去, 做法跟合併hotfix一樣: 
+## Pushing 
+
+當我想要跟大家分享我的branch, 我需要把我的分支**push** up到我有寫入權限的remote去
+
+你的local branches不會自動和你的remote同步, 你必須明確的將你要分享的分支 push上去
+
+也就是說, 對於無意分享的分支，你儘管保留為私人分支好了，而只推送那些協同工作要用到的特性分支。 
+
+如果你有的branch叫作`serverfix`,你想要跟其他人一起合作, 你就可以用`git push (remote) (branch)`的方式push該分支到remote去：
 
 ```
-$ git checkout master
-Switched to branch 'master'
-$ git merge iss53
-Merge made by the 'recursive' strategy.
-index.html |    1 +
-1 file changed, 1 insertion(+)
+$ git push origin serverfix
+Counting objects: 24, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (24/24), 1.91 KiB | 0 bytes/s, done.
+Total 24 (delta 2), reused 0 (delta 0)
+To https://github.com/schacon/simplegit
+ * [new branch]      serverfix -> serverfix
 ```
 
-Git做了三向merge : 
+這裡其實走了一點捷徑。
 
-![b7](https://git-scm.com/book/en/v2/book/03-git-branching/images/basic-merging-1.png)
+Git 自動把 serverfix 分支名擴展為 `refs/heads/serverfix:refs/heads/serverfix`，意為“取出我在本地的 serverfix 分支，推送到遠端倉庫的 serverfix 分支中去”。我們將在第九章進一步介紹 `refs/heads/` 部分的細節，不過一般使用的時候都可以省略它。
 
-C2(共同祖先), C4 和 C5(兩個分支的末端)
+也可以運行 `git push origin serverfix:serverfix` 來實現相同的效果，它的意思是“上傳我本地的 serverfix 分支到遠端倉庫中去，仍舊稱它為 serverfix 分支”。
 
-這次沒有只是將pointer往前, Git建立一個新的snapshot commit, 這個commit有兩個parent(a merge commit):
+通過此語法，你可以把本地分支推送到某個命名不同的遠端分支：若想把遠端分支叫作 awesomebranch，可以用 `git push origin serverfix:awesomebranch` 來推送數據。
 
-![b7](https://git-scm.com/book/en/v2/book/03-git-branching/images/basic-merging-2.png)
 
-Git會判斷用哪一個祖先來當作最佳的merge base
-
-一樣merge後不再需要iss53 branch, 就可以刪除:
+接下來，當你的協作者再次從伺服器上獲取資料時，他們將得到一個新的遠端分支 origin/serverfix，並指向伺服器上 serverfix 所指向的版本：
 
 ```
-$ git branch -d iss53
+$ git fetch origin
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From https://github.com/schacon/simplegit
+ * [new branch]      serverfix    -> origin/serverfix
 ```
 
-## Basic merge conflicts
+**注意! 當你從fetch回來新的remote-tracking branches, 你並不會自動有一個可編輯的副本(editable copies), 換句話說, 你不會有一個新的`serverfix` branch, 你只有一個不能修改(無法移動)的`origin/serverfix`指標**
 
-大多數時間合併沒有這麼順利
+我們可以把這個`origin/serverfix` merge到我們目前的working branch: `git merge origin/serverfix`
 
-如果我們在兩個branch都改相同的檔案然後合併, Git不能清楚的合併他們, 可能就會看到如下的訊息:
-
-```
-$ git merge iss53
-Auto-merging index.html
-CONFLICT (content): Merge conflict in index.html
-Automatic merge failed; fix conflicts and then commit the result.
-```
-
-Git沒有辦法自動建立一個新的merge commit, 會先暫停等你解決衝突後再繼續。
-
-`git status`:
+或是你想要自己的`serverfix` branch, 那我們可以基於我們的remote-tracking branch來建立: 
 
 ```
-$ git status
-On branch master
-You have unmerged paths.
-  (fix conflicts and run "git commit")
-
-Unmerged paths:
-  (use "git add ..." to mark resolution)
-
-    both modified:      index.html
-
-no changes added to commit (use "git add" and/or "git commit -a")
+$ git checkout -b serverfix origin/serverfix
 ```
 
-`git status -s`:
+這會切換到新建的 serverfix 本地分支，其內容同遠端分支 origin/serverfix 一致，這樣你就可以在裡面繼續開發了。
+
+
+## Tracking Branches
+
+從一個remote-tracking分支checkout出來的local branch, 我們叫作`tracking branch`(或是叫作`upstram branch`)
+
+Tracking branch 為local branch, 和某個remote branch有直接關聯, 如果在這個分支直接`git pull`, Git就會知道從哪個server來fetch遠端追蹤的分支回來, 並且執行merge
+
+就像我們clone回來一個repository, Git就會自動建立master branch, 並且追蹤`origin/master`(這也是依開始why `git push`, `git pull`可以正常工作的原因)
+
+當然，你可以隨心所欲地設定為其它跟蹤分支，比如 origin 上除了 master 之外的其它分支。`git checkout -b [branch] [remotename]/[branch]`可以用`--track`簡化:
 
 ```
-$ git status
-UU index.html
+$ git checkout --track origin/serverfix 
+Branch serverfix set up to track remote branch serverfix from origin.
+Switched to a new branch 'serverfix'
 ```
 
-必須要編輯衝突的檔案來解決問題:
+要設定不同名字：
 
 ```
-<<<<<<< HEAD
-div id="footer">contact : email.support@github.com/div>
-=======
-div id="footer">
- please contact us at support@github.com
-/div>
->>>>>>> iss53
+$ git checkout -b sf origin/serverfix
+Branch sf set up to track remote branch serverfix from origin.
+Switched to a new branch 'sf'
 ```
 
-`<<<<<<< HEAD` 就是我們HEAD指向所在(就是master), 到`=======`就是master branch所紀錄的內容, 
-
-`=======` 到` >>>>>>> iss53`就是iss53 branch所紀錄的內容
-
-解決方法要碼就是二者擇一, 或是由你親自整合到一起,例如以下：
+如果你有現成的local branch, 你現要追蹤你剛才pull dwon下來的remote branch, 或是要改變目前所追蹤的upstream branch, 利用`-u`或`--set-upstream-to`: 
 
 ```
-div id="footer">
-please contact us at email.support@github.com
-/div>
+$ git branch -u origin/serverfix
+Branch serverfix set up to track remote branch serverfix from origin.
 ```
-
-選擇了兩者各自的部份內容, 然後移除所有的標記線
-
-再來執行`git add`標記衝突已經解決, 再執行`git commit`完成merge
-
-### 使用merge tool
-
-```
-$ git mergetool
-
-This message is displayed because 'merge.tool' is not configured.
-See 'git mergetool --tool-help' or 'git help config' for more details.
-'git mergetool' will now attempt to use one of the following tools:
-opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc3 codecompare vimdiff emerge
-Merging:
-index.html
-
-Normal merge conflict for 'index.html':
-  {local}: modified file
-  {remote}: modified file
-Hit return to start merge resolution tool (opendiff):
-```
-
-Git預設使用`opendiff`
-
-那我是想用`vimdiff`
 
 
 ----------
 
+## 如何在commit間移動
+
+例如我的master branch:  C1 -> C2 -> C3,  HEAD在C3, 我要移動要C1來建立分支, 如何做
+
+`git checkout`: Checkout a branch or paths to the working tree
+
+
+
+## 不要每次都打密碼 
+
+`git config --global credential.helper cache`
+
+section 7-14
+
+
+## 刪除遠端 branch
+
+
+
 ## .gitconfig 共用參數撰寫
 
+https://github.com/durdn/cfg/blob/master/.gitconfig
 
 
 ## 使用git merge tool -- 使用vimdiff
