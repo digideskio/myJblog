@@ -70,6 +70,24 @@
 
 [Ardan Labs](https://www.ardanlabs.com/): Go Training
 
+## Go NewsLetter 
+
+### #73
+
+[Stupid Gopher Tricks](http://talks.golang.org/2015/tricks.slide)
+
+[Profiling & Optimizing in Go](https://github.com/bradfitz/talk-yapc-asia-2015/blob/master/talk.md?utm_source=golangweekly&utm_medium=email)
+
+[The New Go 1.5 Vendor Handling](http://engineeredweb.com/blog/2015/go-1.5-vendor-handling)
+
+[Working with Files in Go](http://devdungeon.com/content/working-files-go)
+
+[go-starter-kit](https://github.com/olebedev/go-starter-kit): Golang Isomorphic Hot Reloadable/React/Flummox/Css-Module Starter Kit
+
+[bongo](https://github.com/gernest/bongo): Elegant static website generation with Go
+
+
+
 ## Go Web Framework
 
 [Build you own Web Framework in Go](https://www.nicolasmerouze.com/build-web-framework-golang/)

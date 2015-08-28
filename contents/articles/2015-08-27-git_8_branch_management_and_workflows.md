@@ -1,5 +1,9 @@
 # [Git] Branch Management & Workflows
 
+以下部份翻譯ProGit [中文版v1](https://git-scm.com/book/zh-tw/v1/%E9%96%8B%E5%A7%8B) / [英文版v2](https://git-scm.com/book/en/v2), 加上自己一些測試。
+
+-----------
+
 `git branch -v` 可以察看每個branch最新的commit
 
 ```

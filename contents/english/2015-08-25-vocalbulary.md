@@ -1,4 +1,242 @@
-# [Vocalbulary] mitigate, distinct, reside, variation(s), prompt, abbreviate, mess, wrangle, take place, aware, diverge, occupation, category, bureaucrat(s), critical, inspect
+# [Vocalbulary] occasional, resolution, concentrate, get around, silo, bleeding edge, farther, retain, detach, nevertheless, embrace, abandon, tamper, posterity, collar, academic, that way, ahead, up-to-date, hold off, figure out, peril, bliss, sum up, mitigate, distinct, reside, variation(s), prompt, abbreviate, mess, wrangle, take place, aware, diverge, occupation, category, bureaucrat(s), critical, inspect
+
+## occasional --> occasionally
+
+adj, 偶然的
+
+occuring, appearing, or done infrequently and irregularly.
+
+> the occasional car went by but no taxis.
+
+more: 
+
+> Occasionally, this process doesn't go smoothly.
+
+## resolution
+
+n. 決議
+
+a firm decision to do or not to do something.
+
+> She kept her resolution not to see Anne any more
+
+**the action of solving a problem, dispute, or contentious matter.**
+
+> the peaceful resolution of all disputes.
+
+more: 
+
+> Git add standard conflict-resolution markers to the files that have conflicts, so you can open them manually and resolve those conflicts.
+
+## concentrate
+
+**重音在前**
+
+v.
+
+focus one's attention or mental effort on a pariticular object or activity.
+
+> She couldn't concentrate on the movie.
+
+more:
+
+> you can concentrate on your hotfix.
+
+
+
+## get around
+
+避開, 繞開
+
+> There are ways to get ground this.
+
+
+## silo(s)
+
+n. 筒倉
+
+a tower or pit on a farm used to store grain.
+
+n.
+
+an underground chamber in which a guided missile is kept ready for firing.
+
+## bleeding edge
+
+bleeding --> 流血的
+
+非常前端的技術
+
+the very forefront of technological development.
+
+> an architecture that many people delieve is still too bleeding edge fort large mission-critical systems.
+
+more: 
+
+> The stable branches are farther down the line in your commit history, and the bleeding-edge branches are father up the history.
+
+## farther 
+
+adj, 
+
+more distant in space than another item of the same kind.
+
+> the farther side of the mountain
+
+farther down (愈往下), farther up(愈往上)
+
+## retain 
+
+v. 保留
+
+continue to have (something); keep possession of.
+
+> built in 1830, the house retains many of its original features.
+
+more: 
+
+> If you want to create a new branch to retain commits you create, you may  do so (now or later) by using -b with the checkout command again.
+
+## detach
+
+v. 分離
+
+disengage (something or part of something) and remove it.
+
+> he detached the from lamp from its bracket.
+
+more: 
+
+> You are in 'detached HEAD' state.
+
+## nevertheless
+
+adv. 但, 然而
+
+is spite of that; notwithstanding; all the same 
+
+> statements which, although literally true, are nevertheless misleading.
+
+more:
+
+> Nevertheless, a more common way is to take adavantage of remote-tracking branches.
+
+
+## embrace
+
+v, 擁抱
+
+hold (someone) closely in one's arms, especially as a sign of affection
+
+> Aunt Sophie embraced her warmly.
+
+more:
+
+> Many Git developers have a workflow that embraces this approach.
+
+n.
+
+
+## abandon 
+
+v. 完全放棄
+
+give up completely (a course of action, a practice , or a way of thinking)
+
+> he had clearly abandoned all pretense of trying to succeed.
+
+more: 
+
+> When you rebase stuff, your are abandoning existing commits and creating new ones that similar but different.
+
+## tamper
+
+v. (會造成傷害的)竄改, 亂動
+
+interface with (something) in order to cause damage or make unauthorized alterations.
+
+> someone **tampered with** the brakes on my car.
+
+more: 
+
+> it's a historical document, valuable in its own right, and shouldn't be **tempared with**.
+
+## posterity
+
+後代子孫
+
+all future generations of people.
+
+## collar 
+
+n. 衣領
+
+more: 
+
+> blue collar jobs
+
+## academic(s)
+
+n. 
+
+a teacher or scholar in a college or institute of higher education.
+
+adj. 
+
+of or relating to education and scholarship
+
+## that way, in that way
+
+這樣, 以這種方式
+
+> That way, you can use private branches for work you don't want to share, and push up only the topic branches you want collaborate on.
+
+
+## ahead
+
+adv. 向前
+
+further forward in space; in the line of one's forward motion.
+
+> he had to give his attention to the road ahead.
+
+## up-to-date
+
+adj, 跟上時代的, 現代的
+
+> Your branch is up-to-date with 'origin/master'.
+
+## hold off
+
+拖延
+
+## figure out 
+
+弄清楚, 找出
+
+## peril(s)
+
+n. 一連串且立即性的危險
+
+serious and immediate doanger
+
+> his family was in peril
+
+## bliss
+
+n. 極樂
+
+perfect happiness; great joy
+
+> she gave a sigh of bliss
+
+## sum up
+
+總結
+
+more: 
+
+> Ahh, but the bliss of rebasing isn't without its drawbacks, which can be **summed up** in a single line:
 
 ## mitigate
 
