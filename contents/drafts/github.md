@@ -1,7 +1,64 @@
-# [Git]
+# [Git] Github -- Contributing to a Project`
+
+## git push 不用輸入帳號密碼
+
+[github設定SSH keys](https://help.github.com/articles/generating-ssh-keys/)
+
+將origin由原來的`https`改成`ssh`
+
+![ssh](http://imgur.com/DmudyO7l.png)
+
+```
+$ git remote -v 
+```
+
+http://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
+
+## Forking Projects
+
+如果我想要建立一個現有專案是我們沒有push權限的, 我們可以 **fork** 這個專案。
+
+Github會把整個專案做一個copy給你, 這個copy存在於你的username namespace下, 這樣就可以push了
+
+對於專案來說, 就不需要每次都還要加push權限給協作者,  人們只要fork這個專案, push狀態到這個fork出來的專案, 然後建立一個**Pull Request**: 把所建立的改變送回給原來的repository.
+
+## The Github Flow
+
+**Pull Requests**
+
+不管團隊規模, 主要是圍繞在 *Topic Branches workflow* 的方式:
+
+1. 從`master`建立一個topic branch
+2. make some commits to improve the project
+3. 將這個topic branch來push到你的Github project
+4. **在Github開啟一個Pull request**
+5. **討論, 並且任意繼續commiting**
+6. **該project owner執行merge, 並且關閉pull request**
+
+這裡採用了 *Integration Manager workflow* 方式, 但是使用email來溝通與review changes.
+
+### 例子
+
+
 
 
 ----------
+
+## git diff 和 git diff --word-diff
+
+`git diff --word-diff`: 
+
+```
+  [-delay(1000);-]{+delay(3000);+}               // wait for a second
+```
+
+`git diff`:
+
+```
+-  delay(1000);               // wait for a second
++  delay(3000);               // wait for a second
+```
+
 
 ## 如何在commit間移動
 
@@ -64,10 +121,6 @@ https://github.com/g0v/dev/wiki/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Issue-Track
 
 ## Vim git tool
 
-## 跳到特定commit
-
-## 察看特定commit的特定檔案
-
 ### 復原某特定commit的特定檔案? 
 
 ## 更改git branch 名字
@@ -78,24 +131,6 @@ https://github.com/g0v/dev/wiki/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Issue-Track
 http://stackoverflow.com/questions/179123/edit-an-incorrect-commit-message-in-git
 
 `git commit --amend`, `git commit --amend -m "New commit message"`
-
-
-## git push origin不用輸入帳號密碼
-
-[github設定SSH keys](https://help.github.com/articles/generating-ssh-keys/)
-
-將origin由原來的`https`改成`ssh`
-
-![ssh](http://imgur.com/DmudyO7l.png)
-
-```
-$ git remote -v 
-```
-
-http://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
-
-
-## pull request 怎麼用
 
 ## 怎麼在別人的repository 發問
 

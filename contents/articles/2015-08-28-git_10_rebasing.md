@@ -23,7 +23,7 @@ $ git checkout experiment
 $ git rebase master
 ```
 
-它的原理是回到兩個分支最近的共同祖先，根據當前分支（也就是要進行衍合的分支 `experiment`）後續的歷次提交物件（這裡只有一個 `C3`），生成一系列檔補丁，然後以基底分支（也就是主幹分支 master）最後一個提交物件（`C4`）為新的出發點，逐個應用之前準備好的補丁檔，最後會生成一個新的合併提交物件（`C3'`），從而改寫 experiment 的提交歷史，使它成為 master 分支的直接下游:
+它的原理是回到兩個分支最近的共同祖先，根據當前分支（也就是要進行衍合的分支 `experiment`）後續的歷次提交物件（這裡只有一個 `C4`），生成一系列檔補丁(patch)，然後以基底分支（也就是主幹分支 master）最後一個提交物件（`C3`）為新的出發點，逐個應用之前準備好的補丁檔，最後會生成一個新的合併提交物件（`C4'`），從而改寫 experiment 的提交歷史，使它成為 master 分支的直接下游:
 
 It works by going to the common ancestor of the two branches (the one you’re on and the one you’re rebasing onto), getting the diff introduced by each commit of the branch you’re on, saving those diffs to temporary files, resetting the current branch to the same commit as the branch you are rebasing onto, and finally applying each change in turn.
 

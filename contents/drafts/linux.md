@@ -1,5 +1,14 @@
 # [Linux]指令 
 
+## 利用 sed 做搜尋與取代
+
+sed - stream editor for filtering and transforming text
+
+ -i[SUFFIX] : edit files in place (makes backup if SUFFIX supplied)
+
+ > sed -i'' 's/1000/3000'
+
+
 ## xfce4-terminal
 
 http://www.webupd8.org/2013/01/how-to-use-xfce4-terminal-06x-as-drop.html

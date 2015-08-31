@@ -10,6 +10,47 @@ interview問題回應
 
 不好意思, 可否再說一次
 
+## stale 
+
+adj 
+
+(of food) no longer fresh abd pleasant to eat; hard, musty, or dry.
+
+> stale bread.
+
+## suffix
+
+n. 後綴
+
+a morpheme added at the end of a word to form a derivative, e,g. -ation, -fy, -ing, -itis
+
+## celebrity --> celebrities
+
+名人, 明星
+
+a famous person.
+
+## freeloader
+
+(負面語氣)白吃白喝的人
+
+a person who takes advantage of others' generosity without giving anything in return.
+
+> They look like a bunch of freeloaders trying to take advantage of the whole situation.
+
+## headquarter --> headquarterd
+
+v. 總部設在 
+
+based in
+
+provide (an organization) with headquaters at a specified location
+
+> UNESCO is headquarterd in Paris.
+
+## was founded 
+
+公司成立
 
 ## affection
 
