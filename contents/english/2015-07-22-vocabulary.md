@@ -1,4 +1,4 @@
-# [Vocabulary] tenet, essence, essential, essentially, extremely, trivial, omit, precise, candidate, spin off, underlying, wonder, encounter, opposite, subtle, subtlety, sake, brevity, vice versa, recognize
+# [Vocabulary] tenet, essence, essential, essentially, extremely, trivial, omit, precise, candidate, spin off, underlying, wonder, encounter, opposite, opposition, subtle, subtlety, sake, brevity, vice versa, recognize
 
 ## tenet(s) 
 
@@ -149,6 +149,18 @@ having a position on the other or further side of something; facing something, e
 more: 
 
 > Let's go in the opposite direction: ...
+
+## oppostion
+
+n. 反對, 反對派, 反對黨
+
+resistance or dissent, expressed in action or argument.
+
+> there  was considerable opposition to the proposal.
+
+more: 
+
+> opposition companies
 
 ## subtle
 
