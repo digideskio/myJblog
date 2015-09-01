@@ -26,7 +26,17 @@ more:
 
 ## though
 
-雖然 although, even if
+adv, 然而, 但是
+
+however (indicating that a factor qualifies or imposes restrictions on what was said previously)
+
+> I was hunting for work. Jobs were scarce though.
+
+more: 
+
+> Who buit the software image though? 
+
+連接詞, 雖然 although, even if
 
 desplite the fact that
 

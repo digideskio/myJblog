@@ -110,6 +110,10 @@ any of the foods or substances that are combined to make a particular dish
 
 > pork is an important ingredient in many stir-fried dishes.
 
+more: 
+
+> At this point, you have all your software ingredients and behaviors described in a Dockerfile. 
+
 ## dish(es)
 
 碟

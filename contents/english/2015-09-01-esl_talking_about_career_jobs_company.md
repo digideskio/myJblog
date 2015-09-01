@@ -1,10 +1,8 @@
-# [ESL] 
-
-## Talking about careers and Jobs in English
+# [ESL] Talking careers, job and your company 
 
 [video](https://youtu.be/2iR9YH3WgPg)
 
-### Occupation categories 
+## Occupation categories 
 
 Blue collar jobs (working class)
 
@@ -14,7 +12,7 @@ Pink collar jobs (service industry, female workers)
 
 Bureaucrats (work for government, people who work in the government)
 
-Professionals (highly qulified people, docters, lawyers)
+rofessionals (highly qulified people, docters, lawyers)
 
 Academic(s) (學者) teachers, researchers
 
@@ -29,8 +27,28 @@ Freeloader (negative term) 啃老族, a person who takes advantage of other's ge
 
 [video](https://youtu.be/IpMWIvjPlK4)
 
+### your company
+
 headquartered / based in --> main office  --> the main office is based in Paris. 
 
-was founded / established in 
+was founded / established in --> history
 
-2:21
+has a work force of --> No. of people employed, ex: 23 employees.
+
+operates in --> field, locations
+
+> My company operates in retail.
+
+market position 
+
+success strategy --> reasons of your company's success
+
+### your job
+
+current job position --> I work as / I am the ...
+
+job resposibilities --> My job deal with / I'm incharge of ...
+
+> I'm incharge of selling 
+
+Enjoying your job --> What I like about my job

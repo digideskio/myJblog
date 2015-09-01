@@ -10,6 +10,36 @@ interview問題回應
 
 不好意思, 可否再說一次
 
+## deal 
+
+v. 參加特定商品的商業交易
+
+take part in commercial trading of a particular commodity.
+
+董事們被禁止買賣自己公司股票
+
+> directors were prohibited from dealing in the company's shares.
+
+## deal with
+
+經手, handle
+
+販售, sell, trade in 
+
+處理, process, handle, treat
+
+## mandatory 
+
+adj. 
+
+required by law or rules; compulsory.
+
+> wearing helmets was made mandatory for cyclists.
+
+more: 
+
+> Although helpful, the -t flag is not mandatory.
+
 ## stale 
 
 adj 

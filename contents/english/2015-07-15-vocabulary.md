@@ -35,6 +35,10 @@ an abundance of valuable possessions or money.
 
 > he used his wealth to bribe officials.
 
+more: 
+
+> Depending on your interest, the Docker documentation contains a wealth of information.
+
 ## treat
 
 v. 對待, 處理, 當成
