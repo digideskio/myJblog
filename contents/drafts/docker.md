@@ -1,9 +1,14 @@
 # [Docker]  Dockerfile
 
+
 [Official Dockerfile doc](https://docs.docker.com/reference/builder/)
 
 
 ## More
+
+docker 可以透過vncserver 操作GUI介面! (例如xfce4)
+
+[initial shell script and run shell script.](https://gist.github.com/kvzhuang/8233907)
 
 [building minimal docker containers for Go applications](https://blog.codeship.com/building-minimal-docker-containers-for-go-applications/)
 

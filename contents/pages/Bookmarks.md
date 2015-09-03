@@ -50,6 +50,8 @@
 
 ## WEB/HTML5/CSS3
 
+[The future of layout with CSS: Grid Layouts](https://medium.com/@patrickbrosset/css-grid-layout-6c9cba6e8a5a)
+
 [Material Design Lite](http://www.getmdl.io/)
 
 [Introduction to the Fetch API](http://www.sitepoint.com/introduction-to-the-fetch-api/?utm_source=javascriptweekly&utm_medium=email)

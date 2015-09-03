@@ -1,5 +1,21 @@
 # [Vim]
 
+## run your shell scripts 
+
+`:！ sh aaa.sh %`
+
+## Visual Mode
+
+`V3j`選了4行
+
+`V3j>` Visually mark and then indent 3 lines
+
+`Ctrl + v + 2e`
+
+`Ctrl + v + iw`
+
+`Ctrl + v + ^`. `Ctrl + v + $`
+
 ## [markdown] escape html tag 
 
  < 和 > 可用: 

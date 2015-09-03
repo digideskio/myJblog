@@ -10,6 +10,64 @@ interview問題回應
 
 不好意思, 可否再說一次
 
+## arithmetic
+
+n. 算術 (四則運算)
+
+the branch of mathematics dealing with the properties and manipulation of numbers.
+
+> the laws of arithmetic
+
+
+
+## concatenate 
+
+v. 串聯 
+
+link (things) together in a chain or series. 
+
+> some words may be concatenated, such that certain sounds are ommitted.
+
+## expansion 
+
+n. 擴張
+
+the action of becoming larger or more extensive
+
+> the rapid expansion of suburban Washington.
+
+## ultimate
+
+adj.  最終的, 最後的
+
+being or happening at the end of a process.
+
+> their ultimate aim was to force his resignation.
+
+## shape 
+
+n. 
+
+the external form or appearance characteristic of someone or something; the outline of an area area or figure.
+
+> She like the shape of his nose.
+
+more: 
+
+> An area is a rectangular shape that can span an arbitray number of cells.
+
+## enforce
+
+v. 強制執行
+
+compel observance of or compliance with (a law, rule, or obligation)
+
+execute, implement, carry out
+
+more: 
+
+> One key advantage of CSS grids is that they enforce real separation of layout and markup.
+
 ## deal 
 
 v. 參加特定商品的商業交易

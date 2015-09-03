@@ -9,16 +9,18 @@
 
 ## 自己的英文字典庫
 
-存到mongodb 
+存到mongodb + docker 帶著走
 
 可以匯出文件?
 
 ## 新的blog 
 
-將資料存到mongodb ? 
+將posts 和 blog generater 分成兩個repository儲存
+
+style應該要像這樣才乾淨! [here](https://medium.com/@matryer/writing-middleware-in-golang-and-how-go-makes-it-so-much-fun-4375c1246e81)
 
 
-## 撰寫 blog html/css/prototype
+### 撰寫 blog html/css/prototype
 
 copy build成品 在重新排layout
 

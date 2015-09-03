@@ -23,6 +23,15 @@ a close look of long format:
 
 ![lsl](http://imgur.com/XYeEqRQl.png)
 
+ubuntu bash已經內建一些好用alias: 
+
+```
+alias ll='ls -alF'                                                                           
+alias la='ls -A'                                                                             
+alias l='ls -CF'
+```
+
+
 
 如果`$ cd`後面沒有接參數, `cd`就會把working directory從目前的目錄切換到`/home/yourusername` directory.
 
@@ -44,11 +53,100 @@ $ file 2015-08-28-git_9_remote_branches.html
 
 `/etc`: contain the configuration files for the system.  (All of the files in /etc should be text files)
 
-  - `/etc/passwd` 檔案: it is here that users are defined
-  - `/etc/fstab`檔案 : contain a table of  devices that get mounted when your system boots.
+  - `/etc/passwd` : it is here that users are defined
+  - `/etc/fstab`: contain a table of  devices that get mounted when your system boots.
+  - `/etc/hosts`: this file lists the network host names and IP address that are intrinsically known to the system.
+  - `/etc/init.d`: this directory contains the scripts that start various system services typically at boot time.
 
+`/bin`, `/usr/bin`:  contain most of the programs for the system. The `/bin` directory has the esssntial programs that the system requires to operate, `/usr/bin` contains applications for the system's users.
 
-## cmd Pipelines
+`/sbin`, `/usr/sbin`: for superuser
+
+`/usr`: contains variety of things that support user applications.:
+
+  - `/usr/share/X11`: support files for the X Window system
+  - `/usr/share/dict`: for the spelling checker.
+  - `/usr/share/doc`
+  - `/usr/share/man`
+  - `/usr/src`: source code files. ex: kernel source codes
+
+`/usr/local`: for the installation of software and other files for use on the local machine. What this really means is that **software that is not part of the official distribution goes here**(不然就會到`usr/bin`去)
+
+`/var`: contains files that changes as the system is running:
+
+  - `/var/log`: you should view the files from time to time, to monitor the health of your system.
+  - `/var/spool`: is used to hold files that are queued for some process, such as mail messages and print jobs.
+
+(未完, 直接看doc)
+
+## Manipulating Files
+
+`cp`: copy files and directories
+
+`mv`: move or rename files and directories
+
+`rm`: remove(delete) files and directories
+
+`mkdir`: create directories
+
+可以這樣: `mv file1 file2 file3 dir1`
+
+## Working with Commands 
+
+`type`: display information about command type
+
+```
+$ type gla
+gla is aliased to `git la'
+$ type ls
+ls is aliased to `ls --color=auto'
+$ type ll
+ll is aliased to `ls -al'
+$ type cp
+cp is /bin/cp
+```
+
+`which`: locate a command
+
+```
+$ which ls
+/bin/ls
+$ which git
+/usr/bin/git
+```
+
+`help`
+
+`man`
+
+## I/O Redirection
+
+send to standard output: 
+
+```
+$ ls > file_list.txt
+$ ls >> file_list.txt
+```
+
+**standard input**: 
+
+`sort`: sort lines of text files
+
+```
+$ sort < file_list.txt
+```
+
+**注意**: 
+
+```
+$ sort < file_list.txt > sorted_file_list.txt
+```
+
+會先執行`sort < file_list.txt` 將結果output到 `sorted_file_list.txt`
+
+### cmd Pipelines
+
+The standard output of one command is fed into the standard input of another: 
 
 ```
 $ ls -l | less
@@ -56,7 +154,60 @@ $ ls -l | less
 
 the output of the `ls` command is fed into `less`.
 
+**filters**: take standard input and perform an operation upon it and send the results to statndard output.
 
+通常命令組合跟filter搭配, 例如`sort`, `grep`, `fmt`, `sed`, `awk`
+
+## Expansion
+
+`echo`: prints out its text arguments on standard output.
+
+```
+$ echo this is a test
+this is a test
+```
+
+利用`echo`作測試
+
+```
+$ echo text ~/*.txt {a,b} $(echo foo) $((2+2)) $USER
+text /home/parks/test.json.txt a b foo 4 parks
+$ echo "text ~/*.txt {a,b} $(echo foo) $((2+2)) $USER"
+text ~/*.txt {a,b} foo 4 parks
+$ echo 'text ~/*.txt {a,b} $(echo foo) $((2+2)) $USER'
+text ~/*.txt {a,b} $(echo foo) $((2+2)) $USER
+```
+## Permissions
+
+`chmod`: modify file access rights
+
+`su`, `sudo`: temporarily become the superuser (在ubuntu用`sudo`)
+
+`chown`: change file ownership
+
+`chgrp`: change a file's group ownership
+
+![f1](http://linuxcommand.org/images/file_permissions.png)
+
+## Job Control 
+
+`ps`: list the processes running on the system
+
+`kill`: send a signal to one or more processes (usually to kill a process)
+
+`jobs`: an alternate way of listing your own processes
+
+`bg`: put a process in the background
+
+`fg`: put a process in the forground
+
+按 `Ctrl-Z` 表示將process暫停, 該process還在
+
+## alias 
+
+`$ alias` 列出所有bash alias
+
+[bash alias examples](http://www.thegeekstuff.com/2010/04/unix-bash-alias-examples/)
 
 ## group & user 管理
 
