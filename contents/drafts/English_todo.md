@@ -10,6 +10,114 @@ interview問題回應
 
 不好意思, 可否再說一次
 
+## workaround
+
+n. (程式或是系統的)解決方法
+
+a method for overcoming a problem or limitation in a program or system. 
+
+more:
+
+> if your system doesn't have support for dirperm1, the issue describe a workaround.
+
+## overcome
+
+v. 克服
+
+succeed in dealing wiht (a problem or difficullty)
+
+> she worked hard to overcome her paralyzing shyness.
+
+## expose 
+
+v. (使某些東西看得見), 曝露
+
+make (somethig) visible, typically by uncovering it.
+
+> at low tide the sands are exposed
+
+## inform
+
+v. 通知, 告知
+
+give (someone) facts or information; tell 
+
+> he wrote to her, informing her of the situation
+
+## significantly
+
+adv. 顯著地
+
+in a sufficiently great or important way as to be worthy of attention.
+
+> energy bills have increased significantly this year.
+
+more: 
+
+> Whenever possible, Docker will re-use the intermediate images, accelerating docker build significantly.
+
+in a way that has a particular meaning.
+
+> Significnatly, he has refused to give a straight answer to this question.
+
+## gaze
+
+v. 凝視 注視
+
+look steadily and intently, especially in admiration, suprise, or thought.
+
+> he could only gaze at her in astonishment.
+
+n.
+
+a steady intent look.
+
+> ohe tunned, following her gaze.
+
+## surf
+
+v. 沖浪
+
+stand or lie on a surfboard and ride on a wave toward the shore.
+
+> learning to surf
+
+## swoop
+
+v. (很快的速度從空中)落下 
+
+(especially of a bird) move rapidly downward through the air. 
+
+> the barn owl swoop down on a mouse in total darkness.
+
+barn owl --> 穀倉貓頭鷹
+
+## arouse
+
+v. 引起, 激發(感覺, 情感, 回應)
+
+evoke or awaken (a feeling, emotion, or response)
+
+> something about the man aroused the guard's suspicions.
+
+## mighty
+
+adj. (特別是size上的)威武的
+
+possessing great and impressive power or strength, especially on account of size
+
+> three mighty industrial countries
+
+adv.
+
+## greet
+
+v. 迎接, 打招呼
+
+give a polite word or sign of welcome or recognition to (someone) on meeting.
+
+> in the village street, many people stopped to greet me and welcome my brother and his wife.
+
 ## arithmetic
 
 n. 算術 (四則運算)
@@ -17,8 +125,6 @@ n. 算術 (四則運算)
 the branch of mathematics dealing with the properties and manipulation of numbers.
 
 > the laws of arithmetic
-
-
 
 ## concatenate 
 

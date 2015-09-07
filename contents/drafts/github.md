@@ -2,9 +2,7 @@
 
 ## Distributed Workflows
 
---------------------------------
-
-Git hub -- Contributing to a Project`
+Git hub -- Contributing to a Project
 
 ## git push 不用輸入帳號密碼
 
@@ -18,9 +16,11 @@ Git hub -- Contributing to a Project`
 $ git remote -v 
 ```
 
-http://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
+[git push requires username and password](http://stackoverflow.com/questions/6565357/git-push-requires-username-and-password)
+
 
 ## Forking Projects
+
 
 如果我想要建立一個現有專案是我們沒有push權限的, 我們可以 **fork** 這個專案。
 
@@ -124,6 +124,14 @@ https://github.com/g0v/dev/wiki/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Issue-Track
 
 [One weird trick for powerful Git aliases](http://blogs.atlassian.com/2014/10/advanced-git-aliases/)
 
+
+## download github file 
+
+download from RAW url; 
+
+```
+$ curl -O -L https://raw.githubusercontent.com/FremyCompany/css-grid-polyfill/master/bin/css-polyfills.min.js
+```
 
 ## Vim git tool
 

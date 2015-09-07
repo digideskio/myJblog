@@ -4,9 +4,22 @@
 
 [The future of layout with CSS: Grid Layouts](https://medium.com/@patrickbrosset/css-grid-layout-6c9cba6e8a5a)
 
-目前chrome 實作較多
+目前chrome 實作較多, 不過預設沒有開啟這項功能,
+
+chrome中輸入: `chrome://flags#enable-experimental-web-platform-features`, 設定enable: 
+
+![unblock](http://imgur.com/tujIkdil.png)
 
 推荐使用 [css-grid-polyfill](https://github.com/FremyCompany/css-grid-polyfill)
+
+``` html
+  ...
+  <script src="/js/css-polyfills.min.js"></script>                                          
+</body>
+```
+
+這樣所有browser都可以透過polyfill來使用Grid layout了! 
+
 
 Grid layout: 
 
@@ -40,9 +53,13 @@ grid layout是用css定義的, media query也是, 因此可以彼此工作的很
 
 ![g4](https://cdn-images-1.medium.com/max/800/1*xr308r1kDYPKpkzVdYDglQ.png)
 
-**結果css3 grid layout會被chromium和firefox block掉! 不能用..??**
 
 
+
+### Mor
+
+
+[中文解釋](http://www.w3cplus.com/css3/how-to-enable-support-for-grid-layout-in-various-browsers.html)
 
 ## < figure >
 

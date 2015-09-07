@@ -80,7 +80,25 @@ title="My title"
 echo $title
 ```
 
-注意`VARIABLE_NAME=value` 等號跟變數名字間不能有空格
+注意`VARIABLE_NAME=` 等號跟變數名字間不能有空格
+
+另外, `${VARIABLE_NAME}`: 
+
+```
+#!/bin/sh
+# This program will read the filename 
+# from user input.
+
+echo "Enter the file: "
+read FILENAME
+echo "Printing head of ${FILENAME}_LOG..."
+head ${FILENAME}_LOG
+
+echo ""  #this prints an extra return...
+echo "Printing tail of ${FILENAME}_LOG..."
+tail ${FILENAME}_LOG
+```
+
 
 ### environment variables 
 
@@ -149,6 +167,43 @@ fi
 
 相當於比對 `test -f .bash_profile`的結果
 
+**注意!** comparion operators 寫法不太一樣, 參考 [other comparison operators](http://www.tldp.org/LDP/abs/html/comparison-ops.html): 
+
+comparisons: 
+
+- `-eq`: equal to
+- `-ne`: not equal to
+- `-lt`: less than
+- `-le`: less than equal to
+- `gt`,`gte`
+
+File Operations: 
+
+- `-s`: file exists and is not empty
+- `-f`: file exist and is not a directory
+- `-d`: directory exists.
+- `-x`, `-w`, `-r`: file is executable 
+
+可以利用`||` 和 `&&`組合條件式: 
+
+```
+#!/bin/sh
+
+# Prompt for a user name...
+echo "Please enter your age:"
+read AGE
+
+if [ "$AGE" -lt 20 ] || [ "$AGE" -ge 50 ]; then
+  echo "Sorry, you are out of the age range."
+elif [ "$AGE" -ge 20 ] && [ "$AGE" -lt 30 ]; then
+  echo "You are in your 20s"
+elif [ "$AGE" -ge 30 ] && [ "$AGE" -lt 40 ]; then
+  echo "You are in your 30s"
+elif [ "$AGE" -ge 40 ] && [ "$AGE" -lt 50 ]; then
+  echo "You are in your 40s"
+fi
+```
+
 ### Semicolon 
 
 分號(;)為 command sepator, allows you to put more than on command on a line , 例如`clear; ls`
@@ -215,12 +270,171 @@ fi
 
 **注意!** `[ ]`和 expression 前後都要有空格
 
-**注意!** comparion operators 寫法不太一樣, 參考 [other comparison operators](http://www.tldp.org/LDP/abs/html/comparison-ops.html)
 
 **integer 和 string 使用不同的operators!**
 
 
 ## Flow control - part2 
+
+`if..elif..else`: 
+
+```
+#!/bin/bash
+
+echo -n "Enter a number between 1 and 3 inclusive > "
+read character
+if [ "$character" = "1" ]; then
+    echo "You entered one."
+elif [ "$character" = "2" ]; then
+    echo "You entered two."
+elif [ "$character" = "3" ]; then
+    echo "You entered three."
+else
+    echo "You did not enter a number between 1 and 3."
+fi
+```
+
+注意條件式: 
+
+若為 `[ $character = "1" ]` 那使用者沒有輸入直接按enter結果會變成 `[ = "1" ]`會解析錯誤, 
+
+若用`[ "$chracter" = "1" ]`使用者未輸入, 那結果就會變成`[ "" = "1" ]`就不會解析錯誤, 會跳到else block去。
+
+
+`case`條件式: 
+
+```
+case word in
+    patterns ) commands ;;
+esac
+```
+
+範例：
+
+```
+#!/bin/bash
+
+echo -n "Enter a number between 1 and 3 inclusive > "
+read character
+case $character in
+    1 ) echo "You entered one."
+        ;;
+    2 ) echo "You entered two."
+        ;;
+    3 ) echo "You entered three."
+        ;;
+    * ) echo "You did not enter a number between 1 and 3."
+esac
+```
+
+Patterns can be literal text or wildcards. You can have multiple patterns separated by the "|" character: 
+
+```
+#!/bin/bash
+
+echo -n "Type a digit or a letter > "
+read character
+case $character in
+                                # Check for letters
+    [[:lower:]] | [[:upper:]] ) echo "You typed the letter $character"
+                                ;;
+
+                                # Check for digits
+    [0-9] )                     echo "You typed the digit $character"
+                                ;;
+
+                                # Check for anything else
+    * )                         echo "You did not type a letter or a digit"
+esac
+```
+
+注意letter大小寫條件式的寫法
+
+### loops 
+
+`while`, `until`, `for`
+
+`while`: 
+
+```
+#!/bin/bash
+
+number=0
+while [ "$number" -lt 10 ]; do
+    echo "Number = $number"
+    number=$((number + 1))
+done
+```
+
+利用`util`達到上述功能(注意條件式不同, 因為語意不同):
+
+```
+#!/bin/bash
+
+number=0
+until [ "$number" -ge 10 ]; do
+    echo "Number = $number"
+    number=$((number + 1))
+done
+```
+
+### example 
+
+```
+#!/bin/bash
+
+press_enter()
+{
+    echo -en "\nPress Enter to continue"
+    read
+    clear
+}
+
+selection=
+until [ "$selection" = "0" ]; do
+    echo "
+    PROGRAM MENU
+    1 - display free disk space
+    2 - display free memory
+
+    0 - exit program
+"
+    echo -n "Enter selection: "
+    read selection
+    echo ""
+    case $selection in
+        1 ) df ; press_enter ;;
+        2 ) free ; press_enter ;;
+        0 ) exit ;;
+        * ) echo "Please enter 1, 2, or 0"; press_enter
+    esac
+done
+```
+
+## for loop 
+
+```
+#!/bin/sh
+# Validate numbers...
+
+echo "Please enter a list of numbers between 1 and 100. "
+read NUMBERS
+
+for NUM in $NUMBERS
+do
+  if [ "$NUM" -lt 1 ] || [ "$NUM" -gt 100 ]; then
+    echo "Invalid Number ($NUM) - Must be between 1 and 100!"
+  else
+    echo "$NUM is valid."
+  fi
+done
+```
+
+## Reading & Writing Files 
+
+[參考](http://www.dreamsyssoft.com/unix-shell-scripting/read-write-files-tutorial.php)
+
+`$1` 表示第一個參數, 例如`sh test.sh`, 那`$1`就是`test.sh`
 
 
 ## More 

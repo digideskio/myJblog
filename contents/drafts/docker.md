@@ -1,12 +1,29 @@
-# [Docker]  Dockerfile
+# [Docker]  Working with containers 
+
+[Official Docker doc: Get started with containers](https://docs.docker.com/articles/basics/)
+
+```
+$ docker info
+$ docker pull ubuntu
+$ docker -i -t ubuntu /bin/bash
+```
+
+The `-i` flag starts an interactive container. The `-t` flag creates a pseudo-TTY that attaches stdin and stdout.
 
 
-[Official Dockerfile doc](https://docs.docker.com/reference/builder/)
+[Official - Get started with images](https://docs.docker.com/userguide/dockerimages/)
+
+`$ docker search sinatra`
+
+`$ docker tag 5db5f8471261 ouruser/sinatra:devel`
+
 
 
 ## More
 
 docker 可以透過vncserver 操作GUI介面! (例如xfce4)
+
+[Official Dockerfile best practices](https://docs.docker.com/articles/dockerfile_best-practices/)
 
 [initial shell script and run shell script.](https://gist.github.com/kvzhuang/8233907)
 

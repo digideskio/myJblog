@@ -251,11 +251,15 @@ relating to, done by, or affecting large numbers of people or things.
 
 **注意發音**
 
-v. 翻譯
+v. 翻譯, **解讀**
 
 explain the meaning of (information, words. or actions).
 
 > the evidence is diffcult to interpret.
+
+more: 
+
+> Environment variables can also be used in certain instructions as variables to be interpreted by the Dockerfile.
 
 ## sensible 
 

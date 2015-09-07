@@ -12,6 +12,8 @@ RSS feed
 
 應該用這個就好, 最簡單乾淨: http://www.rosipov.com/blog/use-vimdiff-as-git-mergetool/
 
+或是直接抄dockerfile的style, 也很清爽! [dockerfile](https://docs.docker.com/reference/builder/)
+
 
 觀察其mobile first設計! 
 

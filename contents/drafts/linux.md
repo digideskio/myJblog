@@ -209,6 +209,83 @@ text ~/*.txt {a,b} $(echo foo) $((2+2)) $USER
 
 [bash alias examples](http://www.thegeekstuff.com/2010/04/unix-bash-alias-examples/)
 
+將aliases抽出到`~/.bash_aliases`, 
+
+讓vim可以顯示`.bash_aliases`語法標示: 
+
+用root修改`/usr/share/vim/vim74/filetype.vim`, 搜尋`bashrc`, 在： 
+
+```
+au BufNewFile,BufRead .bashrc*,bashrc,bash.bashrc,.bash_profile*,.bash_logout*,*.bash,*.ebuild call SetFileTypeSH("bash")
+```
+
+加入`.bash_aliases`即可
+
+## cat command 
+
+[參考](http://www.cyberciti.biz/faq/howto-use-cat-command-in-unix-linux-shell-script/)
+
+`cat filename` 讀取檔案
+
+`cat > filename` 建立新檔案
+
+`cat options filename`
+
+`cat file1 file2`
+
+`cat file1 file2 > file3` 合併檔案
+
+預設`cat`會把output輸出到螢幕, 現在redirect到另外一個檔案:  
+
+```
+$ cat /etc/passwd > /tmp/test.txt
+```
+
+或是: 
+
+```
+$ cat /etc/hosts /etc/resolv.conf /etc/fstab > /tmp/outputs.txt
+$ cat /tmp/outputs.txt
+```
+
+新增檔案(save and exit 按下`ctrl+D`): 
+
+```
+$ cat > foo
+this is a test
+$ cat foo
+this is a test
+$ cat >> foo
+more
+$ cat foo
+this is a test
+more
+```
+
+以下COOL!: 
+
+```
+$ cat file1 - file2 > file3
+```
+
+`-`表示鍵盤輸入, 會把file1加上你鍵盤輸入內容加上file2的內容, 輸出給file3
+
+`-b`(number non-blank), `-n`(number): 
+
+```
+$ cat -b foo
+     1  this is a test
+     2  more
+
+     3  cc
+     4  dd
+$ cat -n foo
+     1  this is a test
+     2  more
+     3  
+     4  cc
+```
+
 ## group & user 管理
 
 列出你所屬的group :  `$ groups`
