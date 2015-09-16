@@ -103,7 +103,7 @@ v.
 
 draw, trace, of define the outer edge or shape of (something)
 
-## effort 
+## effort(s)
 
 n. 功夫, 努力, 氣力
 

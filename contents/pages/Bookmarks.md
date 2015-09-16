@@ -72,7 +72,19 @@
 
 [Ardan Labs](https://www.ardanlabs.com/): Go Training
 
+## Nodejs NewsLetter 
+
+### #103
+
+[an introduction to microservice- part 1](https://auth0.com/blog/2015/09/04/an-introduction-to-microservices-part-1)
+
 ## Go NewsLetter 
+
+### #75
+
+[URL Shortener Golang Web Service tutorial with Mongodb](http://www.minaandrawos.com/2015/09/05/link-shortener-golang-web-service-tutorial-mongodb)
+
+[time in go](http://bl.ocks.org/joyrexus/a56717634a672dcdfd48)
 
 ### #73
 

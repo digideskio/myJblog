@@ -1,4 +1,130 @@
-# [Docker]  Working with containers 
+# [Docker]  自己整理
+
+## 如何看docker commit message? 
+
+`docker inspect simple_flask:v1 | grep "Comment"`
+
+## 如何檢查 Dockerfile錯誤
+
+## build caching 
+
+## compile your app inside the Docker container
+
+---------------
+
+# The Docker Book
+
+## Docker架構
+
+![arch](http://imgur.com/dOqRTQ5l.png)
+
+Docker是 client-server 架構, Docker client 跟 Docker server或是daemon溝通 
+
+which, in turn, does all the work. 
+
+Docker ships with a command line client binary `docker`, as well as a full RESTful API.
+
+我們可以執行docker damemon和client在同一個host, 或是將你local Docker client 連線到remote daemon或是其他host.
+
+### docker images
+
+Images are the building blocks of the Docker world.
+
+You can launch your containers from images.
+
+Images are the "build" part of Docker's life cycle, 
+
+They are a layered format, using Union file systems, that are built step-by-step using a series of instructions.
+
+**You can consider images to be the source code for your containers**
+
+### Registries
+
+Docker stores the images you build in registries.
+
+有public registry: Docker Hub
+
+
+## Working with Docker images and repositories
+
+docker filesystem layers: 
+
+![filesystem](http://imgur.com/OHlrunul.png)
+
+**build images and run containers with our applications and services**
+
+察看在我們的Docker host有哪些images可用`$ docker images`
+
+`$ docker search puppet`
+
+**puppet使用**
+
+
+### what is a Docker image? 
+
+A Docker image is made up of filesystems layered over each other.
+
+At tha base is a boot filesystem, bootfs, which resembles the typical Linux/Unix boot filesytem. 使用者幾乎不會跟boot filesystem有互動行為
+
+When a container has booted, it is moved into memory, and the boot filesystem is unmounted to free up the RAM used by the initrd disk image. 
+
+... (還有很多)
+
+### commands 
+
+#### images 
+
+list images 
+
+### search 
+
+Search the Dockerhub for images
+
+#### pull
+
+`$ docker pull ubuntu:12.04` --> pull down the ubuntu 12.04 image from the ubuntu repository
+
+
+### Building our own images 
+
+兩種方法: 
+
+1. `$ docker commit` (不建議)
+2. `$ docker build` + `Dockerfile`
+
+事實上我們不是建立一個全新的image, 而是基於現有的base image來build一個image
+
+要使用Docker Hub, 要`$ docker login`: 這會登入Docker Hub並且儲存我們的憑證給接下來使用,`$ docker logout`登出
+
+
+這裡有很好的說明, 從現有container製作新的image: [docker-jump-start](http://odewahn.github.io/docker-jumpstart/example.html)
+
+`$ docker commit -m <imgageID> <imgageName>`, `-m`: add a commit message explaining our new image, `-a`: list the author of the image.
+
+沒有指定imageName, 這時候`$ docker images`會發現我們建立的image的REPOSITORY和TAG都是<none>, 
+
+利用`$ docker tag`來指定名字: Tag an image into a repository
+
+> Usage:  docker tag [OPTIONS] IMAGE[:TAG] [REGISTRYHOST/][USERNAME/]NAME[:TAG]
+
+建議使用Dockerfile, 
+
+撰寫好Dockerfile後, `$ docker build -t <tagName> <PATH>`, `-f`: `/path/to/file`
+
+DockerFile也可以從Git repository上面指定, 例如: 
+
+```
+$ docker build -t "parks/static_web:v1" \
+git@github.com:parks/docker_static_Web
+```
+
+
+
+`$ docker rmi`: remove one or more images
+
+
+
+------------
 
 [Official Docker doc: Get started with containers](https://docs.docker.com/articles/basics/)
 
@@ -8,7 +134,6 @@ $ docker pull ubuntu
 $ docker -i -t ubuntu /bin/bash
 ```
 
-The `-i` flag starts an interactive container. The `-t` flag creates a pseudo-TTY that attaches stdin and stdout.
 
 
 [Official - Get started with images](https://docs.docker.com/userguide/dockerimages/)
@@ -22,6 +147,8 @@ The `-i` flag starts an interactive container. The `-t` flag creates a pseudo-TT
 ## More
 
 docker 可以透過vncserver 操作GUI介面! (例如xfce4)
+
+[docker jump start](http://odewahn.github.io/docker-jumpstart/example.html)
 
 [Official Dockerfile best practices](https://docs.docker.com/articles/dockerfile_best-practices/)
 
@@ -38,86 +165,6 @@ Go + docker 測試
 Go binary + docker
 
 
-## install 
-
-[linux下安裝docker步驟](http://docs.docker.com/linux/step_one/)
-
-升級docker: 
-
-```
-$ curl -sSL https://get.docker.com/ | sh
-```
-
-
-## use docker without sudo
-
-預設不用sudo執行docker當出現: 
-
-```
-Post http:///var/run/docker.sock/v1.19/containers/create: dial unix /var/run/docker.sock: permission denied. Are you trying to connect to a TLS-enabled daemon without TLS?
-```
-
-[docker doc 說明](https://docs.docker.com/installation/ubuntulinux/#giving-non-root-access)：
-
-> The docker daemon binds to a Unix socket instead of a TCP port. By default that Unix socket is owned by the user root and other users can access it with sudo. For this reason, docker daemon always runs as the root user.
-
-[how can i use docker without sudo](http://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo)
-
-解決方法就是建立一個`docker` Unix group, 並且把我們的user加到這個docker group去 (注意 `docker` group 相當於 `root` group), 假設我的username叫作`ubuntu`: 
-
-```
-$ sudo usermod -aG docker ubuntu
-```
-
-
-## Usage 
-
-![use](http://docs.docker.com/tutimg/container_explainer.png)
-
-`run`: creates and runs a Docker container 
-
-`hello-world`: image to load into the container
-
-執行這個命名, Docker會去找我們有無`hello-world`這個image, 若沒有,就從Docker hub下載, 再來載入該image到container中並且執行
-
- though, is capable of much more. An image can start software as complex as a database, wait for you (or someone else) to add data, store the data for later use, and then wait for the next person.
-
-你不用擔心你是否可以執行在Dockert image的程式, Docker container會幫你執行
-
-[https://hub.docker.com/](https://hub.docker.com/)
-
-`$ docker images`會列出現有images
-
-## Build your own image
-
-可以改變現有image, --> `Dockerfile`
-
-Dockerfile告訴軟體使用哪種環境,或是執行哪個命令
-
-```
-FROM docker/whalesay:latest
-```
-
-`FROM`告訴Docker你要建立的image是基於哪個image
-
-```
-RUN apt-get -y update && apt-get install -y fortunes
-```
-
-執行安裝`fortunes`這個程式
-
-一旦我們要裝的程式完成, 我們要下指令說當image被載入的時候就要執行這個程式: 
-
-```
-CMD /usr/games/fortune -a | cosway
-```
-
-利用Dockerfile把你的image的成份與行為都描述完後, 就可以build image: 
-
-```
-$ docker build -t docker-whale .
-```
-
 ## Docker hub 
 
 要push image上去前, 要先`$ docker login`
@@ -131,3 +178,11 @@ pull image: `$ docker pull yourname/docker-whale`
 ## More
 
 [Official Docker user guide](http://docs.docker.com/userguide/)
+
+[Docker Cheat Sheet](https://github.com/wsargent/docker-cheat-sheet)
+
+[15 quick docker tips](https://labs.ctl.io/15-quick-docker-tips/)
+
+[10 docker tips and tricks](http://nathanleclaire.com/blog/2014/07/12/10-docker-tips-and-tricks-that-will-make-you-sing-a-whale-song-of-joy/)
+
+[docker bash functions and aliases](http://kartar.net/2014/03/useful-docker-bash-functions-and-aliases/)
