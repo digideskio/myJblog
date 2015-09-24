@@ -51,11 +51,57 @@ root@c5328777e0a0:/# apt-get update && apt-get install vim
 
 run a command in a new container. 
 
-`--name=`: assign a name to the container
-
-`-d`: run container in background and print container ID.
-
 例如 `$ docker run -i -t --name=my_container ubuntu /bin/bash`就會從`ubuntu` image 建立一個新的container叫作`my_container`, 並且執行`/bin/bash`指令開啟一個bash shell.
+
+-a, --attach=[]                 Attach to STDIN, STDOUT or STDERR
+
+--add-host=[]                   Add a custom host-to-IP mapping (host:ip)
+
+-d, --detach=false              Run container in background and print container ID
+
+-e, --env=[]                    Set environment variables
+
+--entrypoint=                   Overwrite the default ENTRYPOINT of the image
+
+--env-file=[]                   Read in a file of environment variables
+
+--expose=[]                     Expose a port or a range of ports
+
+--group-add=[]                  Add additional groups to join
+
+-h, --hostname=                 Container host name
+
+-i, --interactive=false         Keep STDIN open even if not attached
+
+-l, --label=[]                  Set meta data on a container
+
+--label-file=[]                 Read in a line delimited file of labels
+
+--link=[]                       Add link to another container
+
+--name=                         Assign a name to the container
+
+-P, --publish-all=false         Publish all exposed ports to random ports
+
+-p, --publish=[]                Publish a container's port(s) to the host
+
+--read-only=false               Mount the container's root filesystem as read only
+
+--restart=no                    Restart policy to apply when a container exits
+
+--rm=false                      Automatically remove the container when it exits
+
+-t, --tty=false                 Allocate a pseudo-TTY
+
+-u, --user=                     Username or UID (format: <name|uid>[:<group|gid>])
+
+-v, --volume=[]                 Bind mount a volume
+
+--volumes-from=[]               Mount volumes from the specified container(s)
+
+-w, --workdir=                  Working directory inside the container
+
+
 
 ### create 
 
@@ -135,3 +181,9 @@ Attach(**connect**) to a running container. --> to view its ongoing output or to
 `-d`: detached mode(run command in the background) 
 
 利用`docker exec` 做維護, monitoring 或是 management tasks.
+
+### inspect 
+
+Return low-level information on a container or image
+
+

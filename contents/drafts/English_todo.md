@@ -10,6 +10,49 @@ interview問題回應
 
 不好意思, 可否再說一次
 
+## discriminate
+
+v. 區別
+
+recognize a distinction; differentiate
+
+> babies can discriminate between different facial expressions of emotion.
+
+more: 
+
+> The use of upper-case name for export provides the hook to discriminate the field from the method.
+
+
+## satisfactory 
+
+> A straightforward translation of a C++ or Java program into Go is unlikely to produce a satisfactory result—Java programs are written in Java, not Go.
+
+
+## perspective 
+
+n. 透視
+
+> On the other hand, thinking about the problem from a Go perspective could produce a successful but quite different program.
+
+## idiom(s)
+
+> In other words, to write Go well, it's important to understand its properties and idioms.
+
+## argument
+
+v. 擴大 
+
+make (something) greater by adding to it; increase
+
+> This document gives tips for writing clear, idiomatic Go code. It augments the language specification, the Tour of Go, and How to Write Go Code, all of which you should read first. 
+
+## thus 
+
+adv, 從而, 因此
+
+as a result or consequence of this; therefore.
+
+> Burke knocked out Byrne, thus becoming champion.
 
 ## affection
 

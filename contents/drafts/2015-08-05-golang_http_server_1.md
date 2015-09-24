@@ -206,18 +206,21 @@ func main() {
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>{{ template "title" }}</title>
+  <title>{{ template "title" .}}</title>
   <link rel="stylesheet" href="/static/css/main.css">
   <script src="/static/js/main.js"></script>
 </head>
 <body>
-  {{template "body"}}
+  {{template "body" .}}
 </body>
 </html>
 {{ end }}
 ```
 
-原來的`templates/Hello.html`: 
+**注意`{{ template "title" . }}`有個. , 沒寫的話,我們引用的template外部資料傳不進來**
+
+
+原來的`templates/Hello.html`改為: 
 
 ``` html
 {{define "title"}}Hello (from template){{end}}
@@ -228,21 +231,6 @@ func main() {
 {{end}}
 ```
 
- TODO: **那我可不可以幫整個Hello template定名字: **
-
-``` html
-{{define "hello"}}
-{{define "title"}}Hello (from template){{end}}
-
-{{define "body"}}
-<h1>Hello! (from template)</h1>
-<button onclick="hello()">show</button>
-{{end}}
-{{end}}
-```
-
-
-有寫過templates的朋友應該很快就能適應。
 
 修改原來的`main.go`: 
 

@@ -353,6 +353,18 @@ more:
 
 > Volumnes are specially designated directories within one or more container that bypass the layered Union File System to provide persistent or share data for Docker.
 
+## persist
+
+v. 堅持繼續持續
+
+continue firmly or obstinately in an opinion or a course of action in spite of diffculty, opposition, or failure.
+
+> the minority of drivers who persist in drinking.
+
+more: 
+
+> Volumnes persist until no containers use them.
+
 ## persistent
 
 adj. 持續的

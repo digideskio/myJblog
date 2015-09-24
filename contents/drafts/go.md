@@ -1,5 +1,19 @@
 # [Go] 補充& Todo 
 
+## How to write Go code 
+
+### go install 
+
+copy files and set attributes.
+
+The install program copies files (often just compiled) into destination locations you choose.
+
+例如會把compile好的binary放到 $GOPATH/bin去, 例如`$GOPATH/bin/hello`, 直接執行`hello`也可以
+
+## go-wraper 
+
+https://github.com/docker-library/golang/blob/master/go-wrapper
+
 ## mgo connection pool / http
 
 http://stackoverflow.com/questions/23223743/connections-pool-in-mgo
@@ -52,7 +66,6 @@ combine with 'looper' to have realtime feedback
 `package`不是 classes 也不是objects , 
 
 `package`不包含任何subpackages 
-
 
 Go的最基礎的building block
 

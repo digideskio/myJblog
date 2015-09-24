@@ -56,6 +56,16 @@ text ~/*.txt {a,b} $(echo foo) $((2+2)) $USER
 ```
 ------
 
+## /bin/sh -c 
+
+/bin/sh is usually a symlink to a shell.
+
+```
+$ bash -c ls
+```
+
+will launch bash and execute the command ls.
+
 ## apt-get -yqq
 
 `-qq`選項說明 :
@@ -115,6 +125,7 @@ focus on url bar --> `alt + d` 或 `F6` 或 `ctrl+L`
 ## curl 和 wget的區別
 
 http://unix.stackexchange.com/questions/47434/what-is-the-difference-between-curl-and-wget
+
 
 ## More 
 

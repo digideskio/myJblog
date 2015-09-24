@@ -80,6 +80,10 @@
 
 ## Go NewsLetter 
 
+### #76
+
+[12 videos from the 2015 golang Uk conference](http://golangweekly.us1.list-manage.com/track/click?u=0618f6a79d6bb9675f313ceb2&id=cbf58d0c73&e=d1e149c87f)
+
 ### #75
 
 [URL Shortener Golang Web Service tutorial with Mongodb](http://www.minaandrawos.com/2015/09/05/link-shortener-golang-web-service-tutorial-mongodb)
