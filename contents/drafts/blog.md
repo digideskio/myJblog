@@ -2,7 +2,7 @@
 
 ## go-blog todo(issue)
 
-index post list 取md第一行
+drafts 要跟posts 放同個資料夾, 方便以後做git管理
 
 byte傳到html template應該可以直接顯示, 而不是還要事先轉 string(byteArr)
 
