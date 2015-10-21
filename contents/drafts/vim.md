@@ -1,10 +1,25 @@
 # [Vim]
 
+## zsh  
+
+zsh vim mode 
+
+http://dougblack.io/words/zsh-vi-mode.html
+
+zsh open new tab at the same directory: 
+
+在選項appearence裡面的Working Directory選擇 Reuse previous session's directory
+
+
 ## run your shell scripts 
 
 `:！ sh aaa.sh %`
 
 ## Visual Mode
+
+`vip`: select the current paragraph
+
+`vis`: select the current sentence
 
 `V3j`選了4行
 
@@ -15,6 +30,8 @@
 `Ctrl + v + iw`
 
 `Ctrl + v + ^`. `Ctrl + v + $`
+
+`:help text-object`
 
 ## [markdown] escape html tag 
 

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "jade static blog generator",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "nodemon server.js localhost 4000",
     "build": "sass ./contents/scss/main.scss:build/css/main.css & node gen",
     "scss": "sass --watch ./contents/scss/main.scss:build/css/main.css"
   },

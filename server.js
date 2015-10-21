@@ -5,11 +5,12 @@ var marked = require('marked');
 var fs = require('fs');
 var Bluebird = require('bluebird');
 Bluebird.promisifyAll(fs);
+var port = process.env.PORT || 4000;
 
 var app = express();
 
-app.listen(3000, function(){
-  console.log('server listening on port 3000');
+app.listen(port, function(){
+  console.log('server listening on port '+ port);
 });
 
 app.set('views', './templates');
